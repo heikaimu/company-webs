@@ -1,0 +1,497 @@
+<!--
+ * @Description: 
+ * @Version: 2.0
+ * @Autor: Yaowen Liu
+ * @Date: 2020-05-01 09:06:12
+ * @LastEditors: Yaowen Liu
+ * @LastEditTime: 2020-05-06 16:36:44
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>房产纠纷</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/app.css">
+  <link rel="stylesheet" href="./plugins/swiper/swiper.min.css">
+  <script src="./js/jquery.js"></script>
+</head>
+
+<body>
+<!-- 头部 -->
+<header class="header" id="header">
+  <div class="main-container">
+    <div class="logo">
+      <img
+        src="./images/complete_logo.jpg"
+        alt="">
+    </div>
+    <div class="right-wrapper">
+      <nav class="nav">
+        <a href="./index.html" class="active">
+          网站首页
+          <span>Home</span>
+        </a>
+        <a href="./team.html">
+          律师团队
+          <span>Team</span>
+        </a>
+        <div class="secound-nav-box" id="sub_nav">
+          业务领域
+          <span>Services</span>
+          <div class="sub-nav">
+            <a href="./theme_labor_dispute.html">劳动争议</a>
+            <a href="./theme_property_disputes.html">房产纠纷</a>
+          </div>
+        </div>
+        <a href="./case.html">
+          经典案例
+          <span>Case</span>
+        </a>
+        <a onclick="gotoPage('introduce', -120)">
+          律所介绍
+          <span>About</span>
+        </a>
+        <a onclick="gotoPage('footer')">
+          联系我们
+          <span>Contact</span>
+        </a>
+      </nav>
+      <div class="phone-number">
+        <p>VIP法律服务热线</p>
+        <h3>17358690802</h3>
+      </div>
+    </div>
+  </div>
+</header>
+
+  <!-- 头图 -->
+  <section class="theme-banner" style="background-image: url(./images/property_banner.png)" id="banner">
+    <div class="main-container">
+      <h1 class="title">房产纠纷</h1>
+      <h2 class="desc">全面的公司制律师事务所，通过集体智慧，提供卓越的法律服务方案</h2>
+      <div class="operation">
+        <div class="introduce">
+          <div class="item">
+            <div class="icon">
+              <img src="./images/icon_hummer.png" alt="" />
+            </div>
+            <dl>
+              <dt>43443</dt>
+              <dd>成功案例</dd>
+            </dl>
+          </div>
+          <div class="item">
+            <div class="icon">
+              <img src="./images/icon_message.png" alt="" />
+            </div>
+            <dl>
+              <dt>43443</dt>
+              <dd>成功案例</dd>
+            </dl>
+          </div>
+          <div class="item">
+            <div class="icon">
+              <img src="./images/icon_balance.png" alt="" />
+            </div>
+            <dl>
+              <dt>43443</dt>
+              <dd>成功案例</dd>
+            </dl>
+          </div>
+        </div>
+        <div class="leave-message">
+          <div class="form-item">
+            <input type="text" class="name" placeholder="姓名">
+          </div>
+          <div class="form-item">
+            <input type="text" class="phone" placeholder="电话">
+          </div>
+          <div class="form-item">
+            <button>立即预约</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 服务与优势 -->
+  <div class="services-and-feature">
+    <div class="base-title">
+      <h2 class="title">我们的服务与优势</h2>
+      <h3 class="sub-title">房产纠纷律师团队任多家房地产开发公司法律顾问，办理房产纠纷案件4588件</h3>
+    </div>
+    <div class="main-container">
+      <div class="left-wrapper">
+        <div class="theme-feature">
+          <h2 class="title">房产纠纷我们是专业的</h2>
+          <div class="introduce">
+            <div class="item">
+              <div class="icon">
+                <img src="./images/icon_precise.png" alt="" />
+              </div>
+              <dl>
+                <dt>高效精准</dt>
+                <dd>每一步都立求交付最有利的结果</dd>
+              </dl>
+            </div>
+            <div class="item">
+              <div class="icon">
+                <img src="./images/icon_process.png" alt="" />
+              </div>
+              <dl>
+                <dt>流程清晰</dt>
+                <dd>为客户提供高效、全面、清晰的服务方式</dd>
+              </dl>
+            </div>
+            <div class="item">
+              <div class="icon">
+                <img src="./images/icon_finger.png" alt="" />
+              </div>
+              <dl>
+                <dt>服务专业</dt>
+                <dd>拥有一套完整劳动争议案件办案流程</dd>
+              </dl>
+            </div>
+            <div class="item">
+              <div class="icon">
+                <img src="./images/icon_heart.png" alt="" />
+              </div>
+              <dl>
+                <dt>保障全面</dt>
+                <dd>努力做到“打不赢官司不收费”为原则</dd>
+              </dl>
+            </div>
+          </div>
+          <button class="consult-button">立即咨询</button>
+        </div>
+      </div>
+      <div class="right-wrapper">
+        <ul class="services">
+          <li>
+            <div class="theme-service-card">
+              <div class="image" style="background-image: url(./images/theme_pic_5.png)"></div>
+              <h2 class="title">拖欠工资拖欠工资拖欠工资拖欠工资拖欠工资拖欠工资</h2>
+              <p class="desc">这里是小文字描述，大概还可以写几个字大概还可以写几个字。</p>
+            </div>
+          </li>
+          <li>
+            <div class="theme-service-card">
+              <div class="image" style="background-image: url(./images/theme_pic_6.png)"></div>
+              <h2 class="title">拖欠工资拖欠工资拖欠工资拖欠工资拖欠工资拖欠工资</h2>
+              <p class="desc">这里是小文字描述，大概还可以写几个字大概还可以写几个字。</p>
+            </div>
+          </li>
+          <li>
+            <div class="theme-service-card">
+              <div class="image" style="background-image: url(./images/theme_pic_7.png)"></div>
+              <h2 class="title">拖欠工资拖欠工资拖欠工资拖欠工资拖欠工资拖欠工资</h2>
+              <p class="desc">这里是小文字描述，大概还可以写几个字大概还可以写几个字。</p>
+            </div>
+          </li>
+          <li>
+            <div class="theme-service-card">
+              <div class="image" style="background-image: url(./images/theme_pic_8.png)"></div>
+              <h2 class="title">拖欠工资拖欠工资拖欠工资拖欠工资拖欠工资拖欠工资</h2>
+              <p class="desc">这里是小文字描述，大概还可以写几个字大概还可以写几个字。</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- 案例 -->
+  <section class="case">
+    <div class="base-title">
+      <h2 class="title">专业律师团队为您服务</h2>
+      <h3 class="sub-title">卓越的团队，是胜诉的保障之一，我们知道结果对您更重要 设身处地站在当事人角度思考，为当事人争取最大利益</h3>
+    </div>
+    <div class="main-container">
+      <ul class="theme-case-list">
+        <li>
+          <div class="case-card--card">
+            <div class="cover">
+              <div class="image" style="background-image: url(./example_images/pic_2.png)"></div>
+            </div>
+            <div class="info">
+              <h2 class="title">公司财务人员汇错项目款，泰仁律助助其及时要回</h2>
+              <div class="context">2017年8月4日，原告李**经朋友介绍，认识做装饰装修工程的被告赵**。双方没有签订书面装修合同原告提供了一张预算表...</div>
+              <div class="bottom">
+                <div class="time-views">
+                  <p>发布时间:2019-3-3</p>
+                  <p>浏览：3333</p>
+                </div>
+                <button class="button">查看全文</button>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="case-card--card">
+            <div class="cover">
+              <div class="image" style="background-image: url(./example_images/pic_2.png)"></div>
+            </div>
+            <div class="info">
+              <h2 class="title">公司财务人员汇错项目款，泰仁律助助其及时要回</h2>
+              <div class="context">2017年8月4日，原告李**经朋友介绍，认识做装饰装修工程的被告赵**。双方没有签订书面装修合同原告提供了一张预算表...</div>
+              <div class="bottom">
+                <div class="time-views">
+                  <p>发布时间:2019-3-3</p>
+                  <p>浏览：3333</p>
+                </div>
+                <button class="button">查看全文</button>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+            <div class="case-card--card">
+              <div class="cover">
+                <div class="image" style="background-image: url(./example_images/pic_2.png)"></div>
+              </div>
+              <div class="info">
+                <h2 class="title">公司财务人员汇错项目款，泰仁律助助其及时要回</h2>
+                <div class="context">2017年8月4日，原告李**经朋友介绍，认识做装饰装修工程的被告赵**。双方没有签订书面装修合同原告提供了一张预算表...</div>
+                <div class="bottom">
+                  <div class="time-views">
+                    <p>发布时间:2019-3-3</p>
+                    <p>浏览：3333</p>
+                  </div>
+                  <button class="button">查看全文</button>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+              <div class="case-card--card">
+                <div class="cover">
+                  <div class="image" style="background-image: url(./example_images/pic_2.png)"></div>
+                </div>
+                <div class="info">
+                  <h2 class="title">公司财务人员汇错项目款，泰仁律助助其及时要回</h2>
+                  <div class="context">2017年8月4日，原告李**经朋友介绍，认识做装饰装修工程的被告赵**。双方没有签订书面装修合同原告提供了一张预算表...</div>
+                  <div class="bottom">
+                    <div class="time-views">
+                      <p>发布时间:2019-3-3</p>
+                      <p>浏览：3333</p>
+                    </div>
+                    <button class="button">查看全文</button>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+                <div class="case-card--card">
+                  <div class="cover">
+                    <div class="image" style="background-image: url(./example_images/pic_2.png)"></div>
+                  </div>
+                  <div class="info">
+                    <h2 class="title">公司财务人员汇错项目款，泰仁律助助其及时要回</h2>
+                    <div class="context">2017年8月4日，原告李**经朋友介绍，认识做装饰装修工程的被告赵**。双方没有签订书面装修合同原告提供了一张预算表...</div>
+                    <div class="bottom">
+                      <div class="time-views">
+                        <p>发布时间:2019-3-3</p>
+                        <p>浏览：3333</p>
+                      </div>
+                      <button class="button">查看全文</button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                  <div class="case-card--card">
+                    <div class="cover">
+                      <div class="image" style="background-image: url(./example_images/pic_2.png)"></div>
+                    </div>
+                    <div class="info">
+                      <h2 class="title">公司财务人员汇错项目款，泰仁律助助其及时要回</h2>
+                      <div class="context">2017年8月4日，原告李**经朋友介绍，认识做装饰装修工程的被告赵**。双方没有签订书面装修合同原告提供了一张预算表...</div>
+                      <div class="bottom">
+                        <div class="time-views">
+                          <p>发布时间:2019-3-3</p>
+                          <p>浏览：3333</p>
+                        </div>
+                        <button class="button">查看全文</button>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+      </ul>
+      <div class="more">
+        <button>查看更多案例</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 中间广告 -->
+  <section class="medium-advert">
+    <div class="main-container">
+      <div class="contact">
+        <div class="phone-number">
+          <p>VIP法律服务热线</p>
+          <h3>17358690802</h3>
+        </div>
+        <div class="consult">
+          <button class="button">立即咨询</button>
+        </div>
+      </div>
+      <div class="statistics">
+        <ul class="statistics-list">
+          <li>
+            <div class="statistics-card">
+              <img src="./images/icon_building.png" alt="">
+              <p class="text">成立时间</p>
+              <p class="number">2014</p>
+            </div>
+          </li>
+          <li>
+            <span class="plus"></span>
+          </li>
+          <li>
+            <div class="statistics-card">
+              <img src="./images/icon_files.png" alt="">
+              <p class="text">年办理案件</p>
+              <p class="number">2014</p>
+            </div>
+          </li>
+          <li>
+            <span class="plus"></span>
+          </li>
+          <li>
+            <div class="statistics-card">
+              <img src="./images/icon_medal.png" alt="">
+              <p class="text">年办理案件</p>
+              <p class="number">2014</p>
+            </div>
+          </li>
+          <li>
+            <span class="plus"></span>
+          </li>
+          <li>
+            <div class="statistics-card">
+              <img src="./images/icon_book.png" alt="">
+              <p class="text">年办理案件</p>
+              <p class="number">2014</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 我们的实力与资质 -->
+  <section class="our-power-qualification" id="introduce">
+    <div class="base-title">
+      <h2 class="title">品牌服务优势</h2>
+      <h3 class="sub-title">保障客户的利益，是我们唯一的宗旨。维护法律权威、客户利益至上、坚守执业道德。</h3>
+    </div>
+    <div class="main-container">
+      <div class="power">
+        <div class="left-wrapper">
+          <article>
+            四川方同律师事务所成立于2015年，致力于提供高效、优质、全方位的法律解决方案，成为商事法律服务领域值得尊重和信赖的律师事务所。方同秉持“殊方同致、至诚至远”的理想，坚持“专业化、团队化、精英化”的服务理念，信守“立于事实和法律，志求公正与公平”的执业观念，专注于在商事法律服务领域为客户的重大、疑难案件提供全面解决方案。方同擅长处理重大、复杂、疑难民商事案件，因为方同拥有一支专业、专注、合作、进取的团队。方同的律师大多数拥有硕士以上学历，专业背景扎实；多名律师曾在地方法院长期从事司法审判工作，熟悉诉讼环境，实践丰富，对案件诉讼方向的把握及诉讼前景的研判具有突出的能力。方同建立了独具特色的诉讼业务标准化管理体系，采取团队化工作模式。精细的业务流程管理，案件难度和风险评估体系，诉讼直观可视化工具，模拟法庭等应用，成为方同提供品质服务的突出优势。
+            方同的服务领域覆盖民商事诉讼、非诉讼等各个领域，包括企业及公司改制、重组、投资并购、间接融资、商事争议解决、不良资产处置、银行、保险、证券、破产重整、知识产权、房地产等。方同在投资并购、金融业务、不良资产处置、房地产等领域形成了相当强的专业优势，形成了专家。
+          </article>
+        </div>
+        <div class="right-wrapper">
+          <div class="swiper-container power-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="power-image" style="background-image: url(./example_images/pic_1.png)"></div>
+              </div>
+              <div class="swiper-slide">
+                <div class="power-image" style="background-image: url(./example_images/pic_1.png)"></div>
+              </div>
+              <div class="swiper-slide">
+                <div class="power-image" style="background-image: url(./example_images/pic_1.png)"></div>
+              </div>
+              <div class="swiper-slide">
+                <div class="power-image" style="background-image: url(./example_images/pic_1.png)"></div>
+              </div>
+              <div class="swiper-slide">
+                <div class="power-image" style="background-image: url(./example_images/pic_1.png)"></div>
+              </div>
+              <div class="swiper-slide">
+                <div class="power-image" style="background-image: url(./example_images/pic_1.png)"></div>
+              </div>
+              <div class="swiper-slide">
+                <div class="power-image" style="background-image: url(./example_images/pic_1.png)"></div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination" id="power_pagination"></div>
+          <div class="button prev" id="power_prev"></div>
+          <div class="button next" id="power_next"></div>
+          <div class="dot">
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+          </div>
+        </div>
+      </div>
+      <div class="qualification">
+        <div class="swiper-container qualification-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="qualification-image" style="background-image: url(./example_images/pic_1.png)"></div>
+            </div>
+            <div class="swiper-slide">
+              <div class="qualification-image" style="background-image: url(./example_images/pic_1.png)"></div>
+            </div>
+            <div class="swiper-slide">
+              <div class="qualification-image" style="background-image: url(./example_images/pic_1.png)"></div>
+            </div>
+            <div class="swiper-slide">
+              <div class="qualification-image" style="background-image: url(./example_images/pic_1.png)"></div>
+            </div>
+            <div class="swiper-slide">
+              <div class="qualification-image" style="background-image: url(./example_images/pic_1.png)"></div>
+            </div>
+            <div class="swiper-slide">
+              <div class="qualification-image" style="background-image: url(./example_images/pic_1.png)"></div>
+            </div>
+            <div class="swiper-slide">
+              <div class="qualification-image" style="background-image: url(./example_images/pic_1.png)"></div>
+            </div>
+          </div>
+        </div>
+        <!-- 如果需要导航按钮 -->
+        <div class="swiper-button-prev swiper-button-black" id="qualification_prev"></div>
+        <div class="swiper-button-next swiper-button-black" id="qualification_next"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 底部 -->
+  <footer class="footer" id="footer">
+    <div class="main-container">
+      <div class="operation">
+        <nav class="menus">
+          <a href="">网站首页</a>
+          <a href="">律师团队</a>
+          <a href="">业务领域</a>
+          <a href="">经典案例</a>
+          <a href="">律师介绍</a>
+          <a href="">联系我们</a>
+        </nav>
+        <p class="contact-info">服务热线：17358690802 E-mail：273455447@qq.com</p>
+        <p class="reference">Copyright © 2003-2023 核桃法律法律咨询 蜀ICP备14000208号-5站长统计</p>
+      </div>
+      <div class="qr-code">
+        <div class="icon"><img src="" alt=""></div>
+        <p>扫一扫浏览网站</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./plugins/swiper/swiper.min.js"></script>
+  <script src="./js/my-swiper.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+
+</html>

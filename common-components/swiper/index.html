@@ -1,0 +1,173 @@
+<!--
+ * @Description: 
+ * @Version: 2.0
+ * @Autor: Yaowen Liu
+ * @Date: 2020-05-29 09:56:32
+ * @LastEditors: Yaowen Liu
+ * @LastEditTime: 2020-05-29 11:30:17
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="./reset.css">
+  <link rel="stylesheet" href="./swiper.min.css">
+  <link rel="stylesheet" href="./animate.min.css">
+  <style>
+    .swiper-animation {
+      height: 100vh;
+    }
+
+    .swiper-item {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    .swiper-item .bg {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: -1;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      -webkit-transform: scale3d(1.1, 1.1, 1.1);
+      -ms-transform: scale3d(1.1, 1.1, 1.1);
+      transform: scale3d(1.1, 1.1, 1.1);
+    }
+
+    .content {
+      color: #fff;
+      text-align: center;
+    }
+
+    .content h2 {
+      font-size: 40px;
+      padding-bottom: 20px;
+    }
+
+    .content a {
+      display: inline-block;
+      margin-top: 30px;
+      color: #fff;
+      border: 1px solid #fff;
+      padding: 6px 20px;
+      border-radius: 2px;
+    }
+
+    /* 自定义的图片缩放animation */
+    @-webkit-keyframes shrink {
+      0% {
+        -webkit-transform: scale3d(1.1, 1.1, 1.1);
+        transform: scale3d(1.1, 1.1, 1.1);
+      }
+
+      100% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+      }
+    }
+
+    @keyframes shrink {
+      0% {
+        -webkit-transform: scale3d(1.1, 1.1, 1.1);
+        -ms-transform: scale3d(1.1, 1.1, 1.1);
+        transform: scale3d(1.1, 1.1, 1.1);
+      }
+
+      100% {
+        -webkit-transform: scale3d(1, 1, 1);
+        -ms-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+      }
+    }
+
+    .shrink {
+      -webkit-animation-name: shrink;
+      animation-name: shrink
+    }
+  </style>
+</head>
+
+<body>
+  <div class="swiper-container swiper-animation">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="swiper-item">
+          <div class="bg ani" swiper-animate-effect="shrink" swiper-animate-duration="5s" swiper-no-hidden
+            style="background-image: url(./images/banner1.png)"></div>
+          <div class="content">
+            <h2 class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">
+              Swiper</h2>
+            <p class="ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.6s">
+              Swiper(Swiper master)是目前应用较广泛的移动端网页触摸内容滑动js插件。</p>
+            <a href="" class="ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.5s"
+              swiper-animate-delay="0.3s">View</a>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="swiper-item">
+          <div class="bg ani" swiper-animate-effect="shrink" swiper-animate-duration="5s" swiper-no-hidden
+            style="background-image: url(./images/banner2.png)"></div>
+          <div class="content">
+            <h2 class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">
+              WOW.js</h2>
+            <p class="ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.6s">
+              让页面滚动更有趣_dowebok</p>
+            <a href="" class="ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.5s"
+              swiper-animate-delay="0.3s">View</a>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="swiper-item">
+          <div class="bg ani" swiper-animate-effect="shrink" swiper-animate-duration="5s" swiper-no-hidden
+            style="background-image: url(./images/banner3.png)"></div>
+          <div class="content">
+            <h2 class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">
+              Animate.css</h2>
+            <p class="ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.6s">
+              一款强大的预设css3动画库</p>
+            <a href="" class="ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.5s"
+              swiper-animate-delay="0.3s">View</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./swiper.min.js"></script>
+  <script src="./swiper.animate.rewrite.min.js"></script>
+  <script>
+    new Swiper('.swiper-animation', {
+      speed: 500,
+      effect: 'fade',
+      autoplay: {
+        delay: 5000
+      },
+      disableOnInteraction: false,
+      on: {
+        init: function () {
+          swiperAnimateCache(this); //隐藏动画元素 
+          swiperAnimate(this); //初始化完成开始动画
+        },
+        slideChangeTransitionEnd: function () {
+          swiperAnimate(this); //每个slide切换结束时也运行当前slide动画
+          //this.slides.eq(this.activeIndex).find('.ani').removeClass('ani'); 动画只展现一次，去除ani类名
+        }
+      }
+    });
+  </script>
+</body>
+
+</html>

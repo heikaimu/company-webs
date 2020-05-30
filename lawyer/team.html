@@ -1,0 +1,178 @@
+<!--
+ * @Description: 
+ * @Version: 2.0
+ * @Autor: Yaowen Liu
+ * @Date: 2020-05-01 09:06:12
+ * @LastEditors: Yaowen Liu
+ * @LastEditTime: 2020-05-06 15:53:01
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>律师团队</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/app.css">
+  <link rel="stylesheet" href="./plugins/swiper/swiper.min.css">
+  <script src="./js/jquery.js"></script>
+</head>
+
+<body>
+
+<!-- 头部 -->
+<header class="header" id="header">
+  <div class="main-container">
+    <div class="logo">
+      <img
+        src="./images/complete_logo.jpg"
+        alt="">
+    </div>
+    <div class="right-wrapper">
+      <nav class="nav">
+        <a href="./index.html" class="active">
+          网站首页
+          <span>Home</span>
+        </a>
+        <a href="./team.html">
+          律师团队
+          <span>Team</span>
+        </a>
+        <div class="secound-nav-box" id="sub_nav">
+          业务领域
+          <span>Services</span>
+          <div class="sub-nav">
+            <a href="./theme_labor_dispute.html">劳动争议</a>
+            <a href="./theme_property_disputes.html">房产纠纷</a>
+          </div>
+        </div>
+        <a href="./case.html">
+          经典案例
+          <span>Case</span>
+        </a>
+        <a onclick="gotoPage('introduce', -120)">
+          律所介绍
+          <span>About</span>
+        </a>
+        <a onclick="gotoPage('footer')">
+          联系我们
+          <span>Contact</span>
+        </a>
+      </nav>
+      <div class="phone-number">
+        <p>VIP法律服务热线</p>
+        <h3>17358690802</h3>
+      </div>
+    </div>
+  </div>
+</header>
+
+  <!-- 头图 -->
+  <section class="banner" style="background-image: url(./images/team_page_banner.png)" id="banner">
+    <div class="main-container">
+      <h1 class="title no-button">精英律师团队</h1>
+      <h2 class="desc">Elite team of lawyers</h2>
+    </div>
+  </section>
+
+  <!-- 列表 -->
+  <div class="main-container">
+    <ul class="team-page-list">
+      <li>
+        <div class="lawyer-card black">
+          <div class="avatar">
+            <div class="image" style="background-image: url(./example_images/pic_2.png)"></div>
+          </div>
+          <div class="intro">
+            <div class="top">
+              <h2 class="name">刘大爷</h2>
+              <p class="role">律所合伙人</p>
+              <button class="consult-button">咨询TA</button>
+            </div>
+            <div class="medium">
+              <div class="exp">
+                <p>受理案子<span>3</span>例</p>
+                <p>职业<span>3</span>年</p>
+                <p>接受咨询回复<span>3</span>条</p>
+              </div>
+              <div class="tags">
+                <span>婚姻家庭</span>
+                <span>劳动工伤</span>
+                <span>合同纠纷</span>
+              </div>
+            </div>
+            <div class="bottom">
+              <article>
+                2007年10月加入云南凌云律师事务所，担任法律咨询中心主任。后出任粮油及食品安全法律事务部主任、公司法律事务部主任、建设工程法律事务部主任，任云南凌云律师事务所副主任、金融法律事务部主任。
+                自执业以后，热心公益普法活动，曾先后两次荣获昆明市司法局颁发的“优秀共产党员称号”，同时，通过中央电视台、人民日报、人民网、新华社、中国新闻网、云南日报、昆明日报、云南电视台、云南网、春城晚报、都市时报、云南信息报等数十家省内外媒体对相关热点法律问题进行剖析解答，并积极参与相关各类社区、学校、企业普法服务。
+                积极参与社会立法听证事务，多次应邀参加各类政府及部门地方性法规及规章的听证活动。
+              </article>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="lawyer-card black">
+          <div class="avatar">
+            <div class="image" style="background-image: url(./example_images/pic_2.png)"></div>
+          </div>
+          <div class="intro">
+            <div class="top">
+              <h2 class="name">刘大爷</h2>
+              <p class="role">律所合伙人</p>
+              <button class="consult-button">咨询TA</button>
+            </div>
+            <div class="medium">
+              <div class="exp">
+                <p>受理案子<span>3</span>例</p>
+                <p>职业<span>3</span>年</p>
+                <p>接受咨询回复<span>3</span>条</p>
+              </div>
+              <div class="tags">
+                <span>婚姻家庭</span>
+                <span>劳动工伤</span>
+                <span>合同纠纷</span>
+              </div>
+            </div>
+            <div class="bottom">
+              <article>
+                2007年10月加入云南凌云律师事务所，担任法律咨询中心主任。后出任粮油及食品安全法律事务部主任、公司法律事务部主任、建设工程法律事务部主任，任云南凌云律师事务所副主任、金融法律事务部主任。
+                自执业以后，热心公益普法活动，曾先后两次荣获昆明市司法局颁发的“优秀共产党员称号”，同时，通过中央电视台、人民日报、人民网、新华社、中国新闻网、云南日报、昆明日报、云南电视台、云南网、春城晚报、都市时报、云南信息报等数十家省内外媒体对相关热点法律问题进行剖析解答，并积极参与相关各类社区、学校、企业普法服务。
+                积极参与社会立法听证事务，多次应邀参加各类政府及部门地方性法规及规章的听证活动。
+              </article>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+   <!-- 底部 -->
+   <footer class="footer">
+      <div class="main-container">
+        <div class="operation">
+          <nav class="menus">
+            <a href="">网站首页</a>
+            <a href="">律师团队</a>
+            <a href="">业务领域</a>
+            <a href="">经典案例</a>
+            <a href="">律师介绍</a>
+            <a href="">联系我们</a>
+          </nav>
+          <p class="contact-info">服务热线：17358690802 E-mail：273455447@qq.com</p>
+          <p class="reference">Copyright © 2003-2023 核桃法律法律咨询 蜀ICP备14000208号-5站长统计</p>
+        </div>
+        <div class="qr-code">
+          <div class="icon"><img src="" alt=""></div>
+          <p>扫一扫浏览网站</p>
+        </div>
+      </div>
+    </footer>
+    
+  <script src="./plugins/swiper/swiper.min.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+
+</html>
