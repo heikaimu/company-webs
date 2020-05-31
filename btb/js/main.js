@@ -14,7 +14,7 @@ $(function () {
   }, function () {
     $(this).find(".sub-nav").hide();
   })
-
+  
   // 手机导航
   $("#mobile_nav_switch").click(function () {
     if ($(this).hasClass("active")) {
@@ -26,20 +26,16 @@ $(function () {
     }
   })
 
-  // 滚动的时候改变顶部透明度
-  if (document.getElementById("banner")) {
-    $(window).scroll(function (event) {
-      var scrollDistance = $(window).scrollTop();
-      var bannerHeight = $("#banner").height();
-      if (scrollDistance > bannerHeight) {
-        $("#header").css({ backgroundColor: 'rgba(6, 11, 43, 1)' })
-      } else {
-        $("#header").css({ backgroundColor: 'rgba(6, 11, 43, 0.7)' })
-      }
-    })
-  } else {
-    $("#header").css({ backgroundColor: 'rgba(6, 11, 43, 1)' })
-  };
+  $(document).click(function (e) {
+    var targetName = e.target.className;
+    if (targetName === 'search-show-icon') {
+      $(".search-bar").fadeIn();
+    } else if (targetName === 'submit-icon' || targetName === 'search-input-text') {
+      console.log('不做任何事');
+    } else {
+      $(".search-bar").fadeOut();
+    }
+  })
 
 })
 

@@ -1,9 +1,8 @@
-@charset "UTF-8";
 html,
 body {
   overflow-x: hidden;
   font-weight: 400;
-  font-family: "PingFang SC", "Helvetica Neue", Helvetica, "Hiragino Sans GB", "微软雅黑", Arial, sans-serif, "Microsoft YaHei";
+  font-family: "Microsoft JhengHei", "PingFang HK", "Microsoft YaHei", "Arial";
 }
 
 html,
@@ -176,25 +175,6 @@ hr {
 input,
 select {
   vertical-align: middle;
-}
-
-input::-webkit-input-placeholder {
-  color: #fff;
-}
-
-input::-moz-placeholder {
-  /* Mozilla Firefox 19+ */
-  color: #fff;
-}
-
-input:-moz-placeholder {
-  /* Mozilla Firefox 4 to 18 */
-  color: #fff;
-}
-
-input:-ms-input-placeholder {
-  /* Internet Explorer 10-11 */
-  color: #fff;
 }
 
 img[src=""],

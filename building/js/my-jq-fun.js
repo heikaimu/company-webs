@@ -5,9 +5,10 @@
  * @Date: 2020-05-29 14:00:50
  * @LastEditors: Yaowen Liu
  * @LastEditTime: 2020-05-29 14:25:11
- */ 
-(function($) {
-  $.fn.runNumber = function(duration) {
+ */
+(function ($) {
+  // 数字滚动
+  $.fn.runNumber = function (duration) {
     duration = duration ? duration : 2000;
     var step = 100;
     var el = $(this);
@@ -22,7 +23,7 @@
       return;
     }
 
-    const timer = setInterval(function() {
+    const timer = setInterval(function () {
       runNum += step;
       if (runNum >= num) {
         runNum = num;
@@ -30,5 +31,67 @@
       }
       el.text(runNum);
     }, stepTime);
+  }
+
+  // 导航
+  $.fn.lavaLamp = function (o) {
+    o = $.extend({
+      fx: "linear",
+      speed: 500,
+      li: 'li',
+      click: function () { }
+    }, o || {});
+    return this.each(function () {
+      var b = $(this),
+        noop = function () { },
+        $line = $('<div class="line"></div>').appendTo(b),
+        $li = $(o.li, this),
+        curr = $("li.active", this)[0] || $($li[0]).addClass("active")[0];
+      $li.not(".line").hover(function () {
+        move(this)
+      }, noop);
+      $(this).hover(noop, function () {
+        move(curr)
+      });
+      $li.click(function (e) {
+        setCurr(this);
+        return o.click.apply(this, [e, this])
+      });
+      setCurr(curr);
+
+      function setCurr(a) {
+        $line.css({
+          "left": a.offsetLeft + "px",
+          "width": a.offsetWidth + "px"
+        });
+        curr = a
+      }
+
+      function move(a) {
+        $line.each(function () {
+          $(this).dequeue()
+        }).animate({
+          width: a.offsetWidth,
+          left: a.offsetLeft
+        }, o.speed, o.fx)
+      }
+    })
+  }
+
+  // 滚动到当前元素位置
+  $.fn.scrollInto = function (params) {
+    var offsetDistance = 0;
+    var duration = 500;
+
+    if (params) {
+      offsetDistance = params.offsetDistance || offsetDistance;
+      duration = params.duration || duration;
+    }
+    
+    var scrollDistance = $(this).offset().top + offsetDistance + 'px';
+
+    $("html,body").animate({
+      scrollTop: scrollDistance
+    }, duration);
   }
 }(jQuery));

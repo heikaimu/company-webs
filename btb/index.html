@@ -19,9 +19,6 @@
   <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css"
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" href="./css/app.css">
-  <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js"
-    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-    crossorigin="anonymous"></script>
   <script src="./js/jquery.js"></script>
 </head>
 
@@ -32,14 +29,15 @@
     <div class="top">
       <div class="content">
         <div class="logo"><img src="./images/logo.png" alt=""></div>
+        <div class="search-show-icon"></div>
         <div class="search-bar">
-          <div class="input"><input type="text"></div>
-          <div class="button">搜索</div>
+          <div class="input"><input type="text" class="search-input-text"></div>
+          <div class="submit-icon">搜索</div>
         </div>
       </div>
     </div>
     <div class="bottom">
-      <menu class="web-navs">
+      <nav class="web-navs" id="mobile_nav">
         <a href="" class="active">首页</a>
         <a href="">关于协会</a>
         <a href="">协会动态</a>
@@ -47,7 +45,12 @@
         <a href="">优秀案例</a>
         <a href="">行业研究</a>
         <a href="">会员申请</a>
-      </menu>
+      </nav>
+      <div class="nav-button" id="mobile_nav_switch">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </div>
   </header>
 
@@ -55,7 +58,7 @@
 
   <div class="container">
     <div class="row gutters-10 mb-20">
-      <div class="col-8">
+      <div class="col-md-8 col-12">
         <div class="home-grid-box">
           <div class="home-banner-swiper">
             <div class="swiper-container home-swiper">
@@ -82,7 +85,8 @@
           </div>
         </div>
       </div>
-      <div class="col-4">
+      <div class="col-md-4 col-12">
+        <div class="mobile-blank"></div>
         <div class="home-grid-box">
           <div class="home-title-wrapper">
             <h2 class="title">协会动态</h2>
@@ -105,7 +109,7 @@
       </div>
     </div>
     <div class="row gutters-10 mb-20">
-      <div class="col-8">
+      <div class="col-md-8 col-12">
         <div class="home-grid-box">
           <div class="home-title-wrapper">
             <h2 class="title">协会活动</h2>
@@ -113,11 +117,11 @@
           </div>
           <div class="association-activity">
             <div class="row no-gutters">
-              <div class="col-6">
+              <div class="col-md-6">
                 <div class="cover" style="background-image:url(./example_images/2.jpg)">
                 </div>
               </div>
-              <div class="col-6">
+              <div class="col-md-6">
                 <div class="top-card">
                   <div class="info">
                     <a href="">安红章：《四川省区块链产业白 皮书》解读</a>
@@ -132,7 +136,7 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-6">
+              <div class="col-md-6 col-12">
                 <div class="home-title-wrapper no-padding">
                   <h2 class="title">会员动态</h2>
                   <a href="" class="more">查看更多</a>
@@ -143,7 +147,7 @@
                   <li><a href="">安红章：《四川省区块链产业白 皮书》解读</a><span>2020-04-20</span></li>
                 </ul>
               </div>
-              <div class="col-6">
+              <div class="col-md-6 col-12">
                 <div class="home-title-wrapper no-padding">
                   <h2 class="title">政策法规</h2>
                   <a href="" class="more">查看更多</a>
@@ -158,7 +162,8 @@
           </div>
         </div>
       </div>
-      <div class="col-4">
+      <div class="col-md-4 col-12">
+        <div class="mobile-blank"></div>
         <div class="home-grid-box mb-20">
           <div class="home-title-wrapper">
             <h2 class="title">公共服务</h2>
@@ -218,7 +223,7 @@
       </div>
     </div>
     <div class="row gutters-10 mb-20">
-      <div class="col-8">
+      <div class="col-md-8 col-12">
         <div class="home-grid-box">
           <div class="home-title-wrapper">
             <h2 class="title">行业研究</h2>
@@ -226,7 +231,7 @@
           </div>
           <div class="researchs">
             <div class="row gutters-10">
-              <div class="col-3">
+              <div class="col-6 col-md-3">
                 <div class="research-card">
                   <div class="image">
                     <a href="" class="content" style="background-image:url(./example_images/5.jpg)"></a>
@@ -234,7 +239,7 @@
                   <a href='' class="title">《四川省区块链产业白皮书》</a>
                 </div>
               </div>
-              <div class="col-3">
+              <div class="col-6 col-md-3">
                 <div class="research-card">
                   <div class="image">
                     <a href="" class="content" style="background-image:url(./example_images/5.jpg)"></a>
@@ -242,7 +247,7 @@
                   <a href='' class="title">《四川省区块链产业白皮书》</a>
                 </div>
               </div>
-              <div class="col-3">
+              <div class="col-6 col-md-3">
                 <div class="research-card">
                   <div class="image">
                     <a href="" class="content" style="background-image:url(./example_images/5.jpg)"></a>
@@ -250,7 +255,7 @@
                   <a href='' class="title">《四川省区块链产业白皮书》</a>
                 </div>
               </div>
-              <div class="col-3">
+              <div class="col-6 col-md-3">
                 <div class="research-card">
                   <div class="image">
                     <a href="" class="content" style="background-image:url(./example_images/5.jpg)"></a>
@@ -262,7 +267,8 @@
           </div>
         </div>
       </div>
-      <div class="col-4">
+      <div class="col-md-4 col-12">
+        <div class="mobile-blank"></div>
         <div class="home-grid-box">
           <div class="home-title-wrapper">
             <h2 class="title">大咖专栏</h2>
@@ -301,97 +307,56 @@
               <div class="swiper-slide">
                 <div class="brands">
                   <div class="row gutters-10">
-                    <div class="col-2 mb-20">
+                    <div class="col-3 col-md-2 mb-20">
                       <div class="brand-card">
                         <a href="" class="content">
                           <img src="https://www.baidu.com/img/flexible/logo/pc/result.png" alt="">
                         </a>
                       </div>
                     </div>
-                    <div class="col-2 mb-20">
+                    <div class="col-3 col-md-2 mb-20">
                       <div class="brand-card">
                         <a href="" class="content">
                           <img src="https://www.baidu.com/img/flexible/logo/pc/result.png" alt="">
                         </a>
                       </div>
                     </div>
-                    <div class="col-2 mb-20">
+                    <div class="col-3 col-md-2 mb-20">
                       <div class="brand-card">
                         <a href="" class="content">
                           <img src="https://www.baidu.com/img/flexible/logo/pc/result.png" alt="">
                         </a>
                       </div>
                     </div>
-                    <div class="col-2 mb-20">
+                    <div class="col-3 col-md-2 mb-20">
                       <div class="brand-card">
                         <a href="" class="content">
                           <img src="https://www.baidu.com/img/flexible/logo/pc/result.png" alt="">
                         </a>
                       </div>
                     </div>
-                    <div class="col-2 mb-20">
+                    <div class="col-3 col-md-2 mb-20">
                       <div class="brand-card">
                         <a href="" class="content">
                           <img src="https://www.baidu.com/img/flexible/logo/pc/result.png" alt="">
                         </a>
                       </div>
                     </div>
-                    <div class="col-2 mb-20">
+                    <div class="col-3 col-md-2 mb-20">
                       <div class="brand-card">
                         <a href="" class="content">
                           <img src="https://www.baidu.com/img/flexible/logo/pc/result.png" alt="">
                         </a>
                       </div>
                     </div>
-                    <div class="col-2 mb-20">
+                    <div class="col-3 col-md-2 mb-20">
                       <div class="brand-card">
                         <a href="" class="content">
                           <img src="https://www.baidu.com/img/flexible/logo/pc/result.png" alt="">
                         </a>
                       </div>
                     </div>
-                    <div class="col-2 mb-20">
-                      <div class="brand-card">
-                        <a href="" class="content">
-                          <img src="https://www.baidu.com/img/flexible/logo/pc/result.png" alt="">
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="brands">
-                  <div class="row gutters-10">
-                    <div class="col-2 mb-20">
-                      <div class="brand-card">
-                        <a href="" class="content">
-                          <img src="https://www.baidu.com/img/flexible/logo/pc/result.png" alt="">
-                        </a>
-                      </div>
-                    </div>
-                    <div class="col-2 mb-20">
-                      <div class="brand-card">
-                        <a href="" class="content">
-                          <img src="https://www.baidu.com/img/flexible/logo/pc/result.png" alt="">
-                        </a>
-                      </div>
-                    </div>
-                    <div class="col-2 mb-20">
-                      <div class="brand-card">
-                        <a href="" class="content">
-                          <img src="https://www.baidu.com/img/flexible/logo/pc/result.png" alt="">
-                        </a>
-                      </div>
-                    </div>
-                    <div class="col-2 mb-20">
-                      <div class="brand-card">
-                        <a href="" class="content">
-                          <img src="https://www.baidu.com/img/flexible/logo/pc/result.png" alt="">
-                        </a>
-                      </div>
-                    </div>
-                    <div class="col-2 mb-20">
+                    <div class="col-3 col-md-2 mb-20">
                       <div class="brand-card">
                         <a href="" class="content">
                           <img src="https://www.baidu.com/img/flexible/logo/pc/result.png" alt="">
@@ -404,28 +369,69 @@
               <div class="swiper-slide">
                 <div class="brands">
                   <div class="row gutters-10">
-                    <div class="col-2 mb-20">
+                    <div class="col-3 col-md-2 mb-20">
                       <div class="brand-card">
                         <a href="" class="content">
                           <img src="https://www.baidu.com/img/flexible/logo/pc/result.png" alt="">
                         </a>
                       </div>
                     </div>
-                    <div class="col-2 mb-20">
+                    <div class="col-3 col-md-2 mb-20">
                       <div class="brand-card">
                         <a href="" class="content">
                           <img src="https://www.baidu.com/img/flexible/logo/pc/result.png" alt="">
                         </a>
                       </div>
                     </div>
-                    <div class="col-2 mb-20">
+                    <div class="col-3 col-md-2 mb-20">
                       <div class="brand-card">
                         <a href="" class="content">
                           <img src="https://www.baidu.com/img/flexible/logo/pc/result.png" alt="">
                         </a>
                       </div>
                     </div>
-                    <div class="col-2 mb-20">
+                    <div class="col-3 col-md-2 mb-20">
+                      <div class="brand-card">
+                        <a href="" class="content">
+                          <img src="https://www.baidu.com/img/flexible/logo/pc/result.png" alt="">
+                        </a>
+                      </div>
+                    </div>
+                    <div class="col-3 col-md-2 mb-20">
+                      <div class="brand-card">
+                        <a href="" class="content">
+                          <img src="https://www.baidu.com/img/flexible/logo/pc/result.png" alt="">
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="brands">
+                  <div class="row gutters-10">
+                    <div class="col-3 col-md-2 mb-20">
+                      <div class="brand-card">
+                        <a href="" class="content">
+                          <img src="https://www.baidu.com/img/flexible/logo/pc/result.png" alt="">
+                        </a>
+                      </div>
+                    </div>
+                    <div class="col-3 col-md-2 mb-20">
+                      <div class="brand-card">
+                        <a href="" class="content">
+                          <img src="https://www.baidu.com/img/flexible/logo/pc/result.png" alt="">
+                        </a>
+                      </div>
+                    </div>
+                    <div class="col-3 col-md-2 mb-20">
+                      <div class="brand-card">
+                        <a href="" class="content">
+                          <img src="https://www.baidu.com/img/flexible/logo/pc/result.png" alt="">
+                        </a>
+                      </div>
+                    </div>
+                    <div class="col-3 col-md-2 mb-20">
                       <div class="brand-card">
                         <a href="" class="content">
                           <img src="https://www.baidu.com/img/flexible/logo/pc/result.png" alt="">
@@ -449,7 +455,7 @@
     <div class="top">
       <div class="container">
         <div class="row">
-          <div class="col-6">
+          <div class="col-md-6">
             <div class="footer-part">
               <h2 class="footer-title">友情链接</h2>
               <div class="links">
@@ -467,7 +473,7 @@
               </div>
             </div>
           </div>
-          <div class="col-6">
+          <div class="col-md-6">
             <div class="footer-part">
               <h2 class="footer-title">联系我们</h2>
               <div class="contacts">
@@ -493,6 +499,7 @@
 
   <script src="./plugins/swiper/swiper.min.js"></script>
   <script src="./js/my-swiper.js"></script>
+  <script src="./js/main.js"></script>
 </body>
 
 </html>
