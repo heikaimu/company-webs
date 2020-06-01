@@ -78,6 +78,21 @@
     })
   }
 
+  // tab切换
+  $.fn.tabSwitch = function() {
+    this.each(function () {
+      const tabTitle = $(this).find(".tab-title li");
+      const tabList = $(this).find(".tab-list li");
+      tabTitle.eq(0).addClass("active");
+      tabList.eq(0).show().siblings("li").hide();
+
+      tabTitle.hover(function() {
+        $(this).addClass("active").siblings("li").removeClass("active");
+        tabList.eq($(this).index()).show().siblings("li").hide();
+      })
+    })
+  }
+
   // 滚动到当前元素位置
   $.fn.scrollInto = function (params) {
     var offsetDistance = 0;

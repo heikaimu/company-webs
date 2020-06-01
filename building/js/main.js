@@ -64,7 +64,6 @@ $(function () {
 })
 
 $(window).scroll(function () {
-  runNumber();
   setHeaderBg();
 });
 
