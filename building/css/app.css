@@ -2177,3 +2177,139 @@ a.animated-button.thar-four:before {
 .company-honor .honor-container .honor-swiper-next {
   right: 0;
 }
+
+.business-nav-container {
+  position: relative;
+  top: -222px;
+}
+.business-nav-container .business-nav-wrapper {
+  height: 222px;
+  background-color: #fff;
+}
+.business-nav-container .business-nav-wrapper .business-nav-box {
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+}
+.business-nav-container .business-nav-wrapper .business-nav-box .bread-nav {
+  padding-top: 50px;
+  height: 110px;
+  color: #333;
+}
+.business-nav-container .business-nav-wrapper .business-nav-box .bread-nav a {
+  color: currentColor;
+}
+.business-nav-container .business-nav-wrapper .business-nav-box .bread-nav span {
+  display: inline-block;
+  color: currentColor;
+  margin: 0 20px;
+}
+.business-nav-container .business-nav-wrapper .business-nav-box .business-nav {
+  position: relative;
+}
+.business-nav-container .business-nav-wrapper .business-nav-box .business-nav .business-nav-list {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #f2f2f2;
+  border-bottom: 1px solid #f2f2f2;
+}
+.business-nav-container .business-nav-wrapper .business-nav-box .business-nav .business-nav-list .business-nav-item {
+  flex: 1;
+  text-align: center;
+  position: relative;
+}
+.business-nav-container .business-nav-wrapper .business-nav-box .business-nav .business-nav-list .business-nav-item.active a {
+  color: #D12D28;
+}
+.business-nav-container .business-nav-wrapper .business-nav-box .business-nav .business-nav-list .business-nav-item a {
+  display: block;
+  width: 100%;
+  padding: 40px 0;
+  font-size: 22px;
+  font-weight: 600;
+  color: #333;
+  text-decoration: none;
+  cursor: pointer;
+}
+.business-nav-container .business-nav-wrapper .business-nav-box .business-nav .business-nav-list .business-nav-item a span {
+  display: block;
+  width: 60px;
+  height: 60px;
+  margin: 0 auto;
+  line-height: 60px;
+}
+.business-nav-container .business-nav-wrapper .business-nav-box .business-nav .business-nav-list .business-nav-item a span img {
+  display: inline-block;
+  max-width: 100%;
+  max-height: 100%;
+}
+.business-nav-container .business-nav-wrapper .business-nav-box .business-nav .business-nav-list .business-nav-item a i {
+  display: block;
+  padding-top: 20px;
+  font-size: 16px;
+  font-style: normal;
+}
+.business-nav-container .business-nav-wrapper .business-nav-box .business-nav .line {
+  position: absolute;
+  top: 0;
+  height: 2px;
+  background-color: #D12D28;
+}
+
+.business-honor {
+  padding-bottom: 200px;
+}
+.business-honor .page-title {
+  padding: 65px 0;
+}
+.business-honor .full-container .content {
+  height: 600px;
+  position: relative;
+}
+.business-honor .full-container .content .bg {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+  background-image: url(../images/banner1.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.business-honor .full-container .content .honor-list {
+  width: 80%;
+  height: 400px;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0px 7px 18px 0px rgba(0, 0, 0, 0.22);
+  position: relative;
+  top: 300px;
+}
+.business-honor .full-container .content .honor-list ul {
+  padding: 28px 200px;
+}
+.business-honor .full-container .content .honor-list ul li {
+  padding: 20px;
+  position: relative;
+}
+.business-honor .full-container .content .honor-list ul li::before {
+  content: "";
+  display: block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #D12D28;
+  position: absolute;
+  left: -20px;
+  top: 27px;
+}
+.business-honor .full-container .content .honor-list ul li a {
+  display: block;
+  font-size: 18px;
+  color: #181F2D;
+}
+.business-honor .full-container .content .honor-list ul li a:hover {
+  color: #D12D28;
+}

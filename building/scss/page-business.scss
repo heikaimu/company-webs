@@ -1,0 +1,138 @@
+.business-nav-container {
+  position: relative;
+  top: -222px;
+  .business-nav-wrapper {
+    height: 222px;
+    background-color: $white;
+    .business-nav-box {
+      width: 80%;
+      margin: 0 auto;
+      position: relative;
+      .bread-nav {
+        padding-top: 50px;
+        height: 110px;
+        color: #333;
+        a {
+          color: currentColor;
+        }
+        span {
+          display: inline-block;
+          color: currentColor;
+          margin: 0 20px;
+        }
+      }
+      .business-nav {
+        position: relative;
+        .business-nav-list {
+          @include flex-between-x;
+          border-top: 1px solid #f2f2f2;
+          border-bottom: 1px solid #f2f2f2;
+          .business-nav-item {
+            flex: 1;
+            text-align: center;
+            position: relative;
+            &.active {
+              a {
+                color: $red;
+              }
+              
+            }
+            a {
+              display: block;
+              width: 100%;
+              padding: 40px 0;
+              font-size: 22px;
+              font-weight: 600;
+              color: #333;
+              text-decoration: none;
+              cursor: pointer;
+              span {
+                display: block;
+                width: 60px;
+                height: 60px;
+                margin: 0 auto;
+                line-height: 60px;
+                img {
+                  display: inline-block;
+                  max-width: 100%;
+                  max-height: 100%;
+                }
+              }
+              i {
+                display: block;
+                padding-top: 20px;
+                font-size: 16px;
+                font-style: normal;
+              }
+            }
+          }
+        }
+        .line {
+          position: absolute;
+          top: 0;
+          height: 2px;
+          background-color: $red;
+        }
+      }
+      
+    }
+  }
+}
+
+.business-honor {
+  padding-bottom: 200px;
+  .page-title {
+    padding: 65px 0;
+  }
+  .full-container {
+    .content {
+      height: 600px;
+      position: relative;
+      .bg {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: -1;
+        background-image: url(../images/banner1.png);
+        @include bg-cover;
+      }
+      .honor-list {
+        width: 80%;
+        height: 400px;
+        margin: 0 auto;
+        background-color: rgba($color: $white, $alpha: 0.8);
+        box-shadow:0px 7px 18px 0px rgba(0, 0, 0, 0.22);
+        position: relative;
+        top: 300px;
+        ul {
+          padding: 28px 200px;
+          li {
+            padding: 20px;
+            position: relative;
+            &::before {
+              content: "";
+              display: block;
+              width: 12px;
+              height: 12px;
+              border-radius: 50%;
+              background-color: $red;
+              position: absolute;
+              left: -20px;
+              top: 27px;
+            }
+            a {
+              display: block;
+              font-size: 18px;
+              color: $font-color-main;
+              &:hover {
+                color: $red;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
