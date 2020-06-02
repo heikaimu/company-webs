@@ -113,6 +113,7 @@
           bottom: 0;
           @include flex-center-x-center-y;
           .icon-close {
+            color: #333;
             padding: 10px 20px;
             cursor: pointer;
             &:hover {
