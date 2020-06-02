@@ -2,6 +2,7 @@
   .web-header {
     position: relative;
     color: #ffffff;
+    transition: .3s;
     &.fixed {
       position: fixed;
       left: 0;
@@ -9,18 +10,39 @@
       top: 0;
       z-index: 999999;
     }
+    &.active {
+      background-color: #fff;
+      color: #333;
+      .header-container {
+        bottom: 0;
+        .web-logo {
+          img {
+            height: 70px;
+            bottom: 0;
+          }
+        }
+        .web-nav {
+          .line {
+            visibility: visible;
+          }
+        }
+      }
+    }
     .header-container {
       height: 100px;
       width: 83%;
       margin: 0 auto;
       position: relative;
+      bottom: -50px;
+      transition: .3s;
       @include flex-between-x;
       .web-logo {
         display: flex;
         height: 100%;
         align-items: center;
         img {
-          height: 70px;
+          height: 120px;
+          transition: .3s;
         }
       }
 
@@ -59,6 +81,7 @@
           position: absolute;
           bottom: 0;
           z-index: 9;
+          visibility: hidden;
         }
       }
       .web-nav-switch {
@@ -163,6 +186,10 @@
       right: 0;
       top: 0;
       z-index: 999999;
+    }
+    &.active {
+      background-color: #fff;
+      color: #333;
     }
     .header-container {
       height: 50px;
