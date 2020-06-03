@@ -17,15 +17,15 @@
     @include flex-between-x;
     .left {
       .nav {
-        width: 80%;
+        width: 100%;
+        @include flex-wrap;
         .nav-list {
-          @include flex-wrap;
           .nav-item {
-            margin-right: 50px;
+            margin-right: 40px;
             a {
               display: block;
               padding: 5px;
-              font-size: $font-size-large;
+              font-size: $font-size-medium;
               color: $white;
               margin-bottom: 20px;
               opacity: 0.6;
@@ -102,9 +102,10 @@
         .nav {
           width: 100%;
           .nav-list {
+            width: 100%;
             @include flex-wrap;
             .nav-item {
-              width: 33.3%;
+              width: 25%;
               margin-right: 0;
               a {
                 display: block;

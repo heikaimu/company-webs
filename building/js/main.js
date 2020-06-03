@@ -93,10 +93,12 @@ function setHeaderBg() {
     var wScrollDis = Math.abs($(window).scrollTop());
     var percent = Math.min(1, wScrollDis / 100);
     // $(".web-header").css({ "background-color": "rgba(255,255,255," + percent + ")" });
-    if (percent === 1) {
-      $(".web-header").addClass("active");
-    } else {
-      $(".web-header").removeClass("active");
+    if (!$(".web-header").hasClass("static")) {
+      if (percent === 1) {
+        $(".web-header").addClass("active");
+      } else {
+        $(".web-header").removeClass("active");
+      }
     }
     // $(".web-header").css({ "color": percent < 0.6 ? "#ffffff" : "#333" });
     // $(".web-header").css({ "border-bottom": percent === 1 ? "1px solid #e7e7e7" : "none" });

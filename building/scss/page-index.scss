@@ -353,7 +353,7 @@
   overflow: hidden;
   background-color: #f9f9f9;
   .left {
-    height: 800px;
+    height: 600px;
     .bg {
       position: absolute;
       left: 0;
@@ -394,6 +394,7 @@
     }
   }
   .right {
+    height: 600px;
     padding-top: 100px;
     padding-bottom: 100px;
     .page-title {

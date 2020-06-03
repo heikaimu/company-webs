@@ -3,6 +3,9 @@
   position: relative;
   overflow: hidden;
   @include flex-center-x-center-y;
+  &.aboutus {
+    height: calc(100vh + 110px);
+  }
   .bg {
     position: absolute;
     left: 0;
@@ -113,8 +116,39 @@
   }
 }
 
+
+@media (max-width: 1600px) {
+  .static-banner {
+    .content {
+      h2 {
+        font-size: 40px;
+      }
+      p {
+        font-size: 20px;
+      }
+    }
+  }
+
+  .page-title {
+    text-align: center;
+    .cn {
+      font-size: 30px;
+      &.lg {
+        font-size: 30px;
+      }
+    }
+    .en {
+      font-size: 12px;
+    }
+  }
+
+}
+
 @media (max-width: 1200px) {
   .static-banner {
+    &.aboutus {
+      height: calc(100vh + 40px);
+    }
     .content {
       padding: 20px;
       color: $white;

@@ -13,7 +13,7 @@
     &.active {
       background-color: #fff;
       color: #333;
-      border-bottom: 1px  solid #f2f2f2;
+      box-shadow: 0 5px 40px -2px rgba(7, 0, 2, 0.15);
       .header-container {
         bottom: 0;
         .web-logo {
@@ -42,7 +42,7 @@
         height: 100%;
         align-items: center;
         img {
-          height: 120px;
+          height: 100px;
           transition: .3s;
         }
       }
