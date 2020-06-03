@@ -21,11 +21,24 @@
   <link rel="stylesheet" href="./css/app.css">
   <link rel="stylesheet" href="https://cdn.dowebok.com/98/css/animate.min.css">
   <script src="./js/jquery.js"></script>
-  <script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
   <style>
-  .iw_poi_title {color:#CC5522;font-size:14px;font-weight:bold;overflow:hidden;padding-right:13px;white-space:nowrap}
-    .iw_poi_content {font:12px arial,sans-serif;overflow:visible;padding-top:4px;white-space:-moz-pre-wrap;word-wrap:break-word}
-    </style>
+    .iw_poi_title {
+      color: #CC5522;
+      font-size: 14px;
+      font-weight: bold;
+      overflow: hidden;
+      padding-right: 13px;
+      white-space: nowrap
+    }
+
+    .iw_poi_content {
+      font: 12px arial, sans-serif;
+      overflow: visible;
+      padding-top: 4px;
+      white-space: -moz-pre-wrap;
+      word-wrap: break-word
+    }
+  </style>
 </head>
 
 <body>
@@ -97,7 +110,7 @@
           </div>
 
           <!--百度地图容器-->
-          <div style="width:100%;height:550px;border:#ccc solid 1px;" id="dituContent"></div>
+          <div class="company-map" id="dituContent"></div>
         </div>
       </div>
     </div>
@@ -158,12 +171,12 @@
   <script src="./plugins/swiper/swiper.animate.rewrite.min.js"></script>
   <script src="./js/my-swiper.js"></script>
   <script src="./js/main.js"></script>
+  <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=7d3a4c6e5e8a70dd200a2eeacf8c1b50"></script>
   <script>
     //创建和初始化地图函数：
     function initMap() {
       createMap();//创建地图
       setMapEvent();//设置地图事件
-      addMapControl();//向地图添加控件
       addMarker();//向地图中添加marker
     }
 
@@ -183,22 +196,10 @@
       map.enableKeyboard();//启用键盘上下左右键移动地图
     }
 
-    //地图控件添加函数：
-    function addMapControl() {
-      //向地图中添加缩放控件
-      var ctrl_nav = new BMap.NavigationControl({ anchor: BMAP_ANCHOR_TOP_LEFT, type: BMAP_NAVIGATION_CONTROL_LARGE });
-      map.addControl(ctrl_nav);
-      //向地图中添加缩略图控件
-      var ctrl_ove = new BMap.OverviewMapControl({ anchor: BMAP_ANCHOR_BOTTOM_RIGHT, isOpen: 1 });
-      map.addControl(ctrl_ove);
-      //向地图中添加比例尺控件
-      var ctrl_sca = new BMap.ScaleControl({ anchor: BMAP_ANCHOR_BOTTOM_LEFT });
-      map.addControl(ctrl_sca);
-    }
-
     //标注点数组
-    var markerArr = [{ title: "成龙", content: "我的备注", point: "104.072175|30.663467", isOpen: 0, icon: { w: 320, h: 320, l: 0, t: 0, x: 6, lb: 5 } }
+    var markerArr = [{ title: "dwad", content: "我的备注", point: "104.072175|30.663467", isOpen: 0, icon: { w: 50, h: 50, l: 0, t: 0, x: 6, lb: 5 } }
     ];
+
     //创建marker
     function addMarker() {
       for (var i = 0; i < markerArr.length; i++) {
@@ -209,15 +210,11 @@
         var iconImg = createIcon(json.icon);
         var marker = new BMap.Marker(point, { icon: iconImg });
         var iw = createInfoWindow(i);
-        var label = new BMap.Label(json.title, { "offset": new BMap.Size(json.icon.lb - json.icon.x + 10, -20) });
+        var label = new BMap.Label('', { "offset": new BMap.Size(json.icon.lb - json.icon.x + 10, -20) });
         marker.setLabel(label);
         map.addOverlay(marker);
-        label.setStyle({
-          borderColor: "#808080",
-          color: "#333",
-          cursor: "pointer"
-        });
-
+        marker.setAnimation(BMAP_ANIMATION_BOUNCE);
+        
         (function () {
           var index = i;
           var _iw = createInfoWindow(i);
@@ -249,7 +246,7 @@
     }
     //创建一个Icon
     function createIcon(json) {
-      var icon = new BMap.Icon("./images/location.gif", new BMap.Size(json.w, json.h), { imageOffset: new BMap.Size(-json.l, -json.t), infoWindowOffset: new BMap.Size(json.lb + 5, 1), offset: new BMap.Size(json.x, json.h) })
+      var icon = new BMap.Icon("./images/map_ico.png", new BMap.Size(json.w, json.h), { imageOffset: new BMap.Size(-json.l, -json.t), infoWindowOffset: new BMap.Size(json.lb + 5, 1), offset: new BMap.Size(json.x, json.h) })
       return icon;
     }
 

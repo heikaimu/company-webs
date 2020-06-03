@@ -611,6 +611,7 @@ a.animated-button.thar-four:before {
   .web-header.active {
     background-color: #fff;
     color: #333;
+    border-bottom: 1px  solid #f2f2f2;
   }
   .web-header.active .header-container {
     bottom: 0;
@@ -2644,6 +2645,7 @@ a.animated-button.thar-four:before {
 }
 .business-case .case-swiper-container.row {
   margin-bottom: 240px;
+  position: relative;
 }
 .business-case .case-swiper-container.row .bg-wrapper {
   width: 50%;
@@ -3597,6 +3599,9 @@ a.animated-button.thar-four:before {
   margin-bottom: 0;
   padding-left: 10px;
 }
+.contact-us-page-content .company-map {
+  height: 500px;
+}
 
 @media (max-width: 1200px) {
   .join-us {
@@ -3699,6 +3704,9 @@ a.animated-button.thar-four:before {
   .contact-us-page-content .contact-info .item p {
     margin-bottom: 0;
     padding-left: 10px;
+  }
+  .contact-us-page-content .company-map {
+    height: 300px;
   }
 }
 .cooperation {

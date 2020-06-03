@@ -146,6 +146,9 @@
       }
     }
   }
+  .company-map {
+    height: 500px;
+  }
 }
 
 @media (max-width: 1200px) {
@@ -254,6 +257,9 @@
           padding-left: 10px;
         }
       }
+    }
+    .company-map {
+      height: 300px;
     }
   }
   
