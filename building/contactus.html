@@ -4,7 +4,7 @@
  * @Autor: Yaowen Liu
  * @Date: 2020-05-01 09:06:12
  * @LastEditors: Yaowen Liu
- * @LastEditTime: 2020-06-02 17:30:07
+ * @LastEditTime: 2020-06-03 18:28:23
  -->
 <!DOCTYPE html>
 <html lang="en">
@@ -197,7 +197,7 @@
     }
 
     //标注点数组
-    var markerArr = [{ title: "成龙", content: "我的备注", point: "104.072175|30.663467", isOpen: 0, icon: { w: 32, h: 32, l: 0, t: 0, x: 6, lb: 5 } }
+    var markerArr = [{ title: "成龙", content: "我的备注", point: "104.072175|30.663467", isOpen: 0, icon: { w: 320, h: 320, l: 0, t: 0, x: 6, lb: 5 } }
     ];
     //创建marker
     function addMarker() {
@@ -249,7 +249,7 @@
     }
     //创建一个Icon
     function createIcon(json) {
-      var icon = new BMap.Icon("./images/location.png", new BMap.Size(json.w, json.h), { imageOffset: new BMap.Size(-json.l, -json.t), infoWindowOffset: new BMap.Size(json.lb + 5, 1), offset: new BMap.Size(json.x, json.h) })
+      var icon = new BMap.Icon("./images/location.gif", new BMap.Size(json.w, json.h), { imageOffset: new BMap.Size(-json.l, -json.t), infoWindowOffset: new BMap.Size(json.lb + 5, 1), offset: new BMap.Size(json.x, json.h) })
       return icon;
     }
 
