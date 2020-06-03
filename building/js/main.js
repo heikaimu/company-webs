@@ -61,6 +61,25 @@ $(function () {
     })
   })
 
+  $(".r-view").each(function() {
+    var type= $(this).attr("_type");
+    var src = $(this).attr("_src");
+    $(this).click(function() {
+      if (type === 'picture') {
+        $("#picture_view_wrapper").fadeIn().find(".content").append('<img src="' + src + '"/>');
+      } else if (type === 'video') {
+        $("#picture_view_wrapper").fadeIn().find(".content").append('<video src="'+ src +'" controls="controls">您的浏览器不支持 video 标签。</video>');
+      }
+    })
+  })
+  $(".picture-view-container").each(function() {
+    var float = $(this);
+    var closeBtn = $(this).find(".icon-close");
+    closeBtn.click(function() {
+      float.fadeOut().find(".content").empty();
+    })
+  })
+
 })
 
 $(window).scroll(function () {
@@ -72,9 +91,14 @@ $(window).scroll(function () {
 function setHeaderBg() {
   if (wWidth) {
     var wScrollDis = Math.abs($(window).scrollTop());
-    var percent = Math.min(1, wScrollDis / wHeight);
-    $(".web-header").css({ "background-color": "rgba(255,255,255," + percent + ")" });
-    $(".web-header").css({ "color": percent < 0.6 ? "#ffffff" : "#333" });
-    $(".web-header").css({ "border-bottom": percent === 1 ? "1px solid #e7e7e7" : "none" });
+    var percent = Math.min(1, wScrollDis / 100);
+    // $(".web-header").css({ "background-color": "rgba(255,255,255," + percent + ")" });
+    if (percent === 1) {
+      $(".web-header").addClass("active");
+    } else {
+      $(".web-header").removeClass("active");
+    }
+    // $(".web-header").css({ "color": percent < 0.6 ? "#ffffff" : "#333" });
+    // $(".web-header").css({ "border-bottom": percent === 1 ? "1px solid #e7e7e7" : "none" });
   }
 }

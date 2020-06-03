@@ -90,10 +90,8 @@
           position: relative;
           overflow: hidden;
           margin-bottom: 12px;
-          .image {
-            height: 200px;
-            @include bg-cover;
-            transition: 0.5s;
+          img {
+            width: 100%;
           }
         }
         .time {
@@ -156,8 +154,7 @@
 @media (max-width: 1200px) {
   .news-page-content {
     .page-nav-btn {
-      border-bottom: 1px solid #e7e7e7;
-      margin-bottom: 50px;
+      margin-bottom: 20px;
       .nav-list {
         display: flex;
         .nav-item {
@@ -183,9 +180,6 @@
             position: relative;
             overflow: hidden;
             margin-bottom: 12px;
-            .image {
-              height: 100px;
-            }
           }
           .time {
             font-size: 12px;

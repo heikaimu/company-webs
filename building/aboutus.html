@@ -4,7 +4,7 @@
  * @Autor: Yaowen Liu
  * @Date: 2020-05-01 09:06:12
  * @LastEditors: Yaowen Liu
- * @LastEditTime: 2020-05-29 18:16:00
+ * @LastEditTime: 2020-06-03 13:04:43
  -->
 <!DOCTYPE html>
 <html lang="en">
@@ -118,8 +118,8 @@
     <div class="full-container">
       <div class="half-wrapper left">
         <div class="content">
-          <div class="our-video wow zoomIn">
-            <div class="bg" style="background-image:url(./images/about_img.png)"></div>
+          <div class="our-video wow zoomIn r-view" _type="picture" _src="./images/banner2.png">
+            <div class="bg"><img src="./images/about_img.png" alt=""></div>
             <span class="icon-play"></span>
           </div>
         </div>
@@ -236,7 +236,7 @@
       <div class="half-wrapper right">
         <div class="content">
           <div class="our-video wow zoomIn">
-            <div class="bg" style="background-image:url(./images/speech.png)"></div>
+            <div class="bg"><img src="./images/speech.png" alt=""></div>
           </div>
         </div>
       </div>
@@ -344,6 +344,12 @@
 
   </footer>
 
+  <!-- 图片预览 -->
+  <div class="picture-view-container" id="picture_view_wrapper">
+    <div class="content"></div>
+    <span class="icon icon-close"></span>
+  </div>
+
   <script src="./js/my-jq-fun.js"></script>
   <script src="./js/wow.min.js"></script>
   <script src="./plugins/swiper/swiper.min.js"></script>
@@ -365,10 +371,10 @@
         $("#main").scrollInto({ duration: 1000 });
       })
 
-      $(".aboutus-nav-list").find("a").each(function() {
-        $(this).click(function() {
+      $(".aboutus-nav-list").find("a").each(function () {
+        $(this).click(function () {
           var pointId = $(this).attr("pointId");
-          $("#" + pointId).scrollInto({offsetDistance : -100});
+          $("#" + pointId).scrollInto({ offsetDistance: -100 });
         })
       })
     })
@@ -393,6 +399,14 @@
     var cultureSwiper = new Swiper('.culture-swiper', {
       spaceBetween: 15,
       slidesPerView: 3,//一行显示3个
+      breakpoints: {
+        768: {  //当屏幕宽度大于等于768 
+          slidesPerView: 1
+        },
+        1200: {  //当屏幕宽度大于等于768 
+          slidesPerView: 2
+        },
+      },
       speed: 500,
       autoplay: {
         delay: 5000
@@ -406,6 +420,14 @@
     var honorSwiper = new Swiper('.honor-swiper', {
       spaceBetween: 15,
       slidesPerView: 4,//一行显示3个
+      breakpoints: {
+        768: {  //当屏幕宽度大于等于768 
+          slidesPerView: 2
+        },
+        1200: {  //当屏幕宽度大于等于768 
+          slidesPerView: 3
+        },
+      },
       speed: 500,
       autoplay: {
         delay: 5000
