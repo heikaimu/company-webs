@@ -71,10 +71,30 @@
 }
 
 @media (max-width: 1200px) {
+  .static-banner {
+    .content {
+      padding: 20px;
+      color: $white;
+      text-align: center;
+      h2 {
+        font-size: 30px;
+        margin-bottom: 20px;
+        
+      }
+      p {
+        font-size: 20px;
+      }
+    }
+  }
+
+  
   .page-title {
     text-align: center;
     .cn {
       font-size: 24px;
+      &.lg {
+        font-size: 30px;
+      }
     }
     .en {
       font-size: 12px;
