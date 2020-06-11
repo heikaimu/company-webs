@@ -7,11 +7,12 @@
     position: relative;
     .bg {
       position: absolute;
-      left: 0;
-      right: 0;
-      top: 0;
-      bottom: 0;
+      left: -47px;
+      right: -53px;
+      top: -37px;
+      bottom: -63px;
       z-index: 1;
+      background: url(../images/services_bg.png) no-repeat center center / contain;
     }
     .content {
       position: absolute;
@@ -44,7 +45,7 @@
           cursor: pointer;
           transition: 0.3s;
           img {
-            width: 40px;
+            height: 30px;
           }
         }
         &.top {
@@ -79,7 +80,7 @@
           top: 50%;
           transform: translate3d(0, -50%, 0);
           .info-wrapper {
-            left: -420px;
+            left: -320px;
             top: 0px;
             transform: translate3d(20px, 0, 0);
             &::before {
@@ -92,7 +93,7 @@
         .info-wrapper {
           padding-top: 20px;
           padding-left: 5px;
-          width: 400px;
+          width: 300px;
           position: absolute;
           border-top: 2px solid $red;
           transition: 0.8s;
