@@ -1,0 +1,262 @@
+<!--
+ * @Description: 
+ * @Version: 2.0
+ * @Autor: Yaowen Liu
+ * @Date: 2020-05-01 09:06:12
+ * @LastEditors: Yaowen Liu
+ * @LastEditTime: 2020-06-12 18:22:51
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>网站首页</title>
+  <link rel="stylesheet" href="./plugins/swiper/swiper.min.css">
+  <link rel="stylesheet" href="./css/app.css">
+  <script src="./js/jquery.js"></script>
+</head>
+
+<!-- 头部 -->
+<header class="header">
+  <a class="logo">
+    <img src="./images/logo.png" alt="">
+  </a>
+  <div class="search-bar">
+    <span class="icon-search"></span>
+    <div class="content">
+      <div class="search">
+        <span class="icon-search"></span>
+        <input type="text" class="search-input" placeholder="请输入搜索关键字">
+        <span class="cancel">取消</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="web-container">
+  <!-- 导航 -->
+  <nav class="web-nav">
+    <div class="left">
+      <div class="swiper-container web-nav-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><a href="./index.html" class="active">首页</a></div>
+          <div class="swiper-slide"><a href="./xh_jianjie.html">关于协会</a></div>
+          <div class="swiper-slide"><a href="./dontai.html">协会动态</a></div>
+          <div class="swiper-slide"><a href="./danwei.html">会员单位</a></div>
+          <div class="swiper-slide"><a href="./case.html">优秀案例</a></div>
+          <div class="swiper-slide"><a href="./hanye.html">行业研究</a></div>
+          <div class="swiper-slide"><a href="./joinus.html">会员申请</a></div>
+        </div>
+      </div>
+    </div>
+    <div class="right">
+      <div class="icon-open" id="full_nav_switch">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="full-nav-wrapper" id="full_nav">
+        <ul class="full-nav">
+          <li><a href="./index.html" class="active">首页</a></li>
+          <li><a href="./xh_jianjie.html">关于协会</a></li>
+          <li><a href="./dontai.html">协会动态</a></li>
+          <li><a href="./danwei.html">会员单位</a></li>
+          <li><a href="./case.html">优秀案例</a></li>
+          <li><a href="./hanye.html">行业研究</a></li>
+          <li><a href="./joinus.html">会员申请</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- banner -->
+  <div class="home-banner-swiper">
+    <div class="swiper-container home-swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="home-banner" style="background-image: url(./example_images/1.jpg)">
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="home-banner" style="background-image: url(./example_images/2.jpg)">
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="home-banner" style="background-image: url(./example_images/3.jpg)">
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="home-banner" style="background-image: url(./example_images/4.jpg)">
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+  <!-- 协会活动 -->
+  <div class="association-dynamic shadow">
+    <div class="common-title">
+      <h2 class="title">协会动态</h2>
+      <a href="" class="more">查看更多<span class="icon-arrow-right-round"></span></a>
+    </div>
+    <div class="content">
+      <div class="image-news">
+        <div class="cover" style="background-image:url(./example_images/1.jpg)"></div>
+        <div class="info">
+          <a href="" class="title">安红章：《四川省区块链产业白安红章：《四川省区块链产业白安红章：《四川省区块链产业白 皮书》解读</a>
+          <p class="summary">由四川省区块链行业协会（SCBA）主办的第二届四川省区块链行业协会高...</p>
+        </div>
+      </div>
+      <ul class="single-news">
+        <li><a href="">安红章：《四川省区块链产四川省区块链产业白 皮书》解读</a><span>2020-04-20</span></li>
+        <li><a href="">安红章：《四川省区块链产业白 皮书》解读</a><span>2020-04-20</span></li>
+        <li><a href="">安红章：《四川省区块链产业白 皮书》解读</a><span>2020-04-20</span></li>
+      </ul>
+    </div>
+  </div>
+  <!-- 会员动态 -->
+  <div class="association-dynamic shadow">
+    <div class="common-title">
+      <h2 class="title">会员动态</h2>
+      <a href="" class="more">查看更多<span class="icon-arrow-right-round"></span></a>
+    </div>
+    <div class="content">
+      <ul class="single-news">
+        <li><a href="">安红章：《四川省区块链产四川省区块链产业白 皮书》解读</a><span>2020-04-20</span></li>
+        <li><a href="">安红章：《四川省区块链产业白 皮书》解读</a><span>2020-04-20</span></li>
+        <li><a href="">安红章：《四川省区块链产业白 皮书》解读</a><span>2020-04-20</span></li>
+      </ul>
+    </div>
+  </div>
+  <!-- 公共服务 -->
+  <div class="association-dynamic shadow">
+    <div class="common-title">
+      <h2 class="title">公共服务</h2>
+      <a href="" class="more">查看更多<span class="icon-arrow-right-round"></span></a>
+    </div>
+    <div class="content">
+      <ul class="color-menus">
+        <li>
+          <a href="" class="menu">
+            <img src="./images/card_bg_blue.png" alt="">
+            <span class="text">安心捐慈善</span>
+          </a>
+        </li>
+        <li>
+          <a href="" class="menu">
+            <img src="./images/card_bg_purple.png" alt="">
+            <span class="text">在线签约电子平台</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- 优秀案例 -->
+  <div class="association-dynamic shadow">
+    <div class="common-title">
+      <h2 class="title">优秀案例</h2>
+      <a href="" class="more">查看更多<span class="icon-arrow-right-round"></span></a>
+    </div>
+    <div class="content">
+      <ul class="color-menus">
+        <li>
+          <a href="" class="menu">
+            <img src="./images/card_bg_blue.png" alt="">
+            <span class="text">智能合约开发平台</span>
+          </a>
+        </li>
+        <li>
+          <a href="" class="menu">
+            <img src="./images/card_bg_purple.png" alt="">
+            <span class="text">信链易融</span>
+          </a>
+        </li>
+        <li>
+          <a href="" class="menu">
+            <img src="./images/card_bg_green.png" alt="">
+            <span class="text">信链臻品</span>
+          </a>
+        </li>
+        <li>
+          <a href="" class="menu">
+            <img src="./images/card_bg_orange.png" alt="">
+            <span class="text">知信链</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- 大咖专栏 -->
+  <div class="association-dynamic shadow">
+    <div class="common-title">
+      <h2 class="title">大咖专栏</h2>
+      <a href="" class="more">查看更多<span class="icon-arrow-right-round"></span></a>
+    </div>
+    <div class="content">
+      <div class="image-news-master">
+        <div class="cover" style="background-image:url(./example_images/1.jpg)"></div>
+        <div class="info">
+          <a href="" class="title">安红章：《四川省区块链产业白安红章：《四川省区块链产业白安红章：《四川省区块链产业白 皮书》解读</a>
+          <p class="summary">由四川省区块链行业协会（SCBA）主办的第二届四川省区块链行业协会高...</p>
+        </div>
+      </div>
+      <ul class="single-news">
+        <li><a href="">安红章：《四川省区块链产四川省区块链产业白 皮书》解读</a><span>2020-04-20</span></li>
+        <li><a href="">安红章：《四川省区块链产业白 皮书》解读</a><span>2020-04-20</span></li>
+        <li><a href="">安红章：《四川省区块链产业白 皮书》解读</a><span>2020-04-20</span></li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+<!-- 底部 -->
+<footer class="footer">
+  <h2 class="footer-title">联系我们</h2>
+  <div class="contacts">
+    <p class="building">四川省区块链行业协会</p>
+    <p class="phone">028-63915206</p>
+    <p class="email">axj@cetcel.com</p>
+    <p class="location">成都市高新区创业路8号</p>
+  </div>
+  <div class="logo-qr">
+    <div class="logo-wrapper">
+      <a href="" class="logo">
+        <img src="./images/logo_white.png" alt="">
+      </a>
+      <p class="qr-text">扫一扫，了解更多资讯</p>
+    </div>
+    <div class="qr-wrapper">
+      <img src="./images/qr.png" alt="">
+    </div>
+  </div>
+  <div class="copyfight">
+    <p>Copyright © 2019 XINLIAN TECHNOLOGY OF CETC, All Rights Reserved. 蜀ICP备18030395号-2 川公网安备 51019002001977号</p>
+  </div>
+</footer>
+
+<body>
+  <script src="./plugins/swiper/swiper.min.js"></script>
+  <script src="./js/main.js"></script>
+  <script>
+    // banner
+    new Swiper('.home-swiper', {
+      loop: true,
+      speed: 500,
+      autoplay: {
+        delay: 5000
+      },
+      disableOnInteraction: false,
+      pagination: {
+        el: '.swiper-pagination',
+        bulletClass: 'my-bullet',
+        bulletActiveClass: 'my-bullet-active',
+        clickable: true
+      },
+    });
+  </script>
+</body>
+
+</html>

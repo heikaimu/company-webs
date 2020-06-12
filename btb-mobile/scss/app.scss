@@ -1,0 +1,100 @@
+@import "./variables.scss";
+@import "./mixin.scss";
+@import "./fonts.scss";
+@import "./reset.scss";
+@import "./common.scss";
+
+// 首页
+.home-swiper {
+  .home-banner {
+    height: 193px;
+    @include bg-cover;
+  }
+  .my-bullet {
+    display: inline-block;
+    width: 14px;
+    height: 6px;
+    background-color: $font-color-sub;
+    margin: 0 6px;
+  }
+  .my-bullet-active {
+    background-color: $white;
+  }
+}
+
+.association-dynamic {
+  background-color: $white;
+  @include shadow;
+  margin-top: 10px;
+  .content {
+    padding: 0 15px;
+  }
+}
+
+.search-results {
+  padding: 0 17px;
+  background-color: $white;
+  @include shadow;
+  margin-top: 10px;
+}
+
+.leaders {
+  @include shadow;
+  margin-top: 10px;
+  background-color: $white;
+}
+
+.joinus-form {
+  @include flex-center-x;
+  .form-wrapper {
+    width: 500px;
+    .form-item {
+      .label {
+        font-size: 15px;
+        font-weight: 500;
+        color: #333333;
+        line-height: 34px;
+        padding-left: 15px;
+      }
+      .input-wrapper {
+        input,
+        select {
+          width: 100%;
+          height: 50px;
+          background: rgba(255, 255, 255, 1);
+          border: 1px solid rgba(226, 226, 226, 1);
+          border-top: none;
+          border-bottom: none;
+          outline: none;
+          font-size: 14px;
+          text-indent: 10px;
+        }
+        textarea {
+          width: 100%;
+          height: 100px;
+          padding: 10px 0;
+          background: rgba(255, 255, 255, 1);
+          border: 1px solid rgba(226, 226, 226, 1);
+          border-radius: 2px;
+          outline: none;
+          font-size: 14px;
+          text-indent: 10px;
+        }
+      }
+    }
+    .btn-wrapper {
+      text-align: center;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      button {
+        width: 120px;
+        height: 36px;
+        background: rgba(0, 119, 224, 1);
+        box-shadow: 4px 5px 8px 0px rgba(0, 119, 224, 0.21);
+        border-radius: 4px;
+        color: #fff;
+        border: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,102 @@
+<!--
+ * @Description: 
+ * @Version: 2.0
+ * @Autor: Yaowen Liu
+ * @Date: 2020-05-01 09:06:12
+ * @LastEditors: Yaowen Liu
+ * @LastEditTime: 2020-06-12 17:50:07
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>搜索页面</title>
+  <link rel="stylesheet" href="./plugins/swiper/swiper.min.css">
+  <link rel="stylesheet" href="./css/app.css">
+  <script src="./js/jquery.js"></script>
+</head>
+
+<!-- 头部 -->
+<header class="header">
+  <a href=""><span class="icon-arrow-left"></span></a>
+  <div class="search-bar">
+    <span class="icon-search"></span>
+    <div class="content">
+      <div class="search">
+        <span class="icon-search"></span>
+        <input type="text" class="search-input" placeholder="请输入搜索关键字">
+        <span class="cancel">取消</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="web-container">
+  <!-- 文章详情 -->
+  <div class="article-details">
+    <h2 class="title">四川省区块链行业协会简介</h2>
+    <span class="time">2019-03-13</span>
+    <article class="details">
+      <img src="./example_images/1.jpg" alt="">
+      四川省区块链行业协会是在四川省经信厅指导下，由中国电子科技网络信息安全有限公司等单位发起，在四川省民政厅登记成立的专业性社会组织。
+      协会旨在深入贯彻落实四川省委关于构建“5+1”现代产业体系的决策部署，加快培育产业新模式，加强全省区块链行业企、事业单位和个人之间的交流与合作，在政府和企业之间发挥桥梁、纽带作用，推动我省区块链与实体经济融合发展。
+      协会于2019年9月27日接收到四川省民政厅的《社会组织名称预登记通知书》，于9月29日召开第一次会员大会，选举产生了负责人，于12月19日在四川省民政厅登记正式成立。协会首批会员单位54家，涵盖省内知名区块链高校与企事业单位，涉及政务、金融、医疗、能源、教育、版权等多个领域。
+    </article>
+    <div class="download-wrapper">
+      <p class="desc">【全文下载】</p>
+      <a href="" class="download-link">《四川省区块链产业白皮书》发布及解读，附pdf原文下载</a>
+    </div>
+  </div>
+</div>
+
+<!-- 底部 -->
+<footer class="footer">
+  <h2 class="footer-title">联系我们</h2>
+  <div class="contacts">
+    <p class="building">四川省区块链行业协会</p>
+    <p class="phone">028-63915206</p>
+    <p class="email">axj@cetcel.com</p>
+    <p class="location">成都市高新区创业路8号</p>
+  </div>
+  <div class="logo-qr">
+    <div class="logo-wrapper">
+      <a href="" class="logo">
+        <img src="./images/logo_white.png" alt="">
+      </a>
+      <p class="qr-text">扫一扫，了解更多资讯</p>
+    </div>
+    <div class="qr-wrapper">
+      <img src="./images/qr.png" alt="">
+    </div>
+  </div>
+  <div class="copyfight">
+    <p>Copyright © 2019 XINLIAN TECHNOLOGY OF CETC, All Rights Reserved. 蜀ICP备18030395号-2 川公网安备 51019002001977号</p>
+  </div>
+</footer>
+
+<body>
+  <script src="./plugins/swiper/swiper.min.js"></script>
+  <script src="./js/main.js"></script>
+  <script>
+    // banner
+    new Swiper('.home-swiper', {
+      loop: true,
+      speed: 500,
+      autoplay: {
+        delay: 5000
+      },
+      disableOnInteraction: false,
+      pagination: {
+        el: '.swiper-pagination',
+        bulletClass: 'my-bullet',
+        bulletActiveClass: 'my-bullet-active',
+        clickable: true
+      },
+    });
+  </script>
+</body>
+
+</html>
