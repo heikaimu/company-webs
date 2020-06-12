@@ -45,3 +45,9 @@ $('#brand_titles').find('.tab-item').each(function() {
     brandSwiper.slideTo($(this).index());
   })
 })
+
+// 移动端左侧导航
+var homeSwiper = new Swiper('.mobile-slide-nav-swiper', {
+  slidesPerView : '4',
+  spaceBetween : 10,
+});

@@ -40,6 +40,7 @@
       font-family: Arial;
       letter-spacing: 0.3em;
       color: rgba($color: #fff, $alpha: 0.6);
+      margin-bottom: 0;
     }
   }
 }
@@ -121,10 +122,11 @@
   .static-banner {
     .content {
       h2 {
-        font-size: 40px;
+        font-size: 30px;
+        margin-bottom: 20px;
       }
       p {
-        font-size: 20px;
+        font-size: 12px;
       }
     }
   }
@@ -146,20 +148,20 @@
 
 @media (max-width: 1200px) {
   .static-banner {
+    height: 200px;
     &.aboutus {
-      height: calc(100vh + 40px);
+      height: 200px;
     }
     .content {
       padding: 20px;
       color: $white;
       text-align: center;
       h2 {
-        font-size: 30px;
-        margin-bottom: 20px;
-        
+        font-size: 20px;
+        margin-bottom: 10px;
       }
       p {
-        font-size: 20px;
+        font-size: 12px;
       }
     }
   }

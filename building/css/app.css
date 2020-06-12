@@ -1163,6 +1163,7 @@ a.animated-button.thar-four:before {
   font-family: Arial;
   letter-spacing: 0.3em;
   color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 0;
 }
 
 .page-title.tc {
@@ -1238,10 +1239,11 @@ a.animated-button.thar-four:before {
 
 @media (max-width: 1600px) {
   .static-banner .content h2 {
-    font-size: 40px;
+    font-size: 30px;
+    margin-bottom: 20px;
   }
   .static-banner .content p {
-    font-size: 20px;
+    font-size: 12px;
   }
 
   .page-title {
@@ -1258,8 +1260,11 @@ a.animated-button.thar-four:before {
   }
 }
 @media (max-width: 1200px) {
+  .static-banner {
+    height: 200px;
+  }
   .static-banner.aboutus {
-    height: calc(100vh + 40px);
+    height: 200px;
   }
   .static-banner .content {
     padding: 20px;
@@ -1267,11 +1272,11 @@ a.animated-button.thar-four:before {
     text-align: center;
   }
   .static-banner .content h2 {
-    font-size: 30px;
-    margin-bottom: 20px;
+    font-size: 20px;
+    margin-bottom: 10px;
   }
   .static-banner .content p {
-    font-size: 20px;
+    font-size: 12px;
   }
 
   .page-title {
@@ -2464,16 +2469,16 @@ a.animated-button.thar-four:before {
 }
 @media (max-width: 1200px) {
   .aboutus-nav-container {
-    margin-top: -100px;
+    margin-top: 0;
   }
   .aboutus-nav-container .aboutus-nav-wrapper {
-    height: 100px;
+    height: auto;
   }
   .aboutus-nav-container .aboutus-nav-wrapper .aboutus-nav-box {
-    width: 90%;
+    width: 100%;
   }
   .aboutus-nav-container .aboutus-nav-wrapper .aboutus-nav-box .bread-nav {
-    padding-top: 20px;
+    padding-top: 10px;
     height: 40px;
   }
   .aboutus-nav-container .aboutus-nav-wrapper .aboutus-nav-box .bread-nav a {
@@ -2483,6 +2488,9 @@ a.animated-button.thar-four:before {
     margin: 0 10px;
     font-size: 12px;
   }
+  .aboutus-nav-container .aboutus-nav-wrapper .aboutus-nav-box .aboutus-nav-list {
+    margin-bottom: 0;
+  }
   .aboutus-nav-container .aboutus-nav-wrapper .aboutus-nav-box .aboutus-nav-list .aboutus-nav-item {
     flex: 1;
     text-align: center;
@@ -2490,12 +2498,13 @@ a.animated-button.thar-four:before {
   }
   .aboutus-nav-container .aboutus-nav-wrapper .aboutus-nav-box .aboutus-nav-list .aboutus-nav-item a {
     display: inline-block;
-    padding: 20px 10px;
+    padding: 10px 10px;
     font-size: 12px;
   }
 
   .aboutus-introduce {
-    padding-bottom: 50px;
+    padding-top: 0;
+    padding-bottom: 30px;
   }
   .aboutus-introduce .page-title {
     padding: 30px 0;
@@ -3593,13 +3602,13 @@ a.animated-button.thar-four:before {
 }
 @media (max-width: 1200px) {
   .business-nav-container {
-    top: -120px;
+    top: 0;
   }
   .business-nav-container .business-nav-wrapper {
-    height: 120px;
+    height: auto;
   }
   .business-nav-container .business-nav-wrapper .business-nav-box {
-    width: 90%;
+    width: 100%;
   }
   .business-nav-container .business-nav-wrapper .business-nav-box .bread-nav {
     padding-top: 20px;
@@ -4077,14 +4086,21 @@ a.animated-button.thar-four:before {
     flex-wrap: wrap;
   }
   .news-page-content .news-list .news-item {
-    width: 50%;
+    width: 100%;
     box-sizing: border-box;
     padding: 10px;
+    border-bottom: 1px solid #f2f2f2;
+  }
+  .news-page-content .news-list .news-item .news-card {
+    overflow: hidden;
   }
   .news-page-content .news-list .news-item .news-card .cover {
+    width: 100px;
     position: relative;
     overflow: hidden;
-    margin-bottom: 12px;
+    margin-bottom: 0;
+    float: left;
+    margin-right: 10px;
   }
   .news-page-content .news-list .news-item .news-card .time {
     font-size: 12px;
@@ -4092,6 +4108,24 @@ a.animated-button.thar-four:before {
   .news-page-content .news-list .news-item .news-card .title {
     font-size: 12px;
     margin-bottom: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .news-page-content .news-list .news-item .news-card .more {
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  .news-page-content .news-list .news-item .news-card .more a {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 10;
   }
 }
 .join-us {

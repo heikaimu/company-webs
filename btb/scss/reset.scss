@@ -5,6 +5,11 @@ body {
      "微软雅黑", Arial, sans-serif, "Microsoft YaHei";
 }
 
+@font-face {
+  font-family: 'PingFang';
+  src: url('../assets/PingFang.otf');
+}
+
 html,
 body,
 div,
@@ -177,17 +182,20 @@ select {
   vertical-align: middle;
 }
 
-input::-webkit-input-placeholder{
-  color:#fff;
+input::-webkit-input-placeholder {
+  color: #fff;
 }
-input::-moz-placeholder{   /* Mozilla Firefox 19+ */
-  color:#fff;
+input::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #fff;
 }
-input:-moz-placeholder{    /* Mozilla Firefox 4 to 18 */
-  color:#fff;
+input:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #fff;
 }
-input:-ms-input-placeholder{  /* Internet Explorer 10-11 */ 
-  color:#fff;
+input:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #fff;
 }
 
 img[src=""],
