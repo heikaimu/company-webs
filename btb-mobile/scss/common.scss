@@ -1,9 +1,23 @@
+// 网页主体
+.web-container {
+  min-height: calc(100vh - 387px);
+  padding-top: 46px;
+  padding-bottom: 10px;
+}
+
+// 头部
 .header {
   @include flex-between-x-center-y;
   padding: 0 14px;
   height: 46px;
   background-color: $white;
   border-bottom: 1px solid #eaedf3;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 999999;
+  box-shadow:2px 2px 4px 0px rgba(220,220,220,0.3);
   .logo {
     display: block;
     height: 30px;
@@ -22,42 +36,43 @@
       position: fixed;
       left: 0;
       right: 0;
-      top: 46px;
-      z-index: 999;
-      height: 40px;
+      top: 0;
+      z-index: 99999;
+      height: 46px;
       display: none;
       .search {
         width: 100%;
         height: 100%;
         position: relative;
-        background-color: #0077e0;
-        @include flex-center-x-center-y;
-        .search-input {
-          background-color: #fff;
-          border: none;
-          outline: none;
-          width: 200px;
-          height: 24px;
-          text-indent: 5px;
-          border-radius: 2px 0 0 2px;
-          font-size: 12px;
-          color: #666;
-        }
-        .button {
-          padding: 0 10px;
-          height: 26px;
-          border: none;
-          background-color: #ccc;
-          font-size: 12px;
-          color: #666;
-          outline: none;
-          border-radius: 0 2px 2px 0;
-        }
-        .icon-close {
+        background-color: #fff;
+        @include flex-center-y;
+        .icon-search {
           position: absolute;
-          right: 16px;
+          left: 23px;
           top: 12px;
-          color: #fff;
+          color: #666;
+          z-index: 9999;
+          font-size: 20px;
+        }
+        .search-input {
+          background-color: #f4f5f8;
+          border: none;
+          outline: none;
+          width: 300px;
+          height: 30px;
+          text-indent: 30px;
+          border-radius: 3px;
+          font-size: 14px;
+          color: #666;
+          margin-left: 15px;
+          position: relative;
+        }
+        .cancel {
+          position: absolute;
+          right: 13px;
+          top: 14px;
+          font-size: 15px;
+          color: #0077e0;
         }
       }
     }
@@ -69,6 +84,7 @@
   border-bottom: 1px solid #eaedf3;
   display: flex;
   position: relative;
+  background-color: $white;
   .left {
     width: calc(100% - 50px);
     .web-nav-swiper {
@@ -100,16 +116,55 @@
   .right {
     width: 50px;
     height: 100%;
-    background-color: red;
+    .icon-open {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      span {
+        display: block;
+        width: 20px;
+        height: 2px;
+        background-color: #444;
+        position: absolute;
+        left: 17px;
+        transition: 0.3s;
+        &:nth-child(1) {
+          top: 13px;
+        }
+        &:nth-child(2) {
+          top: 21px;
+        }
+        &:nth-child(3) {
+          top: 29px;
+        }
+      }
+      &.active {
+        span {
+          left: 15px;
+          &:nth-child(1) {
+            top: 20px;
+            transform: rotate(45deg);
+          }
+          &:nth-child(2) {
+            opacity: 0;
+          }
+          &:nth-child(3) {
+            top: 20px;
+            transform: rotate(-45deg);
+          }
+        }
+      }
+    }
     .full-nav-wrapper {
       position: absolute;
       left: 0;
       right: 0;
       top: 45px;
+      z-index: 999999;
       padding: 20px 5px;
+      background-color: #fff;
       display: none;
       .full-nav {
-        background-color: #fff;
         @include flex-wrap;
         li {
           width: 25%;
@@ -128,6 +183,537 @@
             }
           }
         }
+      }
+    }
+  }
+}
+
+// 底部
+.footer {
+  padding: 0 15px;
+  background-color: #333d49;
+  .footer-title {
+    padding-top: 20px;
+    font-size: 16px;
+    color: $white;
+  }
+  .contacts {
+    padding-top: 10px;
+    @include flex-wrap;
+    p {
+      @include flex-center-y;
+      width: 50%;
+      font-size: 13px;
+      color: #f6f6f6;
+      line-height: 32px;
+      &::before {
+        content: "";
+        display: block;
+        width: 13px;
+        height: 13px;
+        @include bg-contain;
+        margin-right: 5px;
+      }
+      &.building {
+        &::before {
+          background-image: url(../images/building.png);
+        }
+      }
+      &.phone {
+        &::before {
+          background-image: url(../images/phone.png);
+        }
+      }
+      &.email {
+        &::before {
+          background-image: url(../images/email.png);
+        }
+      }
+      &.location {
+        &::before {
+          background-image: url(../images/location.png);
+        }
+      }
+    }
+  }
+  .logo-qr {
+    height: 120px;
+    background-color: #3e4752;
+    @include flex-center-y;
+    margin: 20px 0;
+    .logo-wrapper {
+      flex: 1;
+      padding-left: 8px;
+      .logo {
+        img {
+          display: block;
+          width: 185px;
+          height: auto;
+        }
+      }
+      .qr-text {
+        padding-top: 6px;
+        font-size: 12px;
+        color: $white;
+        opacity: 0.8;
+      }
+    }
+    .qr-wrapper {
+      flex: 0 0 100px;
+      img {
+        display: block;
+        width: 80px;
+        height: 80px;
+      }
+    }
+  }
+  .copyfight {
+    padding-bottom: 10px;
+    p {
+      line-height: 24px;
+      font-size: 11px;
+      color: $white;
+      opacity: 0.8;
+    }
+  }
+}
+
+// 带波浪线的标题
+.common-title {
+  @include flex-between-x-center-y;
+  height: 42px;
+  padding: 0 15px 2px 15px;
+  background-color: $white;
+  position: relative;
+  &.no-padding {
+    padding: 0 0 2px 0;
+  }
+  .title {
+    font-size: 16px;
+    font-weight: bold;
+    color: $font-color-main;
+    margin-bottom: 0;
+  }
+  .more {
+    font-size: 13px;
+    color: $theme-color;
+    line-height: 20px;
+    span {
+      margin-left: 5px;
+      position: relative;
+      top: 1px;
+    }
+    &:hover {
+      // font-weight: 900;
+    }
+  }
+  .tab-titles {
+    @include flex-wrap;
+    .tab-item {
+      font-size: $font-size-large;
+      font-weight: normal;
+      color: $font-color-common;
+      margin-bottom: 0;
+      cursor: pointer;
+      &::before {
+        content: "/";
+        display: inline-block;
+        padding: 0 20px;
+      }
+      &:first-child {
+        &::before {
+          display: none;
+        }
+      }
+      &.active {
+        font-weight: bold;
+        color: $font-color-main;
+      }
+      &:hover {
+        color: $font-color-main;
+      }
+    }
+  }
+  &::after {
+    content: "";
+    display: block;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: -webkit-gradient(
+      linear,
+      0 0,
+      100% 100%,
+      color-stop(0.15, #e7e7e7),
+      color-stop(0.15, transparent),
+      color-stop(0.5, transparent),
+      color-stop(0.5, #e7e7e7),
+      color-stop(0.65, #e7e7e7),
+      color-stop(0.65, transparent),
+      to(transparent)
+    );
+    background-size: 4px 4px;
+  }
+}
+
+// 新闻普通列表
+.single-news {
+  margin-bottom: 0;
+  li {
+    padding-top: 14px;
+    padding-left: 14px;
+    padding-bottom: 12px;
+    border-top: 1px solid rgba(234, 237, 243, 1);
+    position: relative;
+    &::before {
+      content: "";
+      display: block;
+      width: 6px;
+      height: 6px;
+      background-color: $theme-color;
+      position: absolute;
+      left: 0;
+      top: 18px;
+    }
+    a {
+      display: block;
+      font-size: 14px;
+      color: #181f2d;
+      @include omit;
+      transition: 0.3s;
+      margin-bottom: 5px;
+      &:hover {
+        color: $theme-color;
+      }
+    }
+    span {
+      font-size: 12px;
+      color: #9ea5b6;
+    }
+  }
+}
+
+// 普通搜索页面的列表
+.search-news {
+  .news-item {
+    padding: 20px 0;
+    border-bottom: 1px solid #EAEDF3;
+    position: relative;
+    .title {
+      font-size: 15px;
+      color: #181f2d;
+      font-weight: 600;
+    }
+    .time {
+      font-size: 11px;
+      color: #9ea5b6;
+      line-height:28px;
+    }
+    .summary {
+      font-size: 12px;
+      color: #9ea5b6;
+      @include omit(2);
+      line-height: 18px;
+    }
+    .link {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: 9;
+    }
+  }
+}
+
+// 有时间的新闻卡片
+.news-width-time-list {
+  padding: 0 15px;
+  background-color: $white;
+  @include shadow;
+  li {
+    .news-card {
+      overflow: hidden;
+      padding: 14px 0;
+      position: relative;
+      border-bottom: 1px solid #EAEDF3;
+      .cover {
+        width: 126px;
+        height: 76px;
+        border-radius: 3px;
+        @include bg-cover;
+        float: left;
+      }
+      .info {
+        width: calc(100% - 140px);
+        float: right;
+        .title {
+          font-size: 15px;
+          color: #181f2d;
+          font-weight: 600;
+          @include omit;
+        }
+        .time {
+          font-size: 11px;
+          color: #9EA5B6;
+          line-height: 24px;
+        }
+        .summary {
+          @include omit(2);
+          font-size: 12px;
+          color: #9ea5b6;
+          line-height: 18px;
+        }
+        .link {
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: 0;
+          bottom: 0;
+          z-index: 9;
+        }
+      }
+    }
+  }
+}
+
+// 没有有时间的新闻卡片
+.news-widthout-time-list {
+  padding: 0 15px;
+  background-color: $white;
+  @include shadow;
+  margin-top: 10px;
+  li {
+    .news-card {
+      overflow: hidden;
+      padding: 14px 0;
+      position: relative;
+      border-bottom: 1px solid #EAEDF3;
+      .cover {
+        width: 126px;
+        height: 76px;
+        border-radius: 3px;
+        @include bg-cover;
+        float: left;
+      }
+      .info {
+        width: calc(100% - 140px);
+        float: right;
+        .title {
+          margin: 0 0 6px 0;
+          font-size: 15px;
+          color: #181f2d;
+          font-weight: 600;
+          @include omit;
+        }
+        .summary {
+          @include omit(3);
+          font-size: 12px;
+          color: #9ea5b6;
+          line-height: 18px;
+        }
+        .link {
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: 0;
+          bottom: 0;
+          z-index: 9;
+        }
+      }
+    }
+  }
+}
+
+// 带图片的新闻
+.image-news {
+  overflow: hidden;
+  padding: 14px 0;
+  .cover {
+    width: 126px;
+    height: 76px;
+    @include bg-cover;
+    float: left;
+  }
+  .info {
+    width: calc(100% - 140px);
+    float: right;
+    .title {
+      margin: 5px 0 10px 0;
+      font-size: 15px;
+      color: #181f2d;
+      font-weight: 600;
+      @include omit;
+    }
+    .summary {
+      @include omit(2);
+      font-size: 12px;
+      color: #9ea5b6;
+      line-height: 1.6;
+    }
+  }
+}
+
+// 带图片的新闻-大师
+.image-news-master {
+  overflow: hidden;
+  padding: 14px 0;
+  .cover {
+    width: 71px;
+    height: 85px;
+    @include bg-cover;
+    float: left;
+  }
+  .info {
+    width: calc(100% - 90px);
+    float: right;
+    .title {
+      margin: 4px 0 7px 0;
+      font-size: 15px;
+      color: #181f2d;
+      font-weight: 600;
+      @include omit(2);
+    }
+    .summary {
+      @include omit(2);
+      font-size: 12px;
+      color: #9ea5b6;
+      line-height: 1.6;
+    }
+  }
+}
+
+// 带颜色的按钮
+.color-menus {
+  @include flex-wrap;
+  padding-top: 18px;
+  li {
+    width: 48%;
+    margin-bottom: 18px;
+    &:nth-child(odd) {
+      margin-right: 4%;
+    }
+    .menu {
+      display: block;
+      position: relative;
+      img {
+        display: block;
+        width: 100%;
+      }
+      .text {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        @include flex-center-x-center-y;
+        font-size: 15px;
+        color: #515a6e;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+
+// 蓝色banner
+.blue-banner {
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+
+// 可滑动的二级菜单
+.mobile-slide-nav {
+  display: block;
+  padding: 10px;
+  a {
+    display: block;
+    line-height: 34px;
+    background: rgba(255, 255, 255, 1);
+    border: 1px solid rgba(234, 237, 243, 1);
+    border-radius: 4px;
+    text-align: center;
+    font-size: 13px;
+    color: #9EA5B6;
+    @include omit;
+    &.active {
+      background-color: rgb(228, 243, 255);
+      border: 1px solid rgb(228, 243, 255);
+      color: #0077E0;
+    }
+  }
+}
+
+// 文章详情
+.article-details {
+  background-color: $white;
+  .title {
+    padding: 0 20px;
+    text-align: center;
+    font-size: 15px;
+    color: #181F2D;
+    padding: 17px 0;
+    border-bottom: 1px solid #EAEDF3;
+  }
+  .time {
+    display: block;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 13px;
+    color: #9EA5B6
+  }
+  .details {
+    padding: 14px;
+    font-size: 14px;
+    color: #515A6E;
+    line-height: 23px;
+    img {
+      max-width: 100%;
+      margin: 0px auto;
+    }
+  }
+  .download-wrapper {
+    padding: 20px 15px;
+    border-top: 1px solid #eaedf3;
+    font-size: 14px;
+    .desc {
+      margin-bottom: 15px;
+      font-size: 14px;
+      color: #515A6E;
+    }
+    .download-link {
+      font-size: 13px;
+      color: #348CE4;
+    }
+  }
+}
+
+// 人物卡片
+.leaders-list {
+  @include flex-wrap;
+  padding-bottom: 17px;
+  background-color: $white;
+  li {
+    width: 33.33%;
+    margin-top: 17px;
+    .leader-card {
+     width: 90px;
+     margin: 0 auto;
+      .cover {
+        width: 90px;
+        height: 114px;
+        border-radius: 2px;
+        @include bg-cover;
+      }
+      .name {
+        font-size: 14px;
+        color: #181F2D;
+        @include omit;
+        margin-top: 10px;
       }
     }
   }

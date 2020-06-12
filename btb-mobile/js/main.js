@@ -4,19 +4,24 @@
  * @Autor: Yaowen Liu
  * @Date: 2020-05-02 17:17:19
  * @LastEditors: Yaowen Liu
- * @LastEditTime: 2020-06-11 20:27:33
+ * @LastEditTime: 2020-06-12 16:22:19
  */
-$(function () {  
+$(function () {
   // 手机导航
-  $("#mobile_nav_switch").click(function () {
+  $("#full_nav_switch").click(function () {
     if ($(this).hasClass("active")) {
       $(this).stop().removeClass("active");
-      $("#mobile_nav").fadeOut();
+      $("#full_nav").fadeOut();
     } else {
       $(this).addClass("active");
-      $("#mobile_nav").stop().fadeIn();
+      $("#full_nav").stop().fadeIn();
     }
   })
+
+  new Swiper('.web-nav-swiper', {
+    slidesPerView: '4',
+    spaceBetween: 10,
+  });
 
   $(document).click(function (e) {
     var targetName = e.target.className;
@@ -29,6 +34,13 @@ $(function () {
     }
   })
 
+  // 二级导航
+  new Swiper('.mobile-slide-nav-swiper', {
+    slidesPerView: '4',
+    spaceBetween: 10,
+  });
+
+
 })
 
 
@@ -39,7 +51,7 @@ function gotoPage(domId, offsetDistance) {
   if (domId) {
     scrollDistance = $("#" + domId).offset().top + offsetDistance + 'px';
   };
-  
+
   $("html,body").animate({
     scrollTop: scrollDistance
   }, 500);

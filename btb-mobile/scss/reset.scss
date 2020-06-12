@@ -11,6 +11,7 @@ body {
   font-weight: 400;
   font-family: "SourceHanSansCN-Light", "Helvetica Neue", Helvetica, "Hiragino Sans GB",
      "微软雅黑", Arial, sans-serif, "Microsoft YaHei";
+  background-color: #f2f2f2;
 }
 
 html,
@@ -88,7 +89,6 @@ video {
   outline: 0;
   font-size: 100%;
   vertical-align: baseline;
-  background: transparent;
   list-style: none;
 }
 
@@ -186,16 +186,16 @@ select {
 }
 
 input::-webkit-input-placeholder{
-  color:#fff;
+  color:#AFB5C3;
 }
 input::-moz-placeholder{   /* Mozilla Firefox 19+ */
-  color:#fff;
+  color:#AFB5C3;
 }
 input:-moz-placeholder{    /* Mozilla Firefox 4 to 18 */
-  color:#fff;
+  color:#AFB5C3;
 }
 input:-ms-input-placeholder{  /* Internet Explorer 10-11 */ 
-  color:#fff;
+  color:#AFB5C3;
 }
 
 img[src=""],
