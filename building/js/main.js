@@ -33,6 +33,7 @@ $(function () {
     var searchCloseSwitch = $(this).find(".search-bar-close");
     var navSwitch = $(this).find(".web-nav-switch");
     var nav = $(this).find(".web-nav");
+    var mobileBlank = $(this).find(".mobile-blank");
 
     nav.lavaLamp({ fx: "swing", speed: 500 });
 
@@ -48,34 +49,42 @@ $(function () {
       search.slideUp();
     })
 
-    navSwitch.click(function() {
+    navSwitch.click(function () {
       if (navSwitch.hasClass("active")) {
         navSwitch.stop().removeClass("active");
-        nav.slideUp();
-        $("html").css({"overflow-y": "auto"});
+        nav.removeClass("active");
+        $("html").css({ "overflow-y": "auto" });
       } else {
         navSwitch.addClass("active");
-        nav.stop().slideDown();
-        $("html").css({"overflow-y": "hidden"});
+        mobileBlank.fadeIn();
+        nav.addClass("active");
+        $("html").css({ "overflow-y": "hidden" });
       }
+    })
+
+    mobileBlank.click(function () {
+      mobileBlank.fadeOut();
+      navSwitch.stop().removeClass("active");
+      nav.removeClass("active");
+      $("html").css({ "overflow-y": "auto" });
     })
   })
 
-  $(".r-view").each(function() {
-    var type= $(this).attr("_type");
+  $(".r-view").each(function () {
+    var type = $(this).attr("_type");
     var src = $(this).attr("_src");
-    $(this).click(function() {
+    $(this).click(function () {
       if (type === 'picture') {
         $("#picture_view_wrapper").fadeIn().find(".content").append('<img src="' + src + '"/>');
       } else if (type === 'video') {
-        $("#picture_view_wrapper").fadeIn().find(".content").append('<video src="'+ src +'" controls="controls">您的浏览器不支持 video 标签。</video>');
+        $("#picture_view_wrapper").fadeIn().find(".content").append('<video src="' + src + '" controls="controls">您的浏览器不支持 video 标签。</video>');
       }
     })
   })
-  $(".picture-view-container").each(function() {
+  $(".picture-view-container").each(function () {
     var float = $(this);
     var closeBtn = $(this).find(".icon-close");
-    closeBtn.click(function() {
+    closeBtn.click(function () {
       float.fadeOut().find(".content").empty();
     })
   })

@@ -21,6 +21,58 @@
   <link rel="stylesheet" href="./css/app.css">
   <link rel="stylesheet" href="https://cdn.dowebok.com/98/css/animate.min.css">
   <script src="./js/jquery.js"></script>
+  <style>
+    .fullscreen-swiper {
+      position: fixed;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background: #111;
+      z-index: 9999999;
+      visibility: hidden;
+    }
+
+    .fullscreen-swiper .swiper-container {
+      height: 100%;
+    }
+
+    .fullscreen-swiper.active {
+      visibility: visible;
+    }
+
+    .fullscreen-swiper .preview-item {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .fullscreen-swiper .preview-item img {
+      max-width: 100%;
+      max-height: 100%；
+    }
+
+    .fullscreen-swiper .close-btn {
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      z-index: 999999;
+    }
+
+    .fullscreen-swiper .close-btn span {
+      color: #fff;
+      cursor: pointer;
+      font-size: 40px;
+    }
+
+    .fullscreen-swiper .close-btn span:hover {
+      color: red;
+    }
+  </style>
 </head>
 
 <body>
@@ -97,43 +149,43 @@
                 <li>
                   <div class="card-list">
                     <div class="box">
-                      <div class="img-card r-view" _type="picture" _src="./images/banner2.png">
+                      <div class="img-card" _type="picture" _src="./images/banner2.png">
                         <div class="cover"><img src="./images/banner1.png" alt=""></div>
                         <div class="icon"><span class="icon-search"></span></div>
                         <p class="text">实景图</p>
                       </div>
                     </div>
                     <div class="box">
-                      <div class="img-card r-view" _type="picture" _src="./images/banner2.png">
+                      <div class="img-card" _type="picture" _src="./images/banner2.png">
+                        <div class="cover"><img src="./images/banner2.png" alt=""></div>
+                        <div class="icon"><span class="icon-search"></span></div>
+                        <p class="text">实景图</p>
+                      </div>
+                    </div>
+                    <div class="box">
+                      <div class="img-card" _type="picture" _src="./images/banner2.png">
+                        <div class="cover"><img src="./images/banner3.png" alt=""></div>
+                        <div class="icon"><span class="icon-search"></span></div>
+                        <p class="text">实景图</p>
+                      </div>
+                    </div>
+                    <div class="box">
+                      <div class="img-card" _type="picture" _src="./images/banner2.png">
                         <div class="cover"><img src="./images/banner1.png" alt=""></div>
                         <div class="icon"><span class="icon-search"></span></div>
                         <p class="text">实景图</p>
                       </div>
                     </div>
                     <div class="box">
-                      <div class="img-card r-view" _type="picture" _src="./images/banner2.png">
-                        <div class="cover"><img src="./images/banner1.png" alt=""></div>
+                      <div class="img-card" _type="picture" _src="./images/banner2.png">
+                        <div class="cover"><img src="./images/banner2.png" alt=""></div>
                         <div class="icon"><span class="icon-search"></span></div>
                         <p class="text">实景图</p>
                       </div>
                     </div>
                     <div class="box">
-                      <div class="img-card r-view" _type="picture" _src="./images/banner2.png">
-                        <div class="cover"><img src="./images/banner1.png" alt=""></div>
-                        <div class="icon"><span class="icon-search"></span></div>
-                        <p class="text">实景图</p>
-                      </div>
-                    </div>
-                    <div class="box">
-                      <div class="img-card r-view" _type="picture" _src="./images/banner2.png">
-                        <div class="cover"><img src="./images/banner1.png" alt=""></div>
-                        <div class="icon"><span class="icon-search"></span></div>
-                        <p class="text">实景图</p>
-                      </div>
-                    </div>
-                    <div class="box">
-                      <div class="img-card r-view" _type="picture" _src="./images/banner2.png">
-                        <div class="cover"><img src="./images/banner1.png" alt=""></div>
+                      <div class="img-card" _type="picture" _src="./images/banner2.png">
+                        <div class="cover"><img src="./images/banner3.png" alt=""></div>
                         <div class="icon"><span class="icon-search"></span></div>
                         <p class="text">实景图</p>
                       </div>
@@ -143,42 +195,42 @@
                 <li>
                   <div class="card-list">
                     <div class="box">
-                      <div class="img-card r-view" _type="picture" _src="./images/banner2.png">
+                      <div class="img-card" _type="picture" _src="./images/banner2.png">
                         <div class="cover"><img src="./images/banner2.png" alt=""></div>
                         <div class="icon"><span class="icon-search"></span></div>
                         <p class="text">实景图</p>
                       </div>
                     </div>
                     <div class="box">
-                      <div class="img-card r-view" _type="picture" _src="./images/banner2.png">
+                      <div class="img-card" _type="picture" _src="./images/banner2.png">
                         <div class="cover"><img src="./images/banner2.png" alt=""></div>
                         <div class="icon"><span class="icon-search"></span></div>
                         <p class="text">实景图</p>
                       </div>
                     </div>
                     <div class="box">
-                      <div class="img-card r-view" _type="picture" _src="./images/banner2.png">
+                      <div class="img-card" _type="picture" _src="./images/banner2.png">
                         <div class="cover"><img src="./images/banner2.png" alt=""></div>
                         <div class="icon"><span class="icon-search"></span></div>
                         <p class="text">实景图</p>
                       </div>
                     </div>
                     <div class="box">
-                      <div class="img-card r-view" _type="picture" _src="./images/banner2.png">
+                      <div class="img-card" _type="picture" _src="./images/banner2.png">
                         <div class="cover"><img src="./images/banner2.png" alt=""></div>
                         <div class="icon"><span class="icon-search"></span></div>
                         <p class="text">实景图</p>
                       </div>
                     </div>
                     <div class="box">
-                      <div class="img-card r-view" _type="picture" _src="./images/banner2.png">
+                      <div class="img-card" _type="picture" _src="./images/banner2.png">
                         <div class="cover"><img src="./images/banner2.png" alt=""></div>
                         <div class="icon"><span class="icon-search"></span></div>
                         <p class="text">实景图</p>
                       </div>
                     </div>
                     <div class="box">
-                      <div class="img-card r-view" _type="picture" _src="./images/banner2.png">
+                      <div class="img-card" _type="picture" _src="./images/banner2.png">
                         <div class="cover"><img src="./images/banner2.png" alt=""></div>
                         <div class="icon"><span class="icon-search"></span></div>
                         <p class="text">实景图</p>
@@ -194,8 +246,6 @@
       </div>
     </div>
   </div>
-
-
 
   <footer class="footer">
     <div class="bg"></div>
@@ -246,10 +296,16 @@
   </footer>
 
   <!-- 图片预览 -->
-  <div class="picture-view-container" id="picture_view_wrapper">
-      <div class="content"></div>
-      <span class="icon icon-close"></span>
+  <div class="fullscreen-swiper">
+    <div class="swiper-container" id="picture_preview">
+      <div class="swiper-wrapper"></div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-prev swiper-button-white"></div>
+      <div class="swiper-button-next swiper-button-white"></div>
     </div>
+    <div class="close-btn"><span class="icon-close"></span></div>
+  </div>
+
 
   <script src="./js/my-jq-fun.js"></script>
   <script src="./js/wow.min.js"></script>
@@ -259,6 +315,35 @@
   <script src="./js/main.js"></script>
   <script>
     $(".image-tab-wrapper").tabSwitch();
+
+    // 图片轮播浏览
+    var previewSwiper = new Swiper("#picture_preview", {
+      zoom : true,
+      pagination: {
+        el: '#picture_preview .swiper-pagination',
+      },
+      navigation: {
+        nextEl: '#picture_preview .swiper-button-next',
+        prevEl: '#picture_preview .swiper-button-prev',
+      },
+    });
+    $(".card-list").each(function () {
+      var list = [];
+      $(this).find(".box").each(function () {
+        const img = $(this).find("img").attr("src");
+        list.push('<div class="swiper-slide"><div class="preview-item"><img src="' + img + '"/></div></div>')
+        $(this).click(function () {
+          $(".fullscreen-swiper").addClass("active");
+          previewSwiper.appendSlide(list);
+            previewSwiper.slideTo($(this).index(), 0);
+        })
+      })
+    })
+    $(".fullscreen-swiper .close-btn").click(function () {
+      $(".fullscreen-swiper").removeClass("active");
+      previewSwiper.removeAllSlides();
+    })
+
   </script>
 </body>
 

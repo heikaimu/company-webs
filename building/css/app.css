@@ -599,7 +599,7 @@ a.animated-button.thar-four:before {
   .web-header {
     position: relative;
     color: #ffffff;
-    transition: .3s;
+    transition: 0.3s;
   }
   .web-header.fixed {
     position: fixed;
@@ -629,7 +629,7 @@ a.animated-button.thar-four:before {
     margin: 0 auto;
     position: relative;
     bottom: -50px;
-    transition: .3s;
+    transition: 0.3s;
     display: flex;
     justify-content: space-between;
   }
@@ -640,7 +640,7 @@ a.animated-button.thar-four:before {
   }
   .web-header .header-container .web-logo img {
     height: 100px;
-    transition: .3s;
+    transition: 0.3s;
   }
   .web-header .header-container .web-nav {
     height: 100%;
@@ -808,14 +808,31 @@ a.animated-button.thar-four:before {
   .web-header .header-container .web-logo img {
     height: 30px;
   }
-  .web-header .header-container .web-nav {
+  .web-header .header-container .mobile-blank {
     position: fixed;
     left: 0;
     right: 0;
-    top: 50px;
+    top: 0;
     bottom: 0;
-    background-color: #fff;
+    z-index: 9990;
+    background-color: rgba(0, 0, 0, 0.2);
     display: none;
+  }
+  .web-header .header-container .web-nav {
+    position: fixed;
+    left: 40%;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 9999;
+    background-color: #003586;
+    transition: 0.5s;
+    transform: translate3d(100%, 0, 0);
+    opacity: 0;
+  }
+  .web-header .header-container .web-nav.active {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
   }
   .web-header .header-container .web-nav .nav-list .nav-item {
     margin: 0 20px;
@@ -828,12 +845,21 @@ a.animated-button.thar-four:before {
   .web-header .header-container .web-nav .nav-list .nav-item a {
     width: 100%;
     display: block;
-    border-bottom: 1px solid #f2f2f2;
-    line-height: 60px;
-    font-size: 16px;
+    border-bottom: 1px rgba(8, 32, 56, 0.3) solid;
+    line-height: 44px;
+    font-size: 14px;
     color: currentColor;
     text-decoration: none;
-    color: #333;
+    color: #fff;
+    position: relative;
+  }
+  .web-header .header-container .web-nav .nav-list .nav-item a::after {
+    content: "\e905";
+    font-family: "icomoon";
+    line-height: 1;
+    position: absolute;
+    right: 10px;
+    top: 14px;
   }
   .web-header .header-container .web-nav .nav-list .nav-item a:hover {
     color: #D12D28;
