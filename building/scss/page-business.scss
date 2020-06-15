@@ -1045,11 +1045,11 @@
 
 @media (max-width: 1200px) {
   .business-nav-container {
-    top: -120px;
+    top: 0;
     .business-nav-wrapper {
-      height: 120px;
+      height: auto;
       .business-nav-box {
-        width: 90%;
+        width: 100%;
         .bread-nav {
           padding-top: 20px;
           height: 60px;

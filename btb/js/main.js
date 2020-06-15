@@ -6,7 +6,13 @@
  * @LastEditors: Yaowen Liu
  * @LastEditTime: 2020-05-06 16:19:38
  */
+
+var wWidth = null;
+var wHeight = null;
+ 
 $(function () {
+  wWidth = $(window).width();
+  wHeight = $(window).height();
 
   // 导航
   $("#sub_nav").hover(function () {
@@ -26,16 +32,18 @@ $(function () {
     }
   })
 
-  $(document).click(function (e) {
-    var targetName = e.target.className;
-    if (targetName === 'search-show-icon') {
-      $(".search-bar").fadeIn();
-    } else if (targetName === 'submit-icon' || targetName === 'search-input-text') {
-      console.log('不做任何事');
-    } else {
-      $(".search-bar").fadeOut();
-    }
-  })
+  if (wWidth < 1200) {
+    $(document).click(function (e) {
+      var targetName = e.target.className;
+      if (targetName === 'search-show-icon') {
+        $(".search-bar").fadeIn();
+      } else if (targetName === 'submit-icon' || targetName === 'search-input-text') {
+        console.log('不做任何事');
+      } else {
+        $(".search-bar").fadeOut();
+      }
+    })
+  }
 
 })
 

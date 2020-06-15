@@ -57,13 +57,13 @@
   white-space: nowrap;
 }
 
-@mixin omit2 {
+@mixin omits($num: 2) {
   text-overflow: -o-ellipsis-lastline;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
-  -webkit-line-clamp: 2;
-  line-clamp: 2;
+  -webkit-line-clamp: $num;
+  line-clamp: $num;
   -webkit-box-orient: vertical;
 }
 
