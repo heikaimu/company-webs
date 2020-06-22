@@ -4,7 +4,7 @@
  * @Autor: Yaowen Liu
  * @Date: 2020-05-29 14:00:50
  * @LastEditors: Yaowen Liu
- * @LastEditTime: 2020-05-29 14:25:11
+ * @LastEditTime: 2020-06-22 13:58:34
  */
 (function ($) {
   // 数字滚动
@@ -81,14 +81,30 @@
   // tab切换
   $.fn.tabSwitch = function() {
     this.each(function () {
-      const tabTitle = $(this).find(".tab-title li");
-      const tabList = $(this).find(".tab-list li");
-      tabTitle.eq(0).addClass("active");
-      tabList.eq(0).show().siblings("li").hide();
-
-      tabTitle.hover(function() {
+      var tabTitle = $(this).children(".js-tab-title");
+      var tabList = $(this).children(".js-tab-list");
+      var showStyle = {
+        visibility: 'visible',
+        position: 'relative',
+        left: 'auto',
+        top: 'auto',
+        zIndex: 1,
+        opacity: 1
+      }
+      var hideStyle = {
+        visibility: 'hidden',
+        position: 'absolute',
+        left: 0,
+        top: 0,
+        zIndex: -9,
+        opacity: 0
+      }
+      tabTitle.children("li").eq(0).addClass("active");
+      tabList.children("li").eq(0).css(showStyle).siblings("li").css(hideStyle);
+      
+      tabTitle.children("li").hover(function() {
         $(this).addClass("active").siblings("li").removeClass("active");
-        tabList.eq($(this).index()).show().siblings("li").hide();
+        tabList.children("li").eq($(this).index()).css(showStyle).siblings("li").css(hideStyle);
       })
     })
   }

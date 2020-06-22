@@ -75,6 +75,23 @@
             top: 0px;
           }
         }
+        &.center {
+          top: 50%;
+          left: 50%;
+          transform: translate3d(-50%, -50%, 0);
+          .info-wrapper {
+            width: 360px;
+            right: 200px;
+            padding-right: 60px;
+            top: -100px;
+            transform: translate3d(20px, 0, 0);
+            &::before {
+              left: auto;
+              right: -28px;
+              transform: rotate(30deg);
+            }
+          }
+        }
         &.left {
           left: 0;
           top: 50%;
