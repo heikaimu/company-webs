@@ -5141,7 +5141,7 @@ a.animated-button.thar-four:before {
   top: -37px;
   bottom: -63px;
   z-index: 1;
-  background: url(../images/services_bg.png) no-repeat center center/contain;
+  background: url(../images/services_bg_2.png) no-repeat center center/contain;
 }
 .services-page .services-content .content {
   position: absolute;
@@ -5155,6 +5155,7 @@ a.animated-button.thar-four:before {
   width: 80px;
   height: 80px;
   position: absolute;
+  z-index: 9;
 }
 .services-page .services-content .content .s-card:hover .btn {
   transform: scale3d(1.1, 1.1, 1.1);
@@ -5181,7 +5182,7 @@ a.animated-button.thar-four:before {
 }
 .services-page .services-content .content .s-card.top {
   left: 50%;
-  top: 0;
+  top: -5px;
   transform: translate3d(-50%, 0, 0);
 }
 .services-page .services-content .content .s-card.top .info-wrapper {
@@ -5190,7 +5191,7 @@ a.animated-button.thar-four:before {
 }
 .services-page .services-content .content .s-card.right {
   top: 50%;
-  right: 0;
+  right: -5px;
   transform: translate3d(0, -50%, 0);
 }
 .services-page .services-content .content .s-card.right .info-wrapper {
@@ -5198,7 +5199,7 @@ a.animated-button.thar-four:before {
   top: 0px;
 }
 .services-page .services-content .content .s-card.bottom {
-  bottom: 0;
+  bottom: 5px;
   left: 50%;
   transform: translate3d(-50%, 0, 0);
 }
@@ -5207,9 +5208,51 @@ a.animated-button.thar-four:before {
   top: 0px;
 }
 .services-page .services-content .content .s-card.center {
+  width: 120px;
+  height: 120px;
   top: 50%;
   left: 50%;
   transform: translate3d(-50%, -50%, 0);
+  z-index: 2;
+}
+.services-page .services-content .content .s-card.center:hover .btn {
+  transform: none;
+  box-shadow: none;
+}
+.services-page .services-content .content .s-card.center:hover .btn::before {
+  opacity: 0.68;
+}
+.services-page .services-content .content .s-card.center .btn {
+  background-color: transparent;
+  flex-direction: column;
+}
+.services-page .services-content .content .s-card.center .btn img {
+  display: block;
+  width: 40px;
+  height: auto;
+}
+.services-page .services-content .content .s-card.center .btn::before {
+  content: "";
+  display: block;
+  width: 300px;
+  height: 300px;
+  background: #372f7a;
+  border: 1px solid black;
+  border-radius: 50%;
+  position: absolute;
+  left: -86px;
+  top: -95px;
+  z-index: -1;
+  opacity: 0;
+  transition: .3s;
+}
+.services-page .services-content .content .s-card.center .btn::after {
+  content: "建筑总承包";
+  display: block;
+  font-size: 20px;
+  color: #fff;
+  font-weight: 400;
+  padding-top: 10px;
 }
 .services-page .services-content .content .s-card.center .info-wrapper {
   width: 360px;
@@ -5217,14 +5260,18 @@ a.animated-button.thar-four:before {
   padding-right: 60px;
   top: -100px;
   transform: translate3d(20px, 0, 0);
+  border-top: 2px solid #372F7A;
 }
 .services-page .services-content .content .s-card.center .info-wrapper::before {
+  width: 50px;
   left: auto;
-  right: -28px;
+  right: -45px;
+  top: 10px;
   transform: rotate(30deg);
+  background-color: #372F7A;
 }
 .services-page .services-content .content .s-card.left {
-  left: 0;
+  left: 2px;
   top: 50%;
   transform: translate3d(0, -50%, 0);
 }
