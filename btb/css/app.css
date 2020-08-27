@@ -653,13 +653,11 @@ body {
   }
 }
 .home-title-wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   height: 52px;
   padding: 0 20px 4px 20px;
   background-color: #fff;
   position: relative;
+  overflow: hidden;
 }
 .home-title-wrapper.no-padding {
   padding: 0 0 4px 0;
@@ -669,12 +667,15 @@ body {
   font-weight: bold;
   color: #181F2D;
   margin-bottom: 0;
+  line-height: 52px;
+  float: left;
 }
 .home-title-wrapper .more {
   font-size: 12px;
   color: #0077E0;
-  line-height: 20px;
+  line-height: 52px;
   font-weight: 600;
+  float: right;
 }
 .home-title-wrapper .more span {
   margin-left: 5px;
@@ -683,6 +684,7 @@ body {
   top: 1px;
 }
 .home-title-wrapper .tab-titles {
+  float: left;
   display: flex;
   flex-wrap: wrap;
 }
@@ -691,6 +693,7 @@ body {
   font-weight: normal;
   color: #515A6E;
   margin-bottom: 0;
+  line-height: 52px;
   cursor: pointer;
 }
 .home-title-wrapper .tab-titles .tab-item::before {

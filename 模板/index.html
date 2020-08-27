@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>首页</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./fonts/iconfont.css">
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+
+  <!-- 头部 -->
+  <header class="web-header">
+    <div class="web-header__wrapper">
+      <!-- logo -->
+      <a class="web-header__logo"><img src="./images/logo.png" alt=""></a>
+      <!-- 导航 -->
+      <nav class="web-header__nav">
+        <ul class="web-header__nav__list">
+          <li class="web-header__nav__item" class="active"><a href="./index.html">首页</a></li>
+          <li class="web-header__nav__item"><a href="./aboutus.html">实验室概况</a></li>
+          <li class="web-header__nav__item"><a href="">团队介绍</a></li>
+          <li class="web-header__nav__item"><a href="">新闻资讯</a></li>
+          <li class="web-header__nav__item"><a href="">仪器设备</a></li>
+        </ul>
+      </nav>
+      <!-- 移动端导航隐藏显示按钮 -->
+      <div class="web-header__nav__switch--mobile">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <!-- 搜索框显示按钮 -->
+      <div class="web-header__searchbar__button--open">
+        <span class="iconfont icon-search"></span>
+      </div>
+      <!-- 搜索框弹窗 -->
+      <div class="web-header__searchbar__dialog">
+        <div class="web-header__searchbar__form">
+          <div class="web-header__searchbar__item">
+            <input type="text" class="input" placeholder="输入关键词搜索">
+          </div>
+          <div class="web-header__searchbar__button--submit">
+            <span class="iconfont icon-search"></span>
+          </div>
+        </div>
+        <div class="web-header__searchbar__button--close">
+          <span class="iconfont icon-close"></span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <script src="./js/jquery.js"></script>
+  <script src="./js/my-jq-fun.js"></script>
+  <script src="./js/wow.min.js"></script>
+  <script src="./js/common.js"></script>
+</body>
+</html>
