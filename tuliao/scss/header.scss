@@ -1,40 +1,16 @@
 @media (min-width: 1200px) {
   .web-header {
-    position: relative;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 999;
     color: #ffffff;
-    transition: 0.3s;
-    &.fixed {
-      position: fixed;
-      left: 0;
-      right: 0;
-      top: 0;
-      z-index: 999999;
-    }
-    &.active {
-      background-color: #fff;
-      color: #333;
-      box-shadow: 0 5px 40px -2px rgba(7, 0, 2, 0.15);
-      .header-container {
-        bottom: 0;
-        .web-logo {
-          img {
-            height: 70px;
-            bottom: 0;
-          }
-        }
-        .web-nav {
-          .line {
-            visibility: visible;
-          }
-        }
-      }
-    }
     .header-container {
       height: 100px;
       width: 83%;
       margin: 0 auto;
       position: relative;
-      bottom: -50px;
       transition: 0.3s;
       @include flex-between-x;
       .web-logo {
@@ -42,7 +18,7 @@
         height: 100%;
         align-items: center;
         img {
-          height: 100px;
+          height: 60px;
           transition: 0.3s;
         }
       }
@@ -64,7 +40,7 @@
             align-content: center;
             &.active {
               a {
-                color: $red;
+                color: $theme-color;
               }
             }
             a {
@@ -73,14 +49,14 @@
               text-decoration: none;
               line-height: 100px;
               &:hover {
-                color: $red;
+                color: $theme-color;
               }
             }
           }
         }
         .line {
           height: 4px;
-          background-color: $red;
+          background-color: currentColor;
           position: absolute;
           bottom: 0;
           z-index: 9;
@@ -156,17 +132,6 @@
         top: 0;
         bottom: 0;
         @include flex-center-x-center-y;
-        &::before {
-          content: "";
-          position: absolute;
-          width: 1px;
-          height: 16px;
-          left: 4px;
-          top: 0;
-          bottom: 0;
-          margin: auto;
-          background-color: #bfbfbf;
-        }
         .icon-search {
           padding: 10px 20px;
           cursor: pointer;

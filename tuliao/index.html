@@ -4,7 +4,7 @@
  * @Autor: Yaowen Liu
  * @Date: 2020-05-01 09:06:12
  * @LastEditors: Yaowen Liu
- * @LastEditTime: 2020-06-22 15:18:32
+ * @LastEditTime: 2020-08-27 16:14:00
  -->
 <!DOCTYPE html>
 <html lang="en">
@@ -16,16 +16,14 @@
   <title>网站首页</title>
   <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="./plugins/swiper/swiper.min.css">
-  <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="./plugins/fullpage/fullpage.css">
   <link rel="stylesheet" href="./css/app.css">
   <link rel="stylesheet" href="https://cdn.dowebok.com/98/css/animate.min.css">
-  <script src="./js/jquery.js"></script>
 </head>
 
 <body>
-
-  <header class="web-header fixed">
+  <!-- 头部 -->
+  <header class="web-header">
     <div class="header-container">
       <!-- logo -->
       <a href="/" class="web-logo" title="成龙"><img src="./images/logo.png" alt=""></a>
@@ -68,132 +66,351 @@
     </div>
   </header>
 
-  <div class="index-banner">
-    <div class="swiper-container swiper-animation">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <div class="swiper-item">
-            <div class="bg ani" swiper-animate-effect="shrink" swiper-animate-duration="5s" swiper-no-hidden
-              style="background-image: url(./images/banner1.png)"></div>
-            <div class="content">
-              <h2 class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s"
-                swiper-animate-delay="0.3s">
-                启涂中华 永登巅峰 敏思创新</h2>
-              <p class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s"
-                swiper-animate-delay="0.6s">
-                Qituzhonghua, Yongdeng peak, minsi innovation
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="swiper-item">
-            <div class="bg ani" swiper-animate-effect="shrink" swiper-animate-duration="5s" swiper-no-hidden
-              style="background-image: url(./images/banner2.png)"></div>
-            <div class="content">
-              <h2 class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s"
-                swiper-animate-delay="0.3s">
-                WOW.js</h2>
-              <p class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s"
-                swiper-animate-delay="0.6s">
-                让页面滚动更有趣_dowebok</p>
-            </div>
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="swiper-item">
-            <div class="bg ani" swiper-animate-effect="shrink" swiper-animate-duration="5s" swiper-no-hidden
-              style="background-image: url(./images/banner3.png)"></div>
-            <div class="content">
-              <h2 class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s"
-                swiper-animate-delay="0.3s">
-                Animate.css</h2>
-              <p class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s"
-                swiper-animate-delay="0.6s">
-                一款强大的预设css3动画库</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="bottom-operations">
-      <div class="left">
-        <div class="icon prev wow fadeInUp" id="index_banner_prev"><span class="icon-arrow-left-round"></span></div>
-        <div class="icon next wow fadeInUp" id="index_banner_next"><span class="icon-arrow-right-round"></span></div>
-      </div>
-      <div class="medium">
-        <a class="icon wow fadeInUp" id="down_scroll_btn">
-          <i>下滑继续</i>
-          <span></span>
-        </a>
-      </div>
-      <div class="right wow fadeInUp"></div>
-    </div>
-  </div>
-
-  <div class="main" id="main">
-    <div class="introduce" id="introduce">
-      <div class="full-container">
-        <div class="half-wrapper left center-y">
-          <div class="content">
-            <div class="image">
-              <img class="wow zoomIn" src="./images/avatar.jpeg" alt="">
-            </div>
-          </div>
-        </div>
-        <div class="half-wrapper right center-y">
-          <div class="content">
-            <div class="page-article black">
-              <h2 class="title wow fadeInUp">塞尔达传说：旷野之息111</h2>
-              <article class="desc wow fadeInUp">
-                《塞尔达传说：旷野之息》（ゼルダの伝说： ブレスオブザワイルド）是由任天堂企划制作本部与子公司Monolith
-                Soft协力研发制作的开放世界动作冒险游戏。2017年3月3日由任天堂发行，为《塞尔达传说》系列游戏正统续作第15部作品，其他续作有《塞尔达传说：众神的三角力量》、《塞尔达传说2：林克的冒险》、《塞尔达传说：风之杖》、《塞尔达传说：时之笛》等。2019年6月12日，在任天堂E3展前发布会上官方公开了该作续作的首个宣传片，并正在开发中
-                [1] 。
-              </article>
-            </div>
-            <div class="statistical">
-              <div class="item">
-                <span class="num year run-num">2010</span>
-                <p class="desc">成龙建安成立于2010年</p>
-              </div>
-              <div class="item">
-                <span class="num money run-num">8000</span>
-                <p class="desc">成龙建安注册资本</p>
-              </div>
-            </div>
-            <!-- <div class="more-wrapper wow fadeInUp">
-              <a href="#" class="btn btn-sm animated-button victoria-four">Read More <span
-                  class="icon-arrow-right"></span></a>
-            </div> -->
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="business" id="business">
-      <div class="page-bg">
-        <div class="swiper-container business-bg-swiper">
+  <div id="fullpage">
+    <div class="section">
+      <!-- 第一屏banner图 -->
+      <div class="index-banner">
+        <div class="swiper-container swiper-animation" id="index_banner">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
-              <div class="business-bg" style="background-image: url(./images/business_bg.png)"></div>
-            </div>
-            <div class="swiper-slide">
-              <div class="business-bg" style="background-image: url(./images/banner1.png)"></div>
-            </div>
-            <div class="swiper-slide">
-              <div class="business-bg" style="background-image: url(./images/banner2.png)"></div>
-            </div>
-            <div class="swiper-slide">
-                <div class="business-bg" style="background-image: url(./images/banner3.png)"></div>
-              </div>
-              <div class="swiper-slide">
-                  <div class="business-bg" style="background-image: url(./images/banner1.png)"></div>
+              <div class="swiper-item">
+                <div class="bg ani" swiper-animate-effect="shrink" swiper-animate-duration="5s" swiper-no-hidden
+                  style="background-image: url(./images/banner1.png)"></div>
+                <div class="content">
+                  <h2 class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s"
+                    swiper-animate-delay="0.3s">
+                    启涂中华 永登巅峰 敏思创新</h2>
+                  <p class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s"
+                    swiper-animate-delay="0.6s">
+                    Qituzhonghua, Yongdeng peak, minsi innovation
+                  </p>
                 </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-item">
+                <div class="bg ani" swiper-animate-effect="shrink" swiper-animate-duration="5s" swiper-no-hidden
+                  style="background-image: url(./images/banner2.png)"></div>
+                <div class="content">
+                  <h2 class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s"
+                    swiper-animate-delay="0.3s">
+                    WOW.js</h2>
+                  <p class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s"
+                    swiper-animate-delay="0.6s">
+                    让页面滚动更有趣_dowebok</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-item">
+                <div class="bg ani" swiper-animate-effect="shrink" swiper-animate-duration="5s" swiper-no-hidden
+                  style="background-image: url(./images/banner3.png)"></div>
+                <div class="content">
+                  <h2 class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s"
+                    swiper-animate-delay="0.3s">
+                    Animate.css</h2>
+                  <p class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s"
+                    swiper-animate-delay="0.6s">
+                    一款强大的预设css3动画库</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bottom-operations">
+          <div class="left">
+            <div class="icon prev wow fadeInUp" id="index_banner_prev"><span class="icon-arrow-left-round"></span></div>
+            <div class="icon next wow fadeInUp" id="index_banner_next"><span class="icon-arrow-right-round"></span>
+            </div>
+          </div>
+          <div class="medium">
+            <a class="icon wow fadeInUp" id="down_scroll_btn">
+              <i>下滑继续</i>
+              <span></span>
+            </a>
+          </div>
+          <div class="right wow fadeInUp"></div>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <!-- 第二屏介绍 -->
+      <div class="introduce" id="introduce">
+        <div class="full-container">
+          <div class="half-wrapper left center-y">
+            <div class="content">
+              <div class="image">
+                <img class="" src="./images/avatar.jpeg" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="half-wrapper right center-y">
+            <div class="content">
+              <div class="page-article black">
+                <h2 class="title">塞尔达传说：旷野之息111</h2>
+                <article class="desc">
+                  《塞尔达传说：旷野之息》（ゼルダの伝说： ブレスオブザワイルド）是由任天堂企划制作本部与子公司Monolith
+                  Soft协力研发制作的开放世界动作冒险游戏。2017年3月3日由任天堂发行，为《塞尔达传说》系列游戏正统续作第15部作品，其他续作有《塞尔达传说：众神的三角力量》、《塞尔达传说2：林克的冒险》、《塞尔达传说：风之杖》、《塞尔达传说：时之笛》等。2019年6月12日，在任天堂E3展前发布会上官方公开了该作续作的首个宣传片，并正在开发中
+                  [1] 。
+                </article>
+              </div>
+              <div class="statistical">
+                <div class="item">
+                  <span class="num year run-num">2010</span>
+                  <p class="desc">成龙建安成立于2010年</p>
+                </div>
+                <div class="item">
+                  <span class="num money run-num">8000</span>
+                  <p class="desc">成龙建安注册资本</p>
+                </div>
+              </div>
+              <!-- <div class="more-wrapper">
+                <a href="#" class="btn btn-sm animated-button victoria-four">Read More <span
+                    class="icon-arrow-right"></span></a>
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <!-- 第三屏动态 -->
+      <div class="index-active-news">
+        <div class="full-container">
+          <div class="full-wrapper">
+            <div class="content index-active-news-wrapper">
+              <ul class="tab-title js-tab-title">
+                <li class="item">
+                  <p class="title">新闻动态</p>
+                </li>
+                <li class="item">
+                  <p class="title">公司动态</p>
+                </li>
+              </ul>
+              <ul class="tab-list js-tab-list">
+                <!-- 新闻动态 -->
+                <li>
+                  <div class="active-news-list">
+                    <a href="" class="active-news-card">
+                      <div class="left">
+                        <p class="type">新闻动态1</p>
+                        <p class="time">2019-01-31</p>
+                      </div>
+                      <div class="medium">
+                        <p class="text">业通过了ISO90001质量管理体系认证</p>
+                      </div>
+                      <div class="right">
+                        <p class="text">企业通过了ISO90001质量管理体系认证和ISO14001环境管理体系认证且已通过中国环境标志产品认证</p>
+                      </div>
+                    </a>
+                    <a href="" class="active-news-card">
+                      <div class="left">
+                        <p class="type">新闻动态</p>
+                        <p class="time">2019-01-31</p>
+                      </div>
+                      <div class="medium">
+                        <p class="text">业通过了ISO90001质量管理体系认证</p>
+                      </div>
+                      <div class="right">
+                        <p class="text">企业通过了ISO90001质量管理体系认证和ISO14001环境管理体系认证且已通过中国环境标志产品认证</p>
+                      </div>
+                    </a>
+                    <a href="" class="active-news-card">
+                      <div class="left">
+                        <p class="type">新闻动态</p>
+                        <p class="time">2019-01-31</p>
+                      </div>
+                      <div class="medium">
+                        <p class="text">业通过了ISO90001质量管理体系认证</p>
+                      </div>
+                      <div class="right">
+                        <p class="text">企业通过了ISO90001质量管理体系认证和ISO14001环境管理体系认证且已通过中国环境标志产品认证</p>
+                      </div>
+                    </a>
+                  </div>
+                </li>
+                <!-- 公司动态 -->
+                <li>
+                  <div class="active-news-list">
+                    <a href="" class="active-news-card">
+                      <div class="left">
+                        <p class="type">新闻动态2</p>
+                        <p class="time">2019-01-31</p>
+                      </div>
+                      <div class="medium">
+                        <p class="text">业通过了ISO90001质量管理体系认证</p>
+                      </div>
+                      <div class="right">
+                        <p class="text">企业通过了ISO90001质量管理体系认证和ISO14001环境管理体系认证且已通过中国环境标志产品认证</p>
+                      </div>
+                    </a>
+                    <a href="" class="active-news-card">
+                      <div class="left">
+                        <p class="type">新闻动态</p>
+                        <p class="time">2019-01-31</p>
+                      </div>
+                      <div class="medium">
+                        <p class="text">业通过了ISO90001质量管理体系认证</p>
+                      </div>
+                      <div class="right">
+                        <p class="text">
+                          企业通过了ISO90001质量管理体系认证和ISO14001环境管理体系认证且已通过中国环境标志产品认证企业通过了ISO90001质量管理体系认证和ISO14001环境管理体系认证且已通过中国环境标志产品认证企业通过了ISO90001质量管理体系认证和ISO14001环境管理体系认证且已通过中国环境标志产品认证企业通过了ISO90001质量管理体系认证和ISO14001环境管理体系认证且已通过中国环境标志产品认证
+                        </p>
+                      </div>
+                    </a>
+                    <a href="" class="active-news-card">
+                      <div class="left">
+                        <p class="type">新闻动态</p>
+                        <p class="time">2019-01-31</p>
+                      </div>
+                      <div class="medium">
+                        <p class="text">业通过了ISO90001质量管理体系认证</p>
+                      </div>
+                      <div class="right">
+                        <p class="text">企业通过了ISO90001质量管理体系认证和ISO14001环境管理体系认证且已通过中国环境标志产品认证</p>
+                      </div>
+                    </a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <!-- 第四屏介绍 -->
+      <div class="our-products">
+        <div class="full-container">
+          <div class="full-wrapper">
+            <div class="content">
+              <div class="swiper-container" id="product_banner">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <ul class="product-group">
+                      <li class="item">
+                        <div class="card">
+                          <div class="image cover" style="background-image:url(./images/about_bg_1.png)"></div>
+                          <div class="info">
+                            <a href="" class="title">华登思快闪创意空间—“城市野餐”圆满落幕</a>
+                            <p class="desc">
+                              6月8日“设计上海@新天地设计节”正式落幕。三棵树联手ELLEDECO家居廊打造的90㎡创意空间——“城市野餐”，在上海新天地广场为来往的人们带来了一场别开生面的梦想“家”体验。
+                            </p>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="item">
+                        <div class="card">
+                          <div class="image cover" style="background-image:url(./images/about_bg_1.png)"></div>
+                          <div class="info">
+                            <a href="" class="title">华登思快闪创意空间—“城市野餐”圆满落幕</a>
+                            <p class="desc">
+                              6月8日“设计上海@新天地设计节”正式落幕。三棵树联手ELLEDECO家居廊打造的90㎡创意空间——“城市野餐”，在上海新天地广场为来往的人们带来了一场别开生面的梦想“家”体验。
+                            </p>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="item">
+                        <div class="card">
+                          <div class="image cover" style="background-image:url(./images/about_bg_1.png)"></div>
+                          <div class="info">
+                            <a href="" class="title">华登思快闪创意空间—“城市野餐”圆满落幕</a>
+                            <p class="desc">
+                              6月8日“设计上海@新天地设计节”正式落幕。三棵树联手ELLEDECO家居廊打造的90㎡创意空间——“城市野餐”，在上海新天地广场为来往的人们带来了一场别开生面的梦想“家”体验。
+                            </p>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="swiper-slide">
+                    <ul class="product-group">
+                      <li class="item">
+                        <div class="card">
+                          <div class="image cover" style="background-image:url(./images/about_bg_1.png)"></div>
+                          <div class="info">
+                            <a href="" class="title">华登思快闪创意空间—“城市野餐”圆满落幕</a>
+                            <p class="desc">
+                              6月8日“设计上海@新天地设计节”正式落幕。三棵树联手ELLEDECO家居廊打造的90㎡创意空间——“城市野餐”，在上海新天地广场为来往的人们带来了一场别开生面的梦想“家”体验。
+                            </p>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="item">
+                        <div class="card">
+                          <div class="image cover" style="background-image:url(./images/about_bg_1.png)"></div>
+                          <div class="info">
+                            <a href="" class="title">华登思快闪创意空间—“城市野餐”圆满落幕</a>
+                            <p class="desc">
+                              6月8日“设计上海@新天地设计节”正式落幕。三棵树联手ELLEDECO家居廊打造的90㎡创意空间——“城市野餐”，在上海新天地广场为来往的人们带来了一场别开生面的梦想“家”体验。
+                            </p>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="item">
+                        <div class="card">
+                          <div class="image cover" style="background-image:url(./images/about_bg_1.png)"></div>
+                          <div class="info">
+                            <a href="" class="title">华登思快闪创意空间—“城市野餐”圆满落幕</a>
+                            <p class="desc">
+                              6月8日“设计上海@新天地设计节”正式落幕。三棵树联手ELLEDECO家居廊打造的90㎡创意空间——“城市野餐”，在上海新天地广场为来往的人们带来了一场别开生面的梦想“家”体验。
+                            </p>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="swiper-slide">
+                    <ul class="product-group">
+                      <li class="item">
+                        <div class="card">
+                          <div class="image cover" style="background-image:url(./images/about_bg_1.png)"></div>
+                          <div class="info">
+                            <a href="" class="title">华登思快闪创意空间—“城市野餐”圆满落幕</a>
+                            <p class="desc">
+                              6月8日“设计上海@新天地设计节”正式落幕。三棵树联手ELLEDECO家居廊打造的90㎡创意空间——“城市野餐”，在上海新天地广场为来往的人们带来了一场别开生面的梦想“家”体验。
+                            </p>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="item">
+                        <div class="card">
+                          <div class="image cover" style="background-image:url(./images/about_bg_1.png)"></div>
+                          <div class="info">
+                            <a href="" class="title">华登思快闪创意空间—“城市野餐”圆满落幕</a>
+                            <p class="desc">
+                              6月8日“设计上海@新天地设计节”正式落幕。三棵树联手ELLEDECO家居廊打造的90㎡创意空间——“城市野餐”，在上海新天地广场为来往的人们带来了一场别开生面的梦想“家”体验。
+                            </p>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="item">
+                        <div class="card">
+                          <div class="image cover" style="background-image:url(./images/about_bg_1.png)"></div>
+                          <div class="info">
+                            <a href="" class="title">华登思快闪创意空间—“城市野餐”圆满落幕</a>
+                            <p class="desc">
+                              6月8日“设计上海@新天地设计节”正式落幕。三棵树联手ELLEDECO家居廊打造的90㎡创意空间——“城市野餐”，在上海新天地广场为来往的人们带来了一场别开生面的梦想“家”体验。
+                            </p>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="operations">
+                <div class="icon prev" id="product_prev"><span class="icon-arrow-left-round"></span></div>
+                <div class="icon next" id="product_next"><span class="icon-arrow-right-round"></span></div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
 
+  <!-- 第五屏介绍 -->
   <footer class="footer">
     <div class="bg"></div>
     <div class="full-container">
@@ -260,133 +477,79 @@
 
   </footer>
 
+  <script src="./js/jquery.js"></script>
   <script src="./js/my-jq-fun.js"></script>
   <script src="./js/wow.min.js"></script>
   <script src="./plugins/swiper/swiper.min.js"></script>
   <script src="./plugins/swiper/swiper.animate.rewrite.min.js"></script>
+  <script src="./plugins/fullpage/fullpage.js"></script>
   <script src="./js/my-swiper.js"></script>
   <script src="./js/main.js"></script>
   <script>
-    // 滚动数字
-    var isDone = false;
+    $(document).ready(function () {
+      //initialising fullpage.js in the jQuery way
+      $('#fullpage').fullpage({
+        sectionsColor: ['#F0F0F0', '#F0F0F0', '#ffffff', '#F0F0F0'],
+        navigation: true,
+        slidesNavigation: true,
+        afterLoad: function (anchorLink, index) {
+          if (index.index === 1) {
+            $(".run-num").each(function () {
+              $(this).runNumber();
+            })
+          }
+        },
+      });
 
-    $(function () {
-      // 滚动数字
-      runNumber();
-
-      // 滚动到第二屏
-      $("#down_scroll_btn").click(function () {
-        $("#main").scrollInto({ duration: 1000 });
-      })
-    })
-
-    $(window).scroll(function () {
-      runNumber();
+      // 动态
+      $(".index-active-news-wrapper").tabSwitch();
     });
 
-    // 滚动数字
-    function runNumber() {
-      if (Math.abs($(window).scrollTop()) > $('#introduce').offset().top - 300) {
-        if (!isDone) {
-          $(".run-num").each(function () {
-            $(this).runNumber();
-          })
-          isDone = true;
-        }
-      }
-    }
-
-
-    /**swiper**/
     // banner
-    var indexBannerSwiper = new Swiper('.swiper-animation', {
-      loop: true,
-      speed: 500,
-      effect: 'fade',
-      autoplay: {
-        delay: 5000
-      },
-      disableOnInteraction: false,
-      pagination: {
-        el: '.swiper-pagination',
-        bulletClass: 'my-bullet',
-        bulletActiveClass: 'my-bullet-active',
-        clickable: true
-      },
-      on: {
-        init: function () {
-          swiperAnimateCache(this); //隐藏动画元素 
-          swiperAnimate(this); //初始化完成开始动画
+    (function () {
+      var indexBannerSwiper = new Swiper('#index_banner', {
+        loop: true,
+        speed: 500,
+        effect: 'fade',
+        autoplay: {
+          delay: 5000
         },
-        slideChangeTransitionEnd: function () {
-          swiperAnimate(this); //每个slide切换结束时也运行当前slide动画
-          //this.slides.eq(this.activeIndex).find('.ani').removeClass('ani'); 动画只展现一次，去除ani类名
+        disableOnInteraction: false,
+        pagination: {
+          el: '.swiper-pagination',
+          bulletClass: 'my-bullet',
+          bulletActiveClass: 'my-bullet-active',
+          clickable: true
+        },
+        on: {
+          init: function () {
+            swiperAnimateCache(this); //隐藏动画元素 
+            swiperAnimate(this); //初始化完成开始动画
+          },
+          slideChangeTransitionEnd: function () {
+            swiperAnimate(this); //每个slide切换结束时也运行当前slide动画
+            //this.slides.eq(this.activeIndex).find('.ani').removeClass('ani'); 动画只展现一次，去除ani类名
+          }
         }
-      }
-    });
-    $("#index_banner_prev").click(function () {
-      indexBannerSwiper.slidePrev();
-    })
-    $("#index_banner_next").click(function () {
-      indexBannerSwiper.slideNext();
-    })
-
-    // 业务领域
-    var businessSwiper = new Swiper('.business-swiper', {
-      speed: 500,
-      autoplay: {
-        delay: 5000
-      },
-      spaceBetween: 35,
-      on: {
-        init: function () {
-          swiperAnimateCache(this); //隐藏动画元素 
-          swiperAnimate(this); //初始化完成开始动画
-          $('#business').find('.menu-item').eq(this.activeIndex).addClass('active').siblings('.menu-item').removeClass('active');
-        },
-        slideChangeTransitionEnd: function () {
-          swiperAnimate(this);
-          $('#business').find('.menu-item').eq(this.activeIndex).addClass('active').siblings('.menu-item').removeClass('active');
-        },
-      },
-    });
-    var businessBgSwiper = new Swiper('.business-bg-swiper', {
-      effect: 'fade'
-    })
-    $('#business').find('.menu-item').each(function () {
-      $(this).hover(function () {
-        $(this).addClass('active').siblings('.menu-item').removeClass('active');
-        businessSwiper.slideTo($(this).index());
-        businessBgSwiper.slideTo($(this).index());
+      });
+      $("#index_banner_prev").click(function () {
+        indexBannerSwiper.slidePrev();
       })
-    })
+      $("#index_banner_next").click(function () {
+        indexBannerSwiper.slideNext();
+      })
+    })();
 
-
-
-    // 品牌切换
-    var brandSwiper = new Swiper('.partner-swiper', {
-      spaceBetween: 15,
-      slidesPerView: 4,//一行显示3个
-      slidesPerColumn: 2,//显示2行
-      speed: 500,
-      autoplay: {
-        delay: 5000
-      },
-      disableOnInteraction: false,
-      navigation: {
-        nextEl: '#partner_prev',
-        prevEl: '#partner_next',
-      },
-      pagination: {
-        el: '#partner_pagination',
-        type: 'fraction',
-        renderFraction: function (currentClass, totalClass) {
-          return '<span class="' + currentClass + '"></span>' +
-            ' / ' +
-            '<span class="' + totalClass + '"></span>';
-        },
-      }
-    });
+    // 产品banner
+    (function () {
+      var productBanner = new Swiper("#product_banner", {});
+      $("#product_prev").click(function () {
+        productBanner.slidePrev();
+      })
+      $("#product_next").click(function () {
+        productBanner.slideNext();
+      })
+    })();
   </script>
 </body>
 
