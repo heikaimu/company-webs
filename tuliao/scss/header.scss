@@ -6,6 +6,9 @@
     top: 0;
     z-index: 999;
     color: #ffffff;
+    &.black {
+      color: #333333;
+    }
     .header-container {
       height: 100px;
       width: 83%;
@@ -45,6 +48,7 @@
             }
             a {
               font-size: $font-size-medium;
+              font-weight: 600;
               color: currentColor;
               text-decoration: none;
               line-height: 100px;
