@@ -1,6 +1,7 @@
 .home-title-wrapper {
   @include flex-between-x-center-y;
   height: 52px;
+  width: 100%;
   padding: 0 20px 4px 20px;
   background-color: $white;
   position: relative;
