@@ -12,7 +12,7 @@
       top: -37px;
       bottom: -63px;
       z-index: 1;
-      background: url(../images/services_bg.png) no-repeat center center / contain;
+      background: url(../images/services_bg_2.png) no-repeat center center / contain;
     }
     .content {
       position: absolute;
@@ -25,6 +25,7 @@
         width: 80px;
         height: 80px;
         position: absolute;
+        z-index: 9;
         &:hover {
           .btn {
             transform: scale3d(1.1, 1.1, 1.1);
@@ -33,7 +34,7 @@
           .info-wrapper {
             visibility: visible;
             opacity: 1;
-            transform: translate3d(0, 0, 0)!important;
+            transform: translate3d(0, 0, 0) !important;
           }
         }
         .btn {
@@ -50,7 +51,7 @@
         }
         &.top {
           left: 50%;
-          top: 0;
+          top: -5px;
           transform: translate3d(-50%, 0, 0);
           .info-wrapper {
             left: 100px;
@@ -59,7 +60,7 @@
         }
         &.right {
           top: 50%;
-          right: 0;
+          right: -5px;
           transform: translate3d(0, -50%, 0);
           .info-wrapper {
             left: 100px;
@@ -67,7 +68,7 @@
           }
         }
         &.bottom {
-          bottom: 0;
+          bottom: 5px;
           left: 50%;
           transform: translate3d(-50%, 0, 0);
           .info-wrapper {
@@ -76,24 +77,72 @@
           }
         }
         &.center {
+          width: 120px;
+          height: 120px;
           top: 50%;
           left: 50%;
           transform: translate3d(-50%, -50%, 0);
+          z-index: 2;
+          &:hover {
+            .btn {
+              transform: none;
+              box-shadow: none;
+              &::before {
+                opacity: 0.68;
+              }
+            }
+          }
+          .btn {
+            background-color: transparent;
+            flex-direction: column;
+            img {
+              display: block;
+              width: 40px;
+              height: auto;
+            }
+            &::before {
+              content: "";
+              display: block;
+              width: 300px;
+              height: 300px;
+              background: rgba(55, 47, 122, 1);
+              border: 1px solid rgba(0, 0, 0, 1);
+              border-radius: 50%;
+              position: absolute;
+              left: -86px;
+              top: -95px;
+              z-index: -1;
+              opacity: 0;
+              transition: .3s;
+            }
+            &::after {
+              content: "建筑总承包";
+              display: block;
+              font-size: 20px;
+              color: #fff;
+              font-weight: 400;
+              padding-top: 10px;
+            }
+          }
           .info-wrapper {
             width: 360px;
             right: 200px;
             padding-right: 60px;
             top: -100px;
             transform: translate3d(20px, 0, 0);
+            border-top: 2px solid #372F7A;
             &::before {
+              width: 50px;
               left: auto;
-              right: -28px;
+              right: -45px;
+              top: 10px;
               transform: rotate(30deg);
+              background-color: #372F7A;
             }
           }
         }
         &.left {
-          left: 0;
+          left: 2px;
           top: 50%;
           transform: translate3d(0, -50%, 0);
           .info-wrapper {

@@ -1,0 +1,202 @@
+.services-page {
+  height: 100vh;
+  @include flex-center-x-center-y;
+  .services-content {
+    width: 400px;
+    height: 400px;
+    position: relative;
+    .bg {
+      position: absolute;
+      left: -47px;
+      right: -53px;
+      top: -37px;
+      bottom: -63px;
+      z-index: 1;
+      background: url(../images/services_bg_2.png) no-repeat center center / contain;
+    }
+    .content {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: 3;
+      .s-card {
+        width: 80px;
+        height: 80px;
+        position: absolute;
+        z-index: 9;
+        &:hover {
+          .btn {
+            transform: scale3d(1.1, 1.1, 1.1);
+            box-shadow: 0 18px 36px -20px #c6181a;
+          }
+          .info-wrapper {
+            visibility: visible;
+            opacity: 1;
+            transform: translate3d(0, 0, 0) !important;
+          }
+        }
+        .btn {
+          width: 100%;
+          height: 100%;
+          background-color: $red;
+          border-radius: 50%;
+          @include flex-center-x-center-y;
+          cursor: pointer;
+          transition: 0.3s;
+          img {
+            height: 30px;
+          }
+        }
+        &.top {
+          left: 50%;
+          top: -5px;
+          transform: translate3d(-50%, 0, 0);
+          .info-wrapper {
+            left: 100px;
+            top: 0px;
+          }
+        }
+        &.right {
+          top: 50%;
+          right: -5px;
+          transform: translate3d(0, -50%, 0);
+          .info-wrapper {
+            left: 100px;
+            top: 0px;
+          }
+        }
+        &.bottom {
+          bottom: 5px;
+          left: 50%;
+          transform: translate3d(-50%, 0, 0);
+          .info-wrapper {
+            left: 100px;
+            top: 0px;
+          }
+        }
+        &.center {
+          width: 120px;
+          height: 120px;
+          top: 50%;
+          left: 50%;
+          transform: translate3d(-50%, -50%, 0);
+          z-index: 2;
+          &:hover {
+            .btn {
+              transform: none;
+              box-shadow: none;
+              &::before {
+                opacity: 0.68;
+              }
+            }
+          }
+          .btn {
+            background-color: transparent;
+            flex-direction: column;
+            img {
+              display: block;
+              width: 40px;
+              height: auto;
+            }
+            &::before {
+              content: "";
+              display: block;
+              width: 300px;
+              height: 300px;
+              background: rgba(55, 47, 122, 1);
+              border: 1px solid rgba(0, 0, 0, 1);
+              border-radius: 50%;
+              position: absolute;
+              left: -86px;
+              top: -95px;
+              z-index: -1;
+              opacity: 0;
+              transition: .3s;
+            }
+            &::after {
+              content: "建筑总承包";
+              display: block;
+              font-size: 20px;
+              color: #fff;
+              font-weight: 400;
+              padding-top: 10px;
+            }
+          }
+          .info-wrapper {
+            width: 360px;
+            right: 200px;
+            padding-right: 60px;
+            top: -100px;
+            transform: translate3d(20px, 0, 0);
+            border-top: 2px solid #372F7A;
+            &::before {
+              width: 50px;
+              left: auto;
+              right: -45px;
+              top: 10px;
+              transform: rotate(30deg);
+              background-color: #372F7A;
+            }
+          }
+        }
+        &.left {
+          left: 2px;
+          top: 50%;
+          transform: translate3d(0, -50%, 0);
+          .info-wrapper {
+            left: -320px;
+            top: 0px;
+            transform: translate3d(20px, 0, 0);
+            &::before {
+              left: auto;
+              right: -26px;
+              transform: rotate(30deg);
+            }
+          }
+        }
+        .info-wrapper {
+          padding-top: 20px;
+          padding-left: 5px;
+          width: 300px;
+          position: absolute;
+          border-top: 2px solid $red;
+          transition: 0.8s;
+          opacity: 0;
+          transform: translate3d(-20px, 0, 0);
+          visibility: hidden;
+          h3 {
+            font-size: 16px;
+            color: #333;
+            font-weight: 600;
+            &::after {
+              content: "";
+              display: block;
+              height: 2px;
+              width: 20px;
+              background-color: #372f79;
+              margin-top: 15px;
+              margin-bottom: 15px;
+            }
+          }
+          p {
+            font-size: 13px;
+            color: #666;
+          }
+          &::before {
+            content: "";
+            display: block;
+            height: 2px;
+            width: 30px;
+            background-color: $red;
+            transform: rotate(-30deg);
+            position: absolute;
+            left: -26px;
+            top: 5px;
+          }
+        }
+      }
+    }
+  }
+}

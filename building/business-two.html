@@ -135,7 +135,55 @@
   </div>
 
   <!-- 轮播图文行 -->
-  <div class="pic-article-row">
+  <div class="pic-article-row pic-article-row-swiper">
+    <div class="full-container">
+      <div class="half-wrapper">
+        <div class="content">
+          <div class="swiper-container swiper-pic-article-bg">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="picture-swiper" style="background-image:url(./images/banner1.png)"></div>
+              </div>
+              <div class="swiper-slide">
+                <div class="picture-swiper" style="background-image:url(./images/banner2.png)"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="half-wrapper">
+        <div class="content">
+          <div class="swiper-container swiper-pic-article-content">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="article-swiper">
+                  <h2 class="title no-line">高低压配电</h2>
+                  <p class="en-title">High And Low Voltage Distribution</p>
+                  <p class="desc">
+                    公司内强管理，外树形象，坚持“以人为本”，秉承“质量第一、安全第一、服务第一、信誉至上”的经营宗旨，所承担的工程均以优质快速，赢得了客户和消防部门的好评，在行业内拥有很高的声誉。</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="article-swiper">
+                  <h2 class="title no-line">高低压配电</h2>
+                  <p class="en-title">High And Low Voltage Distribution</p>
+                  <p class="desc">
+                    公司内强管理，外树形象，坚持“以人为本”，秉承“质量第一、安全第一、服务第一、信誉至上”的经营宗旨，所承担的工程均以优质快速，赢得了客户和消防部门的好评，在行业内拥有很高的声誉。</p>
+                </div>
+              </div>
+            </div>
+            <!-- 如果需要分页器 -->
+            <div class="swiper-pagination swiper-pagination-pic-article"></div>
+            <!-- 如果需要导航按钮 -->
+            <div class="swiper-button-prev swiper-button-prev-pic-article swiper-button-black"></div>
+            <div class="swiper-button-next swiper-button-next-pic-article swiper-button-black"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="pic-article-row pic-article-row-swiper">
     <div class="full-container">
       <div class="half-wrapper">
         <div class="content">
@@ -635,24 +683,26 @@
       });
     })
 
-    var picArticleBg = new Swiper(".swiper-pic-article-bg", {
-      effect: 'fade'
-    });
-    var picArticleContent = new Swiper(".swiper-pic-article-content", {
-      // 如果需要分页器
-      pagination: {
-        el: '.swiper-pagination-pic-article',
-      },
-
-      // 如果需要前进后退按钮
-      navigation: {
-        nextEl: '.swiper-button-next-pic-article',
-        prevEl: '.swiper-button-prev-pic-article',
-      },
-    });
-    picArticleBg.controller.control = picArticleContent;
-    picArticleContent.controller.control = picArticleBg;
-
+    // 轮播的图文行
+    $(".pic-article-row-swiper").each(function () {
+      var bg = $(this).find(".swiper-pic-article-bg");
+      var content = $(this).find(".swiper-pic-article-content");
+      var pagination = $(this).find('.swiper-pagination-pic-article');
+      var prev = $(this).find('.swiper-button-prev-pic-article');
+      var next = $(this).find('.swiper-button-next-pic-article');
+      var bgSwiper = new Swiper(bg, {  effect: 'fade'});
+      var contentSwiper = new Swiper(content, {
+        pagination: {
+          el: pagination
+        },
+        navigation: {
+          nextEl: next,
+          prevEl: prev,
+        },
+      });
+      bgSwiper.controller.control = contentSwiper;
+      contentSwiper.controller.control = bgSwiper;
+    })
   </script>
 </body>
 

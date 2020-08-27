@@ -1,10 +1,10 @@
 .home-title-wrapper {
-  @include flex-between-x-center-y;
   height: 52px;
   width: 100%;
   padding: 0 20px 4px 20px;
   background-color: $white;
   position: relative;
+  overflow: hidden;
   &.no-padding {
     padding: 0 0 4px 0;
   }
@@ -13,12 +13,15 @@
     font-weight: bold;
     color: $font-color-main;
     margin-bottom: 0;
+    line-height: 52px;
+    float: left;
   }
   .more {
     font-size: $font-size-ex-small;
     color: $theme-color;
-    line-height: 20px;
+    line-height: 52px;
     font-weight: 600;
+    float: right;
     span {
       margin-left: 5px;
       font-weight: 600;
@@ -30,12 +33,14 @@
     }
   }
   .tab-titles {
+    float: left;
     @include flex-wrap;
     .tab-item {
       font-size: $font-size-large;
       font-weight: normal;
       color: $font-color-common;
       margin-bottom: 0;
+      line-height: 52px;
       cursor: pointer;
       &::before {
         content: "/";

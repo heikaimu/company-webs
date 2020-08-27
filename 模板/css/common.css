@@ -1,0 +1,225 @@
+/* 头部 */
+.web-header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 9;
+  background-color: #fff;
+  color: #333;
+  box-shadow: 0 5px 40px -2px rgba(7, 0, 2, 0.15);
+}
+
+.web-header__wrapper {
+  height: 100px;
+  width: 83%;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.web-header__logo {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
+.web-header__logo img {
+  display: block;
+  height: 80px;
+}
+
+.web-header__nav {
+  height: 100%;
+  position: relative;
+  padding-right: 120px;
+}
+
+.web-header__nav .line {
+  height: 4px;
+  background-color: #C8181A;
+  position: absolute;
+  bottom: 0;
+  z-index: 10;
+}
+
+.web-header__nav__list {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+}
+
+.web-header__nav__item {
+  height: 100%;
+  margin: 0 20px;
+  display: flex;
+  align-content: center;
+}
+
+.web-header__nav__item a {
+  font-size: 18px;
+  color: currentColor;
+  text-decoration: none;
+  line-height: 100px;
+}
+
+.web-header__nav__item.active a, .web-header__nav__item a:hover {
+  color: #C8181A;
+}
+
+.web-header__nav__switch--mobile {
+  display: none;
+}
+
+.web-header__nav__switch--mobile span {}
+
+.web-header__searchbar__button--open {
+  width: 100px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.web-header__searchbar__button--open::before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 16px;
+  left: 4px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background-color: #bfbfbf;
+}
+
+.web-header__searchbar__button--open span {
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.web-header__searchbar__dialog {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100px;
+  z-index: 999;
+  height: 100px;
+  background-color: #f2f2f2;
+  display: none;
+}
+
+.web-header__searchbar__form {
+  width: 400px;
+  height: 40px;
+  border-bottom: 1px solid #C8181A;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.web-header__searchbar__item {
+  flex: 1;
+  padding-left: 20px;
+}
+
+.web-header__searchbar__item .input {
+  width: 100%;
+  height: 40px;
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 14px;
+}
+
+.web-header__searchbar__button--submit {
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.web-header__searchbar__button--submit span {
+  padding: 10px 20px;
+  color: #C8181A;
+  cursor: pointer;
+}
+
+.web-header__searchbar__button--close {
+  width: 100px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.web-header__searchbar__button--close span {
+  color: #333;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.web-header__searchbar__button--open span:hover, .web-header__searchbar__button--close span:hover {
+  color: #C8181A;
+}
+
+
+/* 超出省略 */
+.omit {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.omit2 {
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.omit3 {
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.omit4 {
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.omit5 {
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
