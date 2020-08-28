@@ -1,0 +1,154 @@
+// 内页banner
+.inner-page-banner {
+  @include bg-cover;
+  height: 100vh;
+  position: relative;
+
+  .content-wrapper {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba($color: #000000, $alpha: 0.3);
+
+    .content {
+      position: absolute;
+      left: 10%;
+      bottom: 10%;
+      color: #ffffff;
+      .cn {
+        font-size: 48px;
+        font-weight: 600;
+        padding-bottom: 10px;
+      }
+
+      .en {
+        font-size: 38px;
+      }
+
+      .scroll-box {
+        padding-top: 100px;
+      }
+    }
+  }
+}
+
+// 内页导航条
+.inner-page-nav {
+  .content {
+    width: 83%;
+    height: 85px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    .nav-list {
+      height: 85px;
+      display: flex;
+      flex-wrap: wrap;
+      .item {
+        display: block;
+        height: 85px;
+        box-sizing: border-box;
+        line-height: 85px;
+        font-size: 20px;
+        color: $font-color-main;
+        & + .item {
+          margin-left: 50px;
+        }
+        &:hover, &.active {
+          border-bottom: 2px solid $theme-color;
+        }
+      }
+    }
+    .bread-nav {
+      color: #666;
+      .item {
+        line-height: 85px;
+      }
+      .iconfont {
+        margin: 0 10px;
+      }
+    }
+  }
+}
+
+// 内页公用标题
+.inner-page-title {
+  margin-bottom: 40px;
+  color: #111111;
+  &.white {
+    color: #ffffff;
+  }
+  .cn {
+    font-size: 30px;
+    color: currentColor;
+    font-weight: 600;
+    padding-bottom: 10px;
+  }
+  .en {
+    font-size: 24px;
+    font-weight: 600;
+    color: currentColor;
+    .yellow {
+      color: $theme-color;
+    }
+  }
+  .desc {
+    font-size: 20px;
+    color: #111111;
+    padding-top: 50px;
+    display: flex;
+    align-items: center;
+    &::after {
+      content: "";
+      display: block;
+      height: 1px;
+      background-color: #cccccc;
+      flex: 1;
+      margin-left: 20px;
+    }
+  }
+}
+
+// ===============关于我们=============
+
+// 组织架构
+.company-origination {
+  padding: 60px 0;
+  @include bg-cover;
+  .image {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+}
+
+// 荣誉
+.our-honor {
+  padding: 60px 0;
+  .honor-swiper {
+    .swiper-wrapper {
+      padding-bottom: 50px;
+    }
+    .swiper-pagination-bullet {
+      width: 16px;
+      height: 16px;
+    }
+    .swiper-pagination-bullet-active {
+      background: $theme-color;
+    }
+    .honor-card {
+      height: 240px;
+      border: 2px solid #ffffff;
+      transition: .3s;
+      &:hover {
+        border: 2px solid $theme-color;
+      }
+    }
+  }
+}

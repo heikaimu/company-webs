@@ -175,6 +175,9 @@
   background-color: #f0f0f0;
   position: relative;
   overflow: hidden;
+  &.white-bg {
+    background-color: #fff;
+  }
   .left {
     height: 100vh;
     .content {
@@ -207,6 +210,9 @@
             color: $font-color-main;
             position: relative;
             transition: 0.3s;
+            &.yellow {
+              color: $theme-color;
+            }
             &::after {
               font-size: $font-size-medium;
               color: $font-color-main;
