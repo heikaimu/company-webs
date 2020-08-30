@@ -6,6 +6,20 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "4765852",
+      "name": "reload",
+      "font_class": "reload",
+      "unicode": "e788",
+      "unicode_decimal": 59272
+    },
+    {
+      "icon_id": "4766970",
+      "name": "phone",
+      "font_class": "phone",
+      "unicode": "e7e3",
+      "unicode_decimal": 59363
+    },
+    {
       "icon_id": "4766685",
       "name": "home",
       "font_class": "home",

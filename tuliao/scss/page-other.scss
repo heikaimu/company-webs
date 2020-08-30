@@ -56,7 +56,8 @@
         & + .item {
           margin-left: 50px;
         }
-        &:hover, &.active {
+        &:hover,
+        &.active {
           border-bottom: 2px solid $theme-color;
         }
       }
@@ -145,9 +146,318 @@
     .honor-card {
       height: 240px;
       border: 2px solid #ffffff;
-      transition: .3s;
+      transition: 0.3s;
       &:hover {
         border: 2px solid $theme-color;
+      }
+    }
+  }
+}
+
+// 企业理念
+.company-idea {
+  padding: 60px 0;
+  @include bg-cover;
+  .idea-list {
+    display: flex;
+    .idea-item {
+      flex: 1;
+      padding: 50px;
+      .idea-card {
+        height: 460px;
+        background-color: rgba(255, 255, 255, 0.6);
+        text-align: center;
+        .title {
+          font-size: 24px;
+          font-weight: 600;
+          color: #050505;
+          position: relative;
+          padding-top: 62px;
+          &::after {
+            content: "";
+            display: block;
+            width: 2px;
+            height: 56px;
+            background-color: $theme-color;
+            margin: 20px auto;
+          }
+        }
+        .article {
+          .text {
+            font-size: 24px;
+            line-height: 1.6;
+            color: #050505;
+            font-weight: 400;
+            opacity: 0.8;
+          }
+        }
+      }
+    }
+  }
+}
+
+// =======================产品服务======================
+
+// 产品介绍
+.product-introduce {
+  position: relative;
+  .product-nav-list {
+    padding: 50px 0;
+    display: flex;
+    .item {
+      font-size: 16px;
+      color: #050505;
+      cursor: pointer;
+      line-height: 30px;
+      border-bottom: 1px solid #ffffff;
+      &:hover,
+      &.active {
+        color: $theme-color;
+        border-bottom: 1px solid $theme-color;
+      }
+      & + .item {
+        margin-left: 40px;
+      }
+    }
+  }
+}
+.product-introduce-content {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #fdf7e9;
+  position: relative;
+  .product-left {
+    height: 700px;
+    width: 40%;
+    .info {
+      position: absolute;
+      left: 8.5%;
+      right: 70%;
+      .title {
+        font-size: 30px;
+        font-weight: 600;
+        color: #050505;
+        padding-top: 100px;
+        padding-bottom: 40px;
+      }
+      .section {
+        padding-bottom: 40px;
+        .sub-title {
+          font-size: 16px;
+          font-weight: 600;
+          color: #050505;
+          padding-bottom: 10px;
+          &::after {
+            content: " :";
+          }
+        }
+        .summary {
+          font-size: 16px;
+          color: #050505;
+          opacity: 0.8;
+          line-height: 1.6;
+        }
+      }
+      .details-button {
+        width: 131px;
+        height: 45px;
+        background-color: $theme-color;
+        font-size: 16px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #ffffff;
+        cursor: pointer;
+        margin-top: 30px;
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+  .product-right {
+    height: 700px;
+    width: 60%;
+    .bg {
+      @include bg-cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+// 案例
+.business-case {
+  padding: 70px 0;
+  .case-title-wrapper {
+    padding-bottom: 70px;
+    position: relative;
+    .top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 40px;
+      .title {
+        font-size: 30px;
+      }
+      .more {
+        font-size: 60px;
+        color: #cccccc;
+        &:hover {
+          color: #050505;
+        }
+      }
+    }
+    .desc {
+      font-size: 18px;
+    }
+  }
+  .case-swiper-container {
+    &.row {
+      position: relative;
+      .bg-wrapper {
+        width: 60%;
+        .case-bg {
+          height: 620px;
+        }
+      }
+      .context-wrapper {
+        position: absolute;
+        width: 50%;
+        right: 0;
+        top: 50%;
+        transform: translate3d(0, -50%, 0);
+      }
+    }
+    .bg-wrapper {
+      .case-bg {
+        height: 600px;
+        @include bg-cover;
+      }
+    }
+    .context-wrapper {
+      width: 1100px;
+      max-width: 100%;
+      margin: 0 auto;
+      background-color: $white;
+      position: relative;
+      top: -200px;
+      z-index: 99;
+      box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.22);
+      .case-details {
+        padding: 70px 130px 42px 130px;
+        .title {
+          font-size: 22px;
+          color: #333;
+          text-align: center;
+        }
+        .blank {
+          height: 100px;
+        }
+        .summary {
+          font-size: 18px;
+          color: #2d2d2d;
+          line-height: 2;
+        }
+        .more-wrapper {
+          text-align: center;
+        }
+      }
+      .operations {
+        position: absolute;
+        left: 50%;
+        top: 130px;
+        z-index: 100;
+        transform: translate3d(-50%, 0, 0);
+        color: #666;
+        @include flex-center-y;
+        .swiper-case-context-prev,
+        .swiper-case-context-next {
+          padding: 10px;
+          font-size: 20px;
+          cursor: pointer;
+          &:hover {
+            color: $theme-color;
+          }
+        }
+        .swiper-case-context-pagination {
+          padding: 10px 80px;
+          font-size: 22px;
+          .swiper-pagination-current {
+            color: $theme-color;
+          }
+        }
+      }
+    }
+  }
+  .more-case {
+    width: 131px;
+    height: 45px;
+    background-color: $theme-color;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    cursor: pointer;
+    margin: 0 auto;
+    margin-top: 50px;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+
+// 联系我们
+.contact-us {
+  .contact-us-content {
+    width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #FDF7E9;
+    .left {
+      width: 80%;
+      height: 670px;
+      background-color: #333;
+      .map {
+        
+      }
+    }
+    .right {
+      width: 20%;
+      .info {
+        padding: 30px;
+        .title {
+          padding-bottom: 10px;
+          border-bottom: 1px solid rgba($color: #000000, $alpha: 0.3);
+          margin-bottom: 30px;
+          .cn {
+            font-size: 20px;
+            padding-bottom: 5px;
+          }
+          .en {
+            font-size: 14px;
+          }
+        }
+        .name {
+          font-size: 18px;
+          font-weight: 600;
+        }
+        .icon-text {
+          display: flex;
+          margin-top: 30px;
+          .iconfont {
+            flex: 0 0 30px;
+            line-height: 1.6;
+          }
+          .text-box {
+            .text {
+              font-size: 16px;
+              line-height: 1.6;
+            }
+          }
+        }
       }
     }
   }
