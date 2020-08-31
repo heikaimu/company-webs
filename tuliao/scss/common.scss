@@ -89,16 +89,16 @@
   opacity: .6;
 
   .text {
-    font-size: 15px;
+    font-size: 13px;
     color: #ffffff;
     text-align: center;
     padding-bottom: 10px;
   }
   .icon {
-    width: 56px;
-    height: 56px;
+    width: 46px;
+    height: 46px;
     box-sizing: border-box;
-    border: 3px solid $white;
+    border: 2px solid $white;
     border-radius: 50%;
     position: relative;
     margin: 0 auto;
@@ -126,7 +126,7 @@
     text-align: center;
   }
   .cn {
-    font-size: 30px;
+    font-size: 24px;
     color: #363278;
     letter-spacing: 0.2em;
     &.lg {
@@ -191,6 +191,61 @@
       color: $red;
     }
   }
+}
+
+// 分页
+.paging {
+  padding-top: 46px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.paging__prev,
+.paging__next {
+  width: 87px;
+  height: 55px;
+  flex: 0 0 87px;
+  background-color: $theme-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.paging__prev.deep,
+.paging__next.deep {
+  background-color: #c6c6c6;
+  color: #111111;
+}
+
+.paging__prev .iconfont {
+  font-size: 24px;
+}
+
+.paging__next .iconfont {
+  font-size: 24px;
+}
+
+.paging .pages {
+  flex: 1;
+  background-color: #EDCA77;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.paging .pages .page-num {
+  padding: 0 15px;
+  height: 32px;
+  line-height: 32px;
+  font-size: 13px;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.paging .pages .page-num.active {
+  background-color: #ffffff;
+  color: $theme-color;
 }
 
 @media (max-width: 1600px) {

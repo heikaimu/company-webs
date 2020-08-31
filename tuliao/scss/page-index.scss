@@ -30,13 +30,13 @@
       color: $white;
       text-align: center;
       h2 {
-        font-size: 50px;
+        font-size: 40px;
         font-weight: 900;
         letter-spacing: 4px;
       }
       p {
-        font-size: 20px;
-        line-height: 44px;
+        font-size: 16px;
+        line-height: 34px;
       }
     }
   }
@@ -141,7 +141,7 @@
     color: $font-color-main;
   }
   .title {
-    font-size: 24px;
+    font-size: 20px;
     margin-bottom: 30px;
     font-weight: 600;
     color: $font-color-main;
@@ -154,14 +154,14 @@
       content: "";
       display: block;
       height: 3px;
-      width: 51px;
+      width: 41px;
       background-color: $theme-color;
       margin-top: 30px;
     }
   }
   .desc {
     line-height: 1.8;
-    font-size: 16px;
+    font-size: 13px;
     color: $font-color-common;
   }
   .more-wrapper {
@@ -190,9 +190,9 @@
           width: 100%;
         }
         transition: 0.3s;
-        &:hover {
-          transform: scale3d(1.1, 1.1, 1.1);
-        }
+        // &:hover {
+        //   transform: scale3d(1.1, 1.1, 1.1);
+        // }
       }
     }
   }
@@ -205,7 +205,7 @@
         .item {
           margin-right: 50px;
           .num {
-            font-size: 48px;
+            font-size: 39px;
             font-weight: 600;
             color: $font-color-main;
             position: relative;
@@ -214,7 +214,7 @@
               color: $theme-color;
             }
             &::after {
-              font-size: $font-size-medium;
+              font-size: 13px;
               color: $font-color-main;
               position: absolute;
               right: -20px;
@@ -232,7 +232,7 @@
             }
           }
           .desc {
-            font-size: $font-size-base;
+            font-size: 12px;
           }
         }
       }
@@ -251,12 +251,12 @@
     .item {
       margin-right: 50px;
       .title {
-        width: 182px;
-        height: 54px;
-        border-radius: 27px;
+        width: 145px;
+        height: 44px;
+        border-radius: 22px;
         text-align: center;
-        line-height: 54px;
-        font-size: 22px;
+        line-height: 44px;
+        font-size: 18px;
         border: 1px solid $font-color-main;
         background: $white;
         color: $font-color-main;
@@ -278,18 +278,19 @@
   .active-news-card {
     display: flex;
     align-items: center;
-    padding: 45px;
-    color: #0D0D0D;
+    padding: 40px;
+    color: #0d0d0d;
     & + .active-news-card {
-      margin-top: 30px;
+      margin-top: 10px;
     }
-    &:hover, &.active {
+    &:hover,
+    &.active {
       background-color: $theme-color;
       color: #ffffff;
     }
     .left {
       flex: 1;
-      font-size: 16px;
+      font-size: 13px;
       line-height: 1.8;
       .type {
         margin: 0;
@@ -301,16 +302,18 @@
     .medium {
       flex: 2;
       .text {
-        font-size: 20px;
+        font-size: 16px;
         font-weight: 600;
+        line-height: 1.6;
       }
     }
     .right {
       flex: 2;
       .text {
-        font-size: 16px;
-        opacity: .6;
+        font-size: 13px;
+        opacity: 0.6;
         @include omit2;
+        line-height: 1.6;
       }
     }
   }
@@ -318,51 +321,47 @@
 
 // 第四屏幕
 .our-products {
-  background-color: #F0F0F0;
-  .product-group {
-    overflow: hidden;
-    .item {
-      width: 26%;
-      float: left;
-      box-sizing: border-box;
-      padding-left: 40px;
-      &:first-child {
-        width: 48%;
-        padding-left: 0;
+  background-color: #f0f0f0;
+  width: 98%;
+  max-width: 1200px;
+  margin: 0 auto;
+  .swiper-slide {
+    width: 25%;
+    &:nth-child(3n + 1) {
+      width: 50%;
+    }
+  }
+  .card {
+    .cover {
+      height: 220px;
+    }
+    .info {
+      color: $font-color-main;
+      padding-top: 40px;
+      .title {
+        display: block;
+        font-size: 16px;
+        font-weight: 600;
+        color: currentColor;
+        padding-bottom: 20px;
+        @include omit;
       }
-      .card {
-        
-        .cover {
-          height: 280px;
-        }
-        .info {
-          color: $font-color-main;
-          padding-top: 40px;
-          .title {
-            display: block;
-            font-size: 18px;
-            font-weight: 600;
-            color: currentColor;
-            padding-bottom: 20px;
-            @include omit;
-          }
-          .desc {
-            font-size: 14px;
-            color: currentColor;
-            opacity: .6;
-            @include omit2;
-          }
-        }
+      .desc {
+        font-size: 14px;
+        color: currentColor;
+        line-height: 1.6;
+        opacity: 0.6;
+        @include omit2;
       }
     }
   }
   .operations {
     padding-top: 50px;
     display: flex;
-    .icon {
+    .iconfont {
       font-size: 30px;
       color: $font-color-common;
-      opacity: .6;
+      opacity: 0.6;
       margin-right: 20px;
       &:hover {
         opacity: 1;
@@ -397,11 +396,10 @@
         color: $white;
         text-align: center;
         h2 {
-          font-size: 30px;
-          margin-bottom: 20px;
+          font-size: 24px;
         }
         p {
-          font-size: $font-size-ex-small;
+          font-size: 14px;
         }
       }
     }
@@ -493,6 +491,132 @@
         }
         .more-wrapper {
           padding-top: 30px;
+        }
+      }
+    }
+  }
+
+  // 第三屏幕
+  .index-active-news {
+    padding: 30px 0;
+    .tab-title {
+      display: flex;
+      .item {
+        margin-right: 20px;
+        .title {
+          width: 100px;
+          height: 30px;
+          border-radius: 15px;
+          text-align: center;
+          line-height: 30px;
+          font-size: 14px;
+          border: 1px solid $font-color-main;
+          background: $white;
+          color: $font-color-main;
+        }
+        &.active {
+          .title {
+            border: 1px solid $theme-color;
+            background: $theme-color;
+            color: #fff;
+          }
+        }
+      }
+    }
+    .tab-list {
+      padding-top: 20px;
+    }
+  }
+  .active-news-list {
+    .active-news-card {
+      display: block;
+      align-items: center;
+      padding: 10px;
+      color: #0d0d0d;
+      & + .active-news-card {
+        margin-top: 10px;
+      }
+      &:hover,
+      &.active {
+        background-color: $theme-color;
+        color: #ffffff;
+      }
+      .left {
+        flex: 1;
+        font-size: 13px;
+        line-height: 1.8;
+        display: flex;
+        justify-content: space-between;
+        .type {
+          margin: 0;
+        }
+        .time {
+          margin: 0;
+        }
+      }
+      .medium {
+        flex: 2;
+        padding: 10px 0;
+        .text {
+          font-size: 16px;
+          font-weight: 600;
+        }
+      }
+      .right {
+        flex: 2;
+        .text {
+          font-size: 13px;
+          opacity: 0.6;
+          @include omit2;
+        }
+      }
+    }
+  }
+
+  // 第四屏幕
+  .our-products {
+    padding-bottom: 30px;
+    background-color: #f0f0f0;
+    .swiper-slide {
+      width: auto;
+      &:nth-child(3n + 1) {
+        width: auto;
+      }
+    }
+    .card {
+      .cover {
+        height: 220px;
+      }
+      .info {
+        color: $font-color-main;
+        padding-top: 20px;
+        .title {
+          display: block;
+          font-size: 16px;
+          font-weight: 600;
+          color: currentColor;
+          padding-bottom: 20px;
+          @include omit;
+        }
+        .desc {
+          font-size: 14px;
+          color: currentColor;
+          line-height: 1.6;
+          opacity: 0.6;
+          @include omit2;
+        }
+      }
+    }
+    .operations {
+      padding-top: 20px;
+      display: flex;
+      .iconfont {
+        font-size: 30px;
+        color: $font-color-common;
+        opacity: 0.6;
+        margin-right: 20px;
+        &:hover {
+          opacity: 1;
         }
       }
     }

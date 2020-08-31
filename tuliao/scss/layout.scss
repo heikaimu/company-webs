@@ -1,6 +1,7 @@
 @media (min-width: 1200px) {
   .full-container {
-    width: 83%;
+    width: 98%;
+    max-width: 1200px;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
@@ -11,6 +12,7 @@
         align-items: center;
       }
       .content {
+        box-sizing: border-box;
         width: 100%;
       }
     }
@@ -29,11 +31,9 @@
     }
   }
 }
+
 @media (max-width: 1199px) {
   .full-container {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
     .full-wrapper {
       width: 100%;
       display: flex;
@@ -41,8 +41,6 @@
         align-items: center;
       }
       .content {
-        box-sizing: border-box;
-        width: 100%;
         padding: 0 20px;
       }
     }

@@ -4,150 +4,332 @@
  * @Autor: Yaowen Liu
  * @Date: 2020-05-01 09:06:12
  * @LastEditors: Yaowen Liu
- * @LastEditTime: 2020-08-28 16:12:16
+ * @LastEditTime: 2020-08-31 15:04:36
  -->
- <!DOCTYPE html>
- <html lang="en">
- 
- <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-   <title>网站首页</title>
-   <link rel="stylesheet" href="./css/reset.css">
-   <link rel="stylesheet" href="./plugins/swiper/swiper.min.css">
-   <link rel="stylesheet" href="./plugins/fullpage/fullpage.css">
-   <link rel="stylesheet" href="https://cdn.dowebok.com/98/css/animate.min.css">
-   <link rel="stylesheet" href="./css/app.css">
- </head>
- 
- <body>
-   <!-- 头部 -->
-   <header class="web-header" id="web_header">
-     <div class="header-container">
-       <!-- logo -->
-       <a href="/" class="web-logo" title="成龙"><img src="./images/logo.png" alt=""></a>
-       <!-- phone -->
-       <span class="header-phone">+400-888-4545</span>
-       <!-- 导航 -->
-       <div class="mobile-blank"></div>
-       <nav class="web-nav">
-         <ul class="nav-list">
-           <li class="nav-item" class="active"><a href="./index.html">首页</a></li>
-           <li class="nav-item"><a href="./aboutus.html">走进华登思</a></li>
-           <li class="nav-item"><a href="">企业文化</a></li>
-           <li class="nav-item"><a href="">产品服务</a></li>
-           <li class="nav-item"><a href="./business-one.html">招聘</a></li>
-         </ul>
-       </nav>
-       <div class="web-nav-switch">
-         <span></span>
-         <span></span>
-         <span></span>
-       </div>
-       <!-- 搜索框 -->
-       <div class="search-bar">
-         <div class="search-form">
-           <div class="input-wrapper">
-             <input type="text" class="search-input-text" placeholder="输入关键词搜索">
-           </div>
-           <div class="submit-wrapper">
-             <span class="icon-search"></span>
-           </div>
-         </div>
-         <div class="search-bar-close">
-           <span class="icon-close"></span>
-         </div>
-       </div>
- 
-       <div class="search-bar-show">
-         <span class="icon-search"></span>
-       </div>
-     </div>
-   </header>
- 
-   <!-- 主体内容 -->
- 
-   <!-- 网页底部 -->
-   <footer class="web-footer">
-     <div class="footer-content">
-       <div class="top">
-         <div class="left">
-           <!-- 友情链接 -->
-           <div class="web-footer__links">
-             <select class="select" name="link" id="footer_link">
-               <option value='' disabled selected style='display:none;'>友情链接</option>
-               <option value="baidu">百度</option>
-               <option value="tengxun">腾讯</option>
-               <option value="ali">阿里</option>
-               <option value="3">Google</option>
-               <option value="3">Facebook</option>
-             </select>
-             <span class="icon icon-arrow-right"></span>
-           </div>
-         </div>
-         <div class="right">
-           <ul class="footer-nav">
-             <li class="footer-nav-item">
-               <a class="main" href="">公司简介</a>
-               <span class="line"></span>
-               <a class="sub" href="">公司简介</a>
-               <a class="sub" href="">公司简介</a>
-               <a class="sub" href="">公司简介</a>
-             </li>
-             <li class="footer-nav-item">
-               <a class="main" href="">公司简介</a>
-               <span class="line"></span>
-               <a class="sub" href="">公司简介</a>
-               <a class="sub" href="">公司简介</a>
-               <a class="sub" href="">公司简介</a>
-             </li>
-             <li class="footer-nav-item">
-               <a class="main" href="">公司简介</a>
-               <span class="line"></span>
-               <a class="sub" href="">公司简介</a>
-               <a class="sub" href="">公司简介</a>
-               <a class="sub" href="">公司简介</a>
-             </li>
-             <li class="footer-nav-item">
-               <a class="main" href="">公司简介</a>
-               <span class="line"></span>
-               <a class="sub" href="">公司简介</a>
-               <a class="sub" href="">公司简介</a>
-               <a class="sub" href="">公司简介</a>
-             </li>
-             <li class="footer-nav-item">
-               <a class="main" href="">公司简介</a>
-               <span class="line"></span>
-               <a class="sub" href="">公司简介</a>
-               <a class="sub" href="">公司简介</a>
-               <a class="sub" href="">公司简介</a>
-             </li>
-             <li class="footer-nav-item">
-               <a class="main" href="">公司简介</a>
-               <span class="line"></span>
-               <a class="sub" href="">公司简介</a>
-               <a class="sub" href="">公司简介</a>
-               <a class="sub" href="">公司简介</a>
-             </li>
-           </ul>
-         </div>
-       </div>
-       <div class="bottom">
-         <h2 class="p1">联系我们</h2>
-         <p class="p2">400 - 888 - 8888</p>
-         <p class="p2">成都市龙泉驿经济开发区</p>
-         <p class="p3">copyright @ 华登思水性涂料有限公司有限公司 川ICP备00000000号 </p>
-       </div>
-     </div>
-   </footer>
- 
-   <script src="./js/jquery.js"></script>
-   <script src="./js/my-jq-fun.js"></script>
-   <script src="./js/wow.min.js"></script>
-   <script src="./plugins/swiper/swiper.min.js"></script>
-   <script src="./plugins/swiper/swiper.animate.rewrite.min.js"></script>
-   <script src="./plugins/fullpage/fullpage.js"></script>
-   <script src="./js/my-swiper.js"></script>
-   <script src="./js/main.js"></script>
- </body>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>网站首页</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./plugins/swiper/swiper.min.css">
+  <link rel="stylesheet" href="./plugins/fullpage/fullpage.css">
+  <link rel="stylesheet" href="https://cdn.dowebok.com/98/css/animate.min.css">
+  <link rel="stylesheet" href="./css/app.css">
+</head>
+
+<body>
+  <!-- 头部 -->
+  <header class="web-header" id="web_header">
+    <div class="header-container">
+      <!-- logo -->
+      <a href="/" class="web-logo" title="成龙"><img src="./images/logo.png" alt=""></a>
+      <!-- phone -->
+      <span class="header-phone">+400-888-4545</span>
+      <!-- 导航 -->
+      <div class="mobile-blank"></div>
+      <nav class="web-nav">
+        <ul class="nav-list">
+          <li class="nav-item" class="active"><a href="./index.html">首页</a></li>
+          <li class="nav-item"><a href="./aboutus.html">走进华登思</a></li>
+          <li class="nav-item"><a href="">企业文化</a></li>
+          <li class="nav-item"><a href="">产品服务</a></li>
+          <li class="nav-item"><a href="./business-one.html">招聘</a></li>
+        </ul>
+      </nav>
+      <div class="web-nav-switch">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <!-- 搜索框 -->
+      <div class="search-bar">
+        <div class="search-form">
+          <div class="input-wrapper">
+            <input type="text" class="search-input-text" placeholder="输入关键词搜索">
+          </div>
+          <div class="submit-wrapper">
+            <span class="icon-search"></span>
+          </div>
+        </div>
+        <div class="search-bar-close">
+          <span class="icon-close"></span>
+        </div>
+      </div>
+
+      <div class="search-bar-show">
+        <span class="icon-search"></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- 主体内容 -->
+  <div class="inner-page-banner" style="background-image: url('./images/banner3.png')">
+    <div class="content-wrapper">
+      <div class="content">
+        <h2 class="cn">新闻动态</h2>
+        <p class="en">News Update</p>
+        <div class="scroll-box">
+          <div class="scroll-button">
+            <p class="text">下滑继续</p>
+            <div class="icon"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 内页导航 -->
+  <div class="inner-page-nav">
+    <div class="content">
+      <nav class="nav-list">
+        <a href="#contact_us" class="item active">新闻动态</a>
+        <a href="#jobs" class="item">公司动态</a>
+      </nav>
+      <div class="bread-nav">
+        <span class="item"><i class="iconfont icon-home"></i></span>
+        <i class="iconfont icon-right"></i>
+        <span class="item">新闻动态</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 主体内容 -->
+  <div class="news-page">
+    <div class="news-container">
+      <div class="left">
+        <!-- 条件 -->
+        <div class="query">
+          <div class="select-item">
+            <select class="select" name="link">
+              <option value='' disabled selected style='display:none;'>招聘公司</option>
+              <option value="baidu">百度</option>
+              <option value="tengxun">腾讯</option>
+              <option value="ali">阿里</option>
+              <option value="3">Google</option>
+              <option value="3">Facebook</option>
+            </select>
+            <span class="iconfont icon-down"></span>
+          </div>
+          <div class="select-item">
+            <select class="select" name="link">
+              <option value='' disabled selected style='display:none;'>招聘职位</option>
+              <option value="baidu">百度</option>
+              <option value="tengxun">腾讯</option>
+              <option value="ali">阿里</option>
+              <option value="3">Google</option>
+              <option value="3">Facebook</option>
+            </select>
+            <span class="iconfont icon-down"></span>
+          </div>
+          <div class="search-input">
+            <div class="input-item">
+              <input type="text" class="input">
+            </div>
+            <button class="button">搜索</button>
+          </div>
+        </div>
+        <ul class="news-list">
+          <li class="news-item">
+            <div class="news-card">
+              <div class="cover hover">
+                <a href="" class="image" style="background-image:url(./images/banner1.png)"></a>
+              </div>
+              <div class="info">
+                <a href="" class="title">企业通过了ISO90001质量管理体系认证</a>
+                <p class="summary">企业通过了ISO90001质量管理体系认证和ISO14001环境管理体系认证且已通过中国环境标志产品认证 . . .</p>
+                <div class="bottom">
+                  <p class="time">2013-31-3</p>
+                  <a href="" class="link">查看</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="news-item">
+            <div class="news-card">
+              <div class="cover hover">
+                <a href="" class="image" style="background-image:url(./images/banner1.png)"></a>
+              </div>
+              <div class="info">
+                <a href="" class="title">企业通过了ISO90001质量管理体系认证</a>
+                <p class="summary">企业通过了ISO90001质量管理体系认证和ISO14001环境管理体系认证且已通过中国环境标志产品认证 . . .</p>
+                <div class="bottom">
+                  <p class="time">2013-31-3</p>
+                  <a href="" class="link">查看</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="news-item">
+            <div class="news-card">
+              <div class="cover hover">
+                <a href="" class="image" style="background-image:url(./images/banner1.png)"></a>
+              </div>
+              <div class="info">
+                <a href="" class="title">企业通过了ISO90001质量管理体系认证</a>
+                <p class="summary">企业通过了ISO90001质量管理体系认证和ISO14001环境管理体系认证且已通过中国环境标志产品认证 . . .</p>
+                <div class="bottom">
+                  <p class="time">2013-31-3</p>
+                  <a href="" class="link">查看</a>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <div class="paging">
+          <div class="paging__prev"><i class="iconfont icon-arrowleft"></i></div>
+          <div class="pages">
+            <a href="" class="page-num active">1</a>
+            <a href="" class="page-num">2</a>
+            <a href="" class="page-num">3</a>
+            <a href="" class="page-num">4</a>
+          </div>
+          <div class="paging__next"><i class="iconfont icon-arrowright"></i></div>
+        </div>
+      </div>
+      <div class="right">
+        <div class="company-active-title">
+          <div class="inner-page-title">
+            <h2 class="cn">公司动态</h2>
+            <h3 class="en"><span class="yellow">Corporate </span>Dynamics</h3>
+          </div>
+        </div>
+        <!-- 第一个 -->
+        <div class="top-news-card">
+          <div class="cover hover">
+            <a href="" class="image" style="background-image:url(./images/banner1.png)"></a>
+          </div>
+          <div class="info">
+            <a href="" class="title">企业通过了ISO90001质量管理体系认证企业通过了ISO90001质量管理体系认证</a>
+            <p class="summary">企业通过了ISO90001质量管理体系认证和ISO14001环境管理体系认证且已通过中国环境标志产品认证 . . .</p>
+            <p class="time">2013-31-3</p>
+          </div>
+        </div>
+        <!-- 其他 -->
+        <ul class="active-list">
+          <li class="active-item">
+            <div class="active-card">
+              <a href="" class="link">企业通过了ISO90001质量管理体系认证企业通过了ISO90001质量管理体系认证</a>
+            </div>
+          </li>
+          <li class="active-item">
+            <div class="active-card">
+              <a href="" class="link">企业通过了ISO90001质量管理体系认证企业通过了ISO90001质量管理体系认证</a>
+            </div>
+          </li>
+          <li class="active-item">
+            <div class="active-card">
+              <a href="" class="link">企业通过了ISO90001质量管理体系认证企业通过了ISO90001质量管理体系认证</a>
+            </div>
+          </li>
+          <li class="active-item">
+            <div class="active-card">
+              <a href="" class="link">企业通过了ISO90001质量管理体系认证企业通过了ISO90001质量管理体系认证</a>
+            </div>
+          </li>
+          <li class="active-item">
+            <div class="active-card">
+              <a href="" class="link">企业通过了ISO90001质量管理体系认证企业通过了ISO90001质量管理体系认证</a>
+            </div>
+          </li>
+          <li class="active-item">
+            <div class="active-card">
+              <a href="" class="link">企业通过了ISO90001质量管理体系认证企业通过了ISO90001质量管理体系认证</a>
+            </div>
+          </li>
+          <li class="active-item">
+            <div class="active-card">
+              <a href="" class="link">企业通过了ISO90001质量管理体系认证企业通过了ISO90001质量管理体系认证</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- 网页底部 -->
+  <footer class="web-footer">
+    <div class="footer-content">
+      <div class="top">
+        <div class="left">
+          <!-- 友情链接 -->
+          <div class="web-footer__links">
+            <select class="select" name="link" id="footer_link">
+              <option value='' disabled selected style='display:none;'>友情链接</option>
+              <option value="baidu">百度</option>
+              <option value="tengxun">腾讯</option>
+              <option value="ali">阿里</option>
+              <option value="3">Google</option>
+              <option value="3">Facebook</option>
+            </select>
+            <span class="iconfont icon-down"></span>
+          </div>
+        </div>
+        <div class="right">
+          <ul class="footer-nav">
+            <li class="footer-nav-item">
+              <a class="main" href="">公司简介</a>
+              <span class="line"></span>
+              <a class="sub" href="">公司简介</a>
+              <a class="sub" href="">公司简介</a>
+              <a class="sub" href="">公司简介</a>
+            </li>
+            <li class="footer-nav-item">
+              <a class="main" href="">公司简介</a>
+              <span class="line"></span>
+              <a class="sub" href="">公司简介</a>
+              <a class="sub" href="">公司简介</a>
+              <a class="sub" href="">公司简介</a>
+            </li>
+            <li class="footer-nav-item">
+              <a class="main" href="">公司简介</a>
+              <span class="line"></span>
+              <a class="sub" href="">公司简介</a>
+              <a class="sub" href="">公司简介</a>
+              <a class="sub" href="">公司简介</a>
+            </li>
+            <li class="footer-nav-item">
+              <a class="main" href="">公司简介</a>
+              <span class="line"></span>
+              <a class="sub" href="">公司简介</a>
+              <a class="sub" href="">公司简介</a>
+              <a class="sub" href="">公司简介</a>
+            </li>
+            <li class="footer-nav-item">
+              <a class="main" href="">公司简介</a>
+              <span class="line"></span>
+              <a class="sub" href="">公司简介</a>
+              <a class="sub" href="">公司简介</a>
+              <a class="sub" href="">公司简介</a>
+            </li>
+            <li class="footer-nav-item">
+              <a class="main" href="">公司简介</a>
+              <span class="line"></span>
+              <a class="sub" href="">公司简介</a>
+              <a class="sub" href="">公司简介</a>
+              <a class="sub" href="">公司简介</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="bottom">
+        <h2 class="p1">联系我们</h2>
+        <p class="p2">400 - 888 - 8888</p>
+        <p class="p2">成都市龙泉驿经济开发区</p>
+        <p class="p3">copyright @ 华登思水性涂料有限公司有限公司 川ICP备00000000号 </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./js/jquery.js"></script>
+  <script src="./js/my-jq-fun.js"></script>
+  <script src="./js/wow.min.js"></script>
+  <script src="./plugins/swiper/swiper.min.js"></script>
+  <script src="./plugins/swiper/swiper.animate.rewrite.min.js"></script>
+  <script src="./plugins/fullpage/fullpage.js"></script>
+  <script src="./js/my-swiper.js"></script>
+  <script src="./js/main.js"></script>
+</body>
