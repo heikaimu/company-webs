@@ -36,12 +36,13 @@
   .full-container {
     .full-wrapper {
       width: 100%;
-      display: flex;
+      display: block;
       &.center-y {
         align-items: center;
       }
       .content {
         padding: 0 20px;
+        display: block;
       }
     }
     .half-wrapper {

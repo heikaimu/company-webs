@@ -86,7 +86,7 @@
 // 下滑继续
 .scroll-button {
   width: 60px;
-  opacity: .6;
+  opacity: 0.6;
 
   .text {
     font-size: 13px;
@@ -229,7 +229,7 @@
 
 .paging .pages {
   flex: 1;
-  background-color: #EDCA77;
+  background-color: #edca77;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -323,5 +323,60 @@
       z-index: 20;
       font-size: 20px;
     }
+  }
+
+  // 分页
+  .paging {
+    padding-top: 26px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .paging__prev,
+  .paging__next {
+    width: 57px;
+    height: 35px;
+    flex: 0 0 57px;
+    background-color: $theme-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    cursor: pointer;
+  }
+
+  .paging__prev.deep,
+  .paging__next.deep {
+    background-color: #c6c6c6;
+    color: #111111;
+  }
+
+  .paging__prev .iconfont {
+    font-size: 18px;
+  }
+
+  .paging__next .iconfont {
+    font-size: 18px;
+  }
+
+  .paging .pages {
+    flex: 1;
+    background-color: #edca77;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .paging .pages .page-num {
+    padding: 0 10px;
+    height: 32px;
+    line-height: 32px;
+    font-size: 13px;
+    color: #ffffff;
+    font-weight: 600;
+  }
+
+  .paging .pages .page-num.active {
+    background-color: #ffffff;
+    color: $theme-color;
   }
 }

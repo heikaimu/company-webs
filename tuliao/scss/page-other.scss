@@ -97,6 +97,7 @@
   border-bottom: 1px solid #f2f2f2;
   .content {
     width: 98%;
+    box-sizing: border-box;
     max-width: 1200px;
     height: 70px;
     margin: 0 auto;
@@ -177,7 +178,7 @@
 
 // 组织架构
 .company-origination {
-  padding: 60px 0;
+  padding: 30px 0;
   @include bg-cover;
   .image {
     width: 100%;
@@ -192,7 +193,10 @@
 
 // 荣誉
 .our-honor {
-  padding: 60px 0;
+  width: 98%;
+  box-sizing: border-box;
+  max-width: 1200px;
+  margin: 0 auto;
   .honor-swiper {
     .swiper-wrapper {
       padding-bottom: 50px;
@@ -217,7 +221,7 @@
 
 // 企业理念
 .company-idea {
-  padding: 60px 0;
+  padding: 30px 0;
   @include bg-cover;
   .idea-list {
     display: flex;
@@ -287,6 +291,7 @@
   position: relative;
   .wrapper {
     width: 98%;
+    box-sizing: border-box;
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
@@ -384,11 +389,11 @@
     position: relative;
     .bg-wrapper {
       height: 500px;
-      @include bg-cover;
       position: relative;
       width: 60%;
       .case-bg {
         height: 500px;
+        @include bg-cover;
       }
     }
     .context-wrapper {
@@ -603,6 +608,7 @@
 .news-container {
   padding: 50px 0;
   width: 98%;
+  box-sizing: border-box;
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
@@ -745,6 +751,787 @@
             position: absolute;
             left: 0;
             top: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// +++++++++++++++++++++++++++++++++++++++++++++++++移动端++++++++++++++++++++++++++++++++++++++++++++++++++
+
+@media (max-width: 1200px) {
+  // 内页banner
+  .inner-page-banner {
+    @include bg-cover;
+    height: 200px;
+    position: relative;
+
+    .content-wrapper {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background-color: rgba($color: #000000, $alpha: 0.3);
+
+      .content {
+        position: absolute;
+        left: 10%;
+        bottom: 10%;
+        color: #ffffff;
+        .cn {
+          font-size: 20px;
+          font-weight: 600;
+          padding-bottom: 10px;
+        }
+
+        .en {
+          font-size: 16px;
+        }
+
+        .scroll-box {
+          padding-top: 10px;
+          display: none;
+        }
+      }
+    }
+  }
+
+  // 搜索框。select框
+  .select-item {
+    position: relative;
+    margin-right: 10px;
+    .select {
+      width: 98px;
+      height: 30px;
+      padding: 0 10px;
+      border: 1px solid #ccc;
+      background-color: #ffffff;
+      font-size: 13px;
+      color: #666;
+      appearance: none;
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      outline: none;
+      text-indent: 10px;
+      option {
+        color: #333;
+      }
+    }
+    .iconfont {
+      width: 30px;
+      height: 30px;
+      color: #666;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      right: 0;
+      top: 0;
+      font-size: 12px;
+    }
+  }
+  .search-input {
+    display: flex;
+    .input-item {
+      .input {
+        width: 90px;
+        height: 30px;
+        box-sizing: border-box;
+        padding: 0 10px;
+        border: 1px solid #ccc;
+        border-right: none;
+        background-color: #ffffff;
+        font-size: 13px;
+        color: #666;
+      }
+    }
+    .button {
+      width: 50px;
+      border: none;
+      background-color: $theme-color;
+      color: #ffffff;
+      cursor: pointer;
+      font-size: 12px;
+    }
+  }
+
+  // 内页导航条
+  .inner-page-nav {
+    border-bottom: 1px solid #f2f2f2;
+    .content {
+      width: 100%;
+      padding: 0 20px;
+      max-width: 1200px;
+      height: 40px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      .nav-list {
+        height: 40px;
+        display: flex;
+        flex-wrap: wrap;
+        .item {
+          display: block;
+          height: 40px;
+          box-sizing: border-box;
+          line-height: 40px;
+          font-size: 12px;
+          color: $font-color-main;
+          & + .item {
+            margin-left: 30px;
+          }
+          &:hover,
+          &.active {
+            border-bottom: 2px solid $theme-color;
+          }
+        }
+      }
+      .bread-nav {
+        display: none;
+        color: #666;
+        font-size: 12px;
+        .item {
+          line-height: 40px;
+        }
+        .iconfont {
+          margin: 0 4px;
+        }
+      }
+    }
+  }
+
+  // 内页公用标题
+  .inner-page-title {
+    margin-bottom: 20px;
+    color: #111111;
+    &.white {
+      color: #ffffff;
+    }
+    .cn {
+      font-size: 18px;
+      color: currentColor;
+      font-weight: 600;
+      padding-bottom: 10px;
+    }
+    .en {
+      font-size: 12px;
+      font-weight: 600;
+      color: currentColor;
+      .yellow {
+        color: $theme-color;
+      }
+    }
+    .desc {
+      font-size: 12px;
+      color: #111111;
+      padding-top: 20px;
+      display: flex;
+      align-items: center;
+      &::after {
+        content: "";
+        display: block;
+        height: 1px;
+        background-color: #cccccc;
+        flex: 1;
+        margin-left: 20px;
+      }
+    }
+  }
+
+  // ===============关于我们=============
+
+  // 组织架构
+  .company-origination {
+    padding: 30px 0;
+    @include bg-cover;
+    .image {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      img {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+
+  // 荣誉
+  .our-honor {
+    width: 100%;
+    padding: 30px 20px;
+    .honor-swiper {
+      .swiper-wrapper {
+        padding-bottom: 50px;
+      }
+      .swiper-pagination-bullet {
+        width: 16px;
+        height: 16px;
+      }
+      .swiper-pagination-bullet-active {
+        background: $theme-color;
+      }
+      .honor-card {
+        height: 240px;
+        border: 2px solid #ffffff;
+        transition: 0.3s;
+        &:hover {
+          border: 2px solid $theme-color;
+        }
+      }
+    }
+  }
+
+  // 企业理念
+  .company-idea {
+    padding: 30px 0;
+    @include bg-cover;
+    .idea-list {
+      display: block;
+      .idea-item {
+        flex: 1;
+        padding: 10px;
+        .idea-card {
+          height: auto;
+          background-color: rgba(255, 255, 255, 0.6);
+          text-align: center;
+          padding-bottom: 20px;
+          .title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #050505;
+            position: relative;
+            padding-top: 22px;
+            &::after {
+              content: "";
+              display: block;
+              width: 2px;
+              height: 16px;
+              background-color: $theme-color;
+              margin: 10px auto;
+            }
+          }
+          .article {
+            .text {
+              font-size: 14px;
+              line-height: 1.6;
+              color: #050505;
+              font-weight: 400;
+              opacity: 0.8;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // =======================产品服务======================
+
+  // 产品介绍
+  .product-introduce {
+    position: relative;
+    .product-nav-list {
+      padding: 20px 0;
+      display: flex;
+      flex-wrap: wrap;
+      .item {
+        width: 33.3%;
+        box-sizing: border-box;
+        padding: 10px 0;
+        font-size: 12px;
+        color: #050505;
+        cursor: pointer;
+        line-height: 20px;
+        border-bottom: 1px solid #ffffff;
+        text-align: center;
+        &:hover,
+        &.active {
+          color: $theme-color;
+          border-bottom: 1px solid $theme-color;
+        }
+        & + .item {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+  .product-introduce-content {
+    background-color: #fdf7e9;
+    position: relative;
+    .wrapper {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 0 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column-reverse;
+      flex-wrap: wrap;
+      .product-left {
+        height: auto;
+        width: 100%;
+        .info {
+          width: auto;
+          padding-bottom: 20px;
+          .title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #050505;
+            padding-top: 20px;
+            padding-bottom: 20px;
+          }
+          .section {
+            padding-bottom: 20px;
+            .sub-title {
+              font-size: 12px;
+              font-weight: 600;
+              color: #050505;
+              padding-bottom: 5px;
+              &::after {
+                content: " :";
+              }
+            }
+            .summary {
+              font-size: 12px;
+              color: #050505;
+              opacity: 0.8;
+              line-height: 1.6;
+            }
+          }
+          .details-button {
+            width: 80px;
+            height: 30px;
+            background-color: $theme-color;
+            font-size: 13px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #ffffff;
+            cursor: pointer;
+            margin-top: 0px;
+            &:hover {
+              opacity: 0.8;
+            }
+          }
+        }
+      }
+      .product-right {
+        width: 100%;
+        height: 200px;
+        position: relative;
+        left: auto;
+        right: auto;
+        .bg {
+          @include bg-cover;
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+
+  // 案例
+  .business-case {
+    padding: 30px 20px;
+    position: relative;
+    .full-container .full-wrapper .content {
+      padding: 0;
+    }
+    .case-title-wrapper {
+      padding-bottom: 20px;
+      position: relative;
+      .top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 10px;
+        .title {
+          font-size: 16px;
+        }
+        .more {
+          font-size: 20px;
+          color: #cccccc;
+          &:hover {
+            color: #050505;
+          }
+        }
+      }
+      .desc {
+        font-size: 16px;
+        line-height: 1.6;
+      }
+    }
+    .case-swiper-container {
+      position: relative;
+      .bg-wrapper {
+        height: 200px;
+        position: relative;
+        width: 100%;
+        .case-bg {
+          @include bg-cover;
+          height: 200px;
+        }
+      }
+      .context-wrapper {
+        width: 100%;
+        background-color: $white;
+        box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.22);
+        position: relative;
+        right: auto;
+        top: auto;
+        transform: translate3d(0, 0%, 0);
+        z-index: 999;
+        .case-details {
+          padding: 20px;
+          .title {
+            font-size: 16px;
+            color: #333;
+            text-align: center;
+          }
+          .blank {
+            height: 60px;
+          }
+          .summary {
+            font-size: 14px;
+            color: #2d2d2d;
+            line-height: 2;
+          }
+          .more-wrapper {
+            text-align: center;
+          }
+        }
+        .operations {
+          position: absolute;
+          left: 50%;
+          top: 50px;
+          z-index: 100;
+          transform: translate3d(-50%, 0, 0);
+          color: #666;
+          @include flex-center-y;
+          .swiper-case-context-prev,
+          .swiper-case-context-next {
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            &:hover {
+              color: $theme-color;
+            }
+          }
+          .swiper-case-context-pagination {
+            padding: 10px 30px;
+            font-size: 16px;
+            .swiper-pagination-current {
+              color: $theme-color;
+            }
+          }
+        }
+      }
+    }
+    .more-case {
+      width: 100px;
+      height: 30px;
+      background-color: $theme-color;
+      font-size: 13px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #ffffff;
+      cursor: pointer;
+      margin: 0 auto;
+      margin-top: 20px;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  // ============加入我们=============
+
+  // 联系我们
+  .contact-us {
+    padding: 30px 0;
+    .contact-us-content {
+      width: 100%;
+      display: block;
+      flex-wrap: wrap;
+      background-color: #fdf7e9;
+      .left {
+        width: auto;
+        height: 409px;
+        background-color: #333;
+        .map {
+        }
+      }
+      .right {
+        width: auto;
+        .info {
+          padding: 20px;
+          .title {
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba($color: #000000, $alpha: 0.3);
+            margin-bottom: 20px;
+            .cn {
+              font-size: 16px;
+              padding-bottom: 5px;
+            }
+            .en {
+              font-size: 13px;
+            }
+          }
+          .name {
+            font-size: 14px;
+            font-weight: 600;
+          }
+          .icon-text {
+            display: flex;
+            margin-top: 10px;
+            .iconfont {
+              flex: 0 0 20px;
+              line-height: 1.8;
+            }
+            .text-box {
+              .text {
+                font-size: 12px;
+                line-height: 1.8;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // 岗位招聘
+  .company-jobs {
+    padding: 30px 0;
+    background-color: #eaeaea;
+
+    .job-search {
+      padding: 10px;
+      background-color: #ffffff;
+      margin-bottom: 20px;
+      .title {
+        font-size: 13px;
+        color: #161616;
+        padding-bottom: 10px;
+      }
+      .desc {
+        font-size: 12px;
+        color: #161616;
+      }
+      .form-wrapper {
+        padding-top: 10px;
+        display: flex;
+        justify-content: space-between;
+        .left {
+          display: flex;
+        }
+      }
+    }
+
+    .job-list {
+      width: 100%;
+      .job-table {
+        width: 100%;
+        text-align: left;
+        thead {
+          tr {
+            th {
+              line-height: 30px;
+              background-color: #9d9b9b;
+              font-size: 12px;
+              color: #ffffff;
+              text-indent: 20px;
+            }
+          }
+        }
+        tbody {
+          tr {
+            border-top: 1px solid #f2f2f2;
+            td {
+              line-height: 30px;
+              background-color: #ffffff;
+              font-size: 12px;
+              color: #474747;
+              text-indent: 20px;
+              .expend-button {
+                font-size: 20px;
+                cursor: pointer;
+                &:hover {
+                  font-weight: 900;
+                }
+              }
+              .details {
+                text-indent: 0;
+                padding: 10px;
+                font-size: 12px;
+                line-height: 1.6;
+              }
+            }
+            &.none {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // ==========新闻===============
+  .news-page {
+    background-color: #f5f5f5;
+  }
+  .news-container {
+    padding: 30px 20px;
+    width: 100%;
+    box-sizing: border-box;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: block;
+    flex-wrap: wrap;
+    .left {
+      flex: 2;
+      box-sizing: border-box;
+      padding-right: 0px;
+      border-right: none;
+      .query {
+        display: flex;
+        padding-bottom: 16px;
+      }
+      .news-list {
+        display: block;
+        .news-item {
+          margin-bottom: 10px;
+          .news-card {
+            display: flex;
+            flex-wrap: wrap;
+            background-color: #ffffff;
+            .cover {
+              width: 100px;
+              height: 100px;
+              flex: 0 0 100px;
+            }
+            .info {
+              flex: 1;
+              height: auto;
+              box-sizing: border-box;
+              padding-left: 20px;
+              position: relative;
+              .title {
+                display: block;
+                font-size: 14px;
+                color: #050505;
+                padding-top: 5px;
+                @include omit;
+                &:hover {
+                  color: $theme-color;
+                }
+              }
+              .summary {
+                font-size: 12px;
+                color: #050505;
+                opacity: 0.6;
+                padding-top: 5px;
+                line-height: 1.6;
+                @include omit2;
+              }
+              .bottom {
+                position: absolute;
+                left: 20px;
+                right: 20px;
+                bottom: 10px;
+                padding-top: 10px;
+                display: flex;
+                justify-content: space-between;
+                font-size: 12px;
+                border-top: none;
+                .time {
+                  color: #050505;
+                }
+                .link {
+                  color: #050505;
+                  &:hover {
+                    color: $theme-color;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .right {
+      flex: 1;
+      box-sizing: border-box;
+      padding-left: 0;
+      .company-active-title {
+        padding-top: 20px;
+        border-top: none;
+      }
+      .top-news-card {
+        .cover {
+          height: 173px;
+        }
+        .info {
+          position: relative;
+          .title {
+            display: block;
+            width: 300px;
+            font-size: 14px;
+            color: #050505;
+            padding-top: 10px;
+            @include omit;
+            &:hover {
+              color: $theme-color;
+            }
+          }
+          .summary {
+            font-size: 12px;
+            color: #050505;
+            opacity: 0.6;
+            padding-top: 18px;
+            line-height: 1.6;
+          }
+          .time {
+            font-size: 12px;
+            color: #050505;
+            position: absolute;
+            right: 0;
+            top: 23px;
+          }
+        }
+      }
+      .active-list {
+        padding-top: 30px;
+        border-bottom: none;
+        .active-item {
+          .active-card {
+            padding: 10px 0 10px 20px;
+            position: relative;
+            border-top: 1px solid #ccc;
+            color: #666;
+            &:hover {
+              color: $theme-color;
+            }
+            .link {
+              display: block;
+              width: 330px;
+              @include omit;
+              font-size: 12px;
+              color: currentColor;
+            }
+            &::before {
+              content: "";
+              display: block;
+              width: 4px;
+              height: 4px;
+              border-radius: 50%;
+              background-color: currentColor;
+              position: absolute;
+              left: 0;
+              top: 14px;
+            }
           }
         }
       }

@@ -104,7 +104,7 @@
           .submit-wrapper {
             height: 40px;
             @include flex-center-x-center-y;
-            .icon-search {
+            .iconfont {
               padding: 10px 20px;
               color: $red;
               cursor: pointer;
@@ -118,7 +118,7 @@
           top: 0;
           bottom: 0;
           @include flex-center-x-center-y;
-          .icon-close {
+          .iconfont {
             color: #333;
             padding: 10px 20px;
             cursor: pointer;
@@ -136,7 +136,7 @@
         top: 0;
         bottom: 0;
         @include flex-center-x-center-y;
-        .icon-search {
+        .iconfont {
           padding: 10px 20px;
           cursor: pointer;
           &:hover {
@@ -189,6 +189,9 @@
       }
       .header-phone {
         line-height: 50px;
+        position: absolute;
+        right: 70px;
+        font-size: 12px;
       }
       .web-nav {
         position: fixed;
@@ -310,7 +313,7 @@
           .submit-wrapper {
             height: 40px;
             @include flex-center-x-center-y;
-            .icon-search {
+            .iconfont {
               padding: 10px 20px;
               color: $red;
               cursor: pointer;
@@ -324,8 +327,9 @@
           top: 0;
           bottom: 0;
           @include flex-center-x-center-y;
-          .icon-close {
+          .iconfont {
             padding: 10px 20px;
+            color: #333;
             cursor: pointer;
             &:hover {
               color: $red;
@@ -341,8 +345,9 @@
         top: 0;
         bottom: 0;
         @include flex-center-x-center-y;
-        .icon-search {
+        .iconfont {
           padding: 10px 20px;
+          font-size: 20px;
           cursor: pointer;
           &:hover {
             color: $red;
