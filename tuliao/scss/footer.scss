@@ -2,7 +2,7 @@
 
 .web-footer {
   padding: 50px 0;
-  background-color:#E8AD23;
+  background-color: #e8ad23;
 
   .footer-content {
     width: 83%;
@@ -21,7 +21,7 @@
             border: none;
             width: 340px;
             height: 46px;
-            background-color: rgba($color: #ffffff, $alpha: .3);
+            background-color: rgba($color: #ffffff, $alpha: 0.3);
             appearance: none;
             -moz-appearance: none;
             -webkit-appearance: none;
@@ -45,8 +45,6 @@
             top: 0;
           }
         }
-
-     
       }
       .right {
         .footer-nav {
@@ -102,121 +100,160 @@
       .p3 {
         padding-top: 20px;
         font-size: 13px;
-        opacity: .6;
+        opacity: 0.6;
+      }
+    }
+    .third {
+      padding-top: 20px;
+      text-align: right;
+      a {
+        display: inline-block;
+        & + a {
+          margin-left: 20px;
+        }
+        span {
+          font-size: 16px;
+          color: #ffffff;
+          opacity: 0.8;
+        }
+        &:hover {
+          span {
+            opacity: 1;
+          }
+        }
       }
     }
   }
 }
 
 @media (max-width: 1200px) {
-/* 底部 */
+  /* 底部 */
 
-.web-footer {
-  padding: 10px;
-  background-color:#E8AD23;
+  .web-footer {
+    padding: 10px;
+    background-color: #e8ad23;
 
-  .footer-content {
-    width: auto;
-    margin: 0 auto;
-    .top {
-      width: 100%;
-      display: block;
-      justify-content: space-between;
-      .left {
+    .footer-content {
+      width: auto;
+      margin: 0 auto;
+      .top {
         width: 100%;
-        padding-top: 0;
-        overflow: hidden;
-        .web-footer__links {
-          position: relative;
+        display: block;
+        justify-content: space-between;
+        .left {
+          width: 100%;
+          padding-top: 0;
           overflow: hidden;
-          .select {
-            border: none;
-            width: 240px;
-            height: 40px;
-            background-color: rgba($color: #ffffff, $alpha: .3);
-            appearance: none;
-            -moz-appearance: none;
-            -webkit-appearance: none;
-            outline: none;
-            text-indent: 10px;
-            color: #ffffff;
-            option {
-              color: #333;
-            }
-          }
-          .iconfont {
-            width: 40px;
-            height: 40px;
-            background-color: #ffffff;
-            color: #666;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: absolute;
-            right: 0;
-            top: 0;
-          }
-        }
-      }
-      .right {
-        width: 100%;
-        padding-top: 20px;
-        .footer-nav {
-          display: flex;
-          flex-wrap: wrap;
-          .footer-nav-item {
-            color: #ffffff;
-            & + .footer-nav-item {
-              margin-left: 20px;
-            }
-            .main {
-              display: block;
-              font-size: 12px;
-              color: currentColor;
-            }
-            .line {
-              display: block;
-              height: 20px;
-              margin-top: 20px;
-              margin-left: 10px;
-              position: relative;
-              &::after {
-                content: "";
-                display: block;
-                width: 20px;
-                height: 0;
-                border-bottom: 1px solid currentColor;
-                transform: rotate(-40deg);
+          .web-footer__links {
+            position: relative;
+            overflow: hidden;
+            .select {
+              border: none;
+              width: 240px;
+              height: 40px;
+              background-color: rgba($color: #ffffff, $alpha: 0.3);
+              appearance: none;
+              -moz-appearance: none;
+              -webkit-appearance: none;
+              outline: none;
+              text-indent: 10px;
+              color: #ffffff;
+              option {
+                color: #333;
               }
             }
-            .sub {
-              display: block;
-              font-size: 13px;
-              color: currentColor;
-              line-height: 1.8;
+            .iconfont {
+              width: 40px;
+              height: 40px;
+              background-color: #ffffff;
+              color: #666;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              position: absolute;
+              right: 0;
+              top: 0;
+            }
+          }
+        }
+        .right {
+          width: 100%;
+          padding-top: 20px;
+          .footer-nav {
+            display: flex;
+            flex-wrap: wrap;
+            .footer-nav-item {
+              color: #ffffff;
+              & + .footer-nav-item {
+                margin-left: 20px;
+              }
+              .main {
+                display: block;
+                font-size: 12px;
+                color: currentColor;
+              }
+              .line {
+                display: block;
+                height: 20px;
+                margin-top: 20px;
+                margin-left: 10px;
+                position: relative;
+                &::after {
+                  content: "";
+                  display: block;
+                  width: 20px;
+                  height: 0;
+                  border-bottom: 1px solid currentColor;
+                  transform: rotate(-40deg);
+                }
+              }
+              .sub {
+                display: block;
+                font-size: 13px;
+                color: currentColor;
+                line-height: 1.8;
+              }
             }
           }
         }
       }
-    }
-    .bottom {
-      width: 100%;
-      color: #ffffff;
-      padding-top: 20px;
-      .p1 {
-        font-size: 13px;
-        padding-bottom: 10px;
+      .bottom {
+        width: 100%;
+        color: #ffffff;
+        padding-top: 20px;
+        .p1 {
+          font-size: 13px;
+          padding-bottom: 10px;
+        }
+        .p2 {
+          font-size: 12px;
+          line-height: 1.6;
+        }
+        .p3 {
+          padding-top: 10px;
+          font-size: 12px;
+          opacity: 0.6;
+        }
       }
-      .p2 {
-        font-size: 12px;
-        line-height: 1.6;
-      }
-      .p3 {
-        padding-top: 10px;
-        font-size: 12px;
-        opacity: .6;
+      .third {
+        text-align: center;
+        a {
+          display: inline-block;
+          & + a {
+            margin-left: 30px;
+          }
+          span {
+            font-size: 24px;
+            color: #ffffff;
+            opacity: 0.8;
+          }
+          &:hover {
+            span {
+              opacity: 1;
+            }
+          }
+        }
       }
     }
   }
-}
 }

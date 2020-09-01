@@ -83,7 +83,7 @@
         .search-form {
           width: 400px;
           height: 40px;
-          border-bottom: 1px solid $red;
+          border-bottom: 1px solid $theme-color;
           position: absolute;
           left: 50%;
           top: 50%;
@@ -106,7 +106,7 @@
             @include flex-center-x-center-y;
             .iconfont {
               padding: 10px 20px;
-              color: $red;
+              color: $theme-color;
               cursor: pointer;
             }
           }
@@ -123,7 +123,7 @@
             padding: 10px 20px;
             cursor: pointer;
             &:hover {
-              color: $red;
+              color: $theme-color;
             }
           }
         }
@@ -140,7 +140,7 @@
           padding: 10px 20px;
           cursor: pointer;
           &:hover {
-            color: $red;
+            color: $theme-color;
           }
         }
       }
@@ -216,7 +216,7 @@
 
             &.active {
               a {
-                color: $red;
+                color: $theme-color;
               }
             }
             a {
@@ -230,7 +230,7 @@
               color: #fff;
               position: relative;
               &::after {
-                content: "\e905";
+                content: "\e7eb";
                 font-family: "icomoon";
                 line-height: 1;
                 position: absolute;
@@ -238,7 +238,7 @@
                 top: 14px;
               }
               &:hover {
-                color: $red;
+                color: $theme-color;
               }
             }
           }
@@ -292,7 +292,7 @@
         .search-form {
           width: 300px;
           height: 40px;
-          border-bottom: 1px solid $red;
+          border-bottom: 1px solid $theme-color;
           position: absolute;
           left: 50%;
           top: 50%;
@@ -315,7 +315,7 @@
             @include flex-center-x-center-y;
             .iconfont {
               padding: 10px 20px;
-              color: $red;
+              color: $theme-color;
               cursor: pointer;
             }
           }
@@ -332,7 +332,7 @@
             color: #333;
             cursor: pointer;
             &:hover {
-              color: $red;
+              color: $theme-color;
             }
           }
         }
@@ -350,7 +350,7 @@
           font-size: 20px;
           cursor: pointer;
           &:hover {
-            color: $red;
+            color: $theme-color;
           }
         }
       }
