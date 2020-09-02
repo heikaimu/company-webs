@@ -1502,6 +1502,116 @@ a.animated-button.thar-four:before {
   position: relative;
 }
 
+.scroll-button-wrapper {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 30px;
+  z-index: 99999;
+  display: flex;
+  justify-content: center;
+  color: #ffffff;
+}
+.scroll-button-wrapper .scroll-down {
+  display: block;
+  width: 46px;
+  height: 46px;
+  cursor: pointer;
+  position: relative;
+}
+.scroll-button-wrapper .scroll-down::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/loading.png);
+  animation: rotate 1s linear infinite;
+}
+.scroll-button-wrapper .scroll-down.black {
+  color: #0d0d0d;
+}
+.scroll-button-wrapper .scroll-down.black::after {
+  background-image: url(../images/loading_black.png);
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.scroll-button-wrapper .scroll-down i {
+  color: currentColor;
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translate3d(-50%, 0, 0);
+  font-style: normal;
+  display: block;
+  width: 100px;
+  text-align: center;
+}
+.scroll-button-wrapper .scroll-down i::after {
+  content: "下滑继续";
+}
+.scroll-button-wrapper .scroll-down span {
+  position: absolute;
+  left: 50%;
+  top: 29px;
+  transform: translate3d(-50%, 0, 0);
+}
+.scroll-button-wrapper .scroll-down span::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 5px solid currentColor;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  position: absolute;
+  left: 50%;
+  bottom: 0px;
+  transform: translate3d(-50%, -53%, 0);
+}
+.scroll-button-wrapper .scroll-down.up i::after {
+  content: "返回顶部";
+}
+.scroll-button-wrapper .scroll-down.up span::after {
+  border-top: none;
+  border-bottom: 5px solid currentColor;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+}
+
+.left-page-pagination {
+  display: flex;
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  z-index: 99;
+  font-size: 12px;
+}
+.left-page-pagination .pagination-wrapper {
+  transform: rotate(90deg);
+}
+.left-page-pagination .pagination-wrapper.white {
+  color: #ffffff;
+}
+.left-page-pagination .pagination-wrapper.black {
+  color: #0d0d0d;
+}
+.left-page-pagination .pagination-wrapper .swiper-pagination-current {
+  font-size: 13px;
+  font-weight: 600;
+  color: #ECBB48;
+}
+.left-page-pagination .pagination-wrapper .swiper-pagination-total {
+  font-size: 13px;
+  font-weight: 600;
+  color: currentColor;
+}
+
 .index-banner {
   width: 100%;
   height: 100vh;
@@ -1541,28 +1651,6 @@ a.animated-button.thar-four:before {
   font-size: 16px;
   line-height: 34px;
 }
-.index-banner .left-swiper-pagination {
-  display: flex;
-  position: absolute;
-  left: 20px;
-  top: 50%;
-  z-index: 99;
-  font-size: 12px;
-  color: #fff;
-}
-.index-banner .left-swiper-pagination .pagination-wrapper {
-  transform: rotate(90deg);
-}
-.index-banner .left-swiper-pagination .pagination-wrapper .swiper-pagination-current {
-  font-size: 13px;
-  font-weight: 600;
-  color: #ECBB48;
-}
-.index-banner .left-swiper-pagination .pagination-wrapper .swiper-pagination-total {
-  font-size: 13px;
-  font-weight: 600;
-  color: #fff;
-}
 .index-banner .bottom-operations {
   display: flex;
   justify-content: space-between;
@@ -1594,59 +1682,6 @@ a.animated-button.thar-four:before {
   flex: 1;
   display: flex;
   justify-content: center;
-}
-.index-banner .bottom-operations .medium .icon {
-  display: block;
-  width: 46px;
-  height: 46px;
-  cursor: pointer;
-  position: relative;
-}
-.index-banner .bottom-operations .medium .icon::after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 100%;
-  background-image: url(../images/loading.png);
-  animation: rotate 1s linear infinite;
-}
-@keyframes rotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-.index-banner .bottom-operations .medium .icon i {
-  color: #fff;
-  position: absolute;
-  top: -30px;
-  left: 50%;
-  transform: translate3d(-50%, 0, 0);
-  font-style: normal;
-  display: block;
-  width: 100px;
-  text-align: center;
-}
-.index-banner .bottom-operations .medium .icon span {
-  position: absolute;
-  left: 50%;
-  top: 29px;
-  transform: translate3d(-50%, 0, 0);
-}
-.index-banner .bottom-operations .medium .icon span::after {
-  content: "";
-  display: block;
-  width: 0;
-  height: 0;
-  border-top: 5px solid #fff;
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  position: absolute;
-  left: 50%;
-  bottom: 0px;
-  transform: translate3d(-50%, -53%, 0);
 }
 .index-banner .bottom-operations .right {
   flex: 1;
@@ -1828,6 +1863,10 @@ a.animated-button.thar-four:before {
   line-clamp: 2;
   -webkit-box-orient: vertical;
   line-height: 1.6;
+}
+.active-news-list .active-news-card .iconfont {
+  font-size: 30px;
+  margin-left: 20px;
 }
 
 .our-products {

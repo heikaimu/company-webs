@@ -66,6 +66,19 @@
     </div>
   </header>
 
+  <!-- 滚动按钮 -->
+  <div class="scroll-button-wrapper">
+    <a class="scroll-down wow fadeInUp" id="down_scroll_btn">
+      <i></i>
+      <span></span>
+    </a>
+  </div>
+
+  <!-- 当前页数 -->
+  <div class="left-page-pagination">
+    <div id="page_pagination" class="pagination-wrapper"></div>
+  </div>
+
   <div id="fullpage">
     <div class="section">
       <!-- 第一屏banner图 -->
@@ -117,9 +130,6 @@
             </div>
           </div>
         </div>
-        <div class="left-swiper-pagination">
-          <div id="index_banner_pagination" class="pagination-wrapper"></div>
-        </div>
         <div class="bottom-operations">
           <div class="left">
             <div class="icon prev wow fadeInUp" id="index_banner_prev"><span class="iconfont icon-left-circle"></span>
@@ -128,10 +138,7 @@
             </div>
           </div>
           <div class="medium">
-            <a class="icon wow fadeInUp" id="down_scroll_btn">
-              <i>下滑继续</i>
-              <span></span>
-            </a>
+
           </div>
           <div class="right wow fadeInUp"></div>
         </div>
@@ -206,6 +213,7 @@
                       <div class="right">
                         <p class="text">企业通过了ISO90001质量管理体系认证和ISO14001环境管理体系认证且已通过中国环境标志产品认证</p>
                       </div>
+                      <span class="iconfont icon-icon-test1"></span>
                     </a>
                     <a href="" class="active-news-card">
                       <div class="left">
@@ -218,6 +226,7 @@
                       <div class="right">
                         <p class="text">企业通过了ISO90001质量管理体系认证和ISO14001环境管理体系认证且已通过中国环境标志产品认证</p>
                       </div>
+                      <span class="iconfont icon-icon-test1"></span>
                     </a>
                     <a href="" class="active-news-card">
                       <div class="left">
@@ -230,6 +239,7 @@
                       <div class="right">
                         <p class="text">企业通过了ISO90001质量管理体系认证和ISO14001环境管理体系认证且已通过中国环境标志产品认证</p>
                       </div>
+                      <span class="iconfont icon-icon-test1"></span>
                     </a>
                   </div>
                 </li>
@@ -247,6 +257,7 @@
                       <div class="right">
                         <p class="text">企业通过了ISO90001质量管理体系认证和ISO14001环境管理体系认证且已通过中国环境标志产品认证</p>
                       </div>
+                      <span class="iconfont icon-icon-test1"></span>
                     </a>
                     <a href="" class="active-news-card">
                       <div class="left">
@@ -261,6 +272,7 @@
                           企业通过了ISO90001质量管理体系认证和ISO14001环境管理体系认证且已通过中国环境标志产品认证企业通过了ISO90001质量管理体系认证和ISO14001环境管理体系认证且已通过中国环境标志产品认证企业通过了ISO90001质量管理体系认证和ISO14001环境管理体系认证且已通过中国环境标志产品认证企业通过了ISO90001质量管理体系认证和ISO14001环境管理体系认证且已通过中国环境标志产品认证
                         </p>
                       </div>
+                      <span class="iconfont icon-icon-test1"></span>
                     </a>
                     <a href="" class="active-news-card">
                       <div class="left">
@@ -273,6 +285,7 @@
                       <div class="right">
                         <p class="text">企业通过了ISO90001质量管理体系认证和ISO14001环境管理体系认证且已通过中国环境标志产品认证</p>
                       </div>
+                      <span class="iconfont icon-icon-test1"></span>
                     </a>
                   </div>
                 </li>
@@ -362,7 +375,7 @@
         </div>
       </div>
     </div>
-    <div class="section fp-auto-height">
+    <div class="section">
       <!-- 网页底部 -->
       <footer class="web-footer">
         <div class="footer-content">
@@ -446,31 +459,40 @@
   <script src="./js/my-swiper.js"></script>
   <script src="./js/main.js"></script>
   <script>
+    var activeIndex = 0;
+    setPage();
     $(document).ready(function () {
       if (document.body.clientWidth > 1200) {
-        $('#fullpage').fullpage({
-          sectionsColor: ['#F0F0F0', '#F0F0F0', '#ffffff', '#F0F0F0'],
+        var fullpage = $('#fullpage').fullpage({
+          sectionsColor: ['#F0F0F0', '#F0F0F0', '#ffffff', '#F0F0F0', '#e8ad23'],
           navigation: true,
           slidesNavigation: true,
           afterLoad: function (anchorLink, index) {
+            activeIndex = index.index;
+            setPage();
             if (index.index === 0) {
               $("#web_header").removeClass("black");
               $("#fp-nav").addClass("white");
+              $("#down_scroll_btn").removeClass("black").removeClass("up");
             } else if (index.index === 1) {
               $("#web_header").addClass("black");
               $("#fp-nav").removeClass("white");
+              $("#down_scroll_btn").addClass("black").removeClass("up");
               $(".run-num").each(function () {
                 $(this).runNumber();
               })
             } else if (index.index === 2) {
               $("#web_header").addClass("black");
               $("#fp-nav").removeClass("white");
+              $("#down_scroll_btn").addClass("black").removeClass("up");
             } else if (index.index === 3) {
               $("#web_header").addClass("black");
               $("#fp-nav").removeClass("white");
+              $("#down_scroll_btn").addClass("black").removeClass("up");
             } else if (index.index === 4) {
               $("#web_header").addClass("black");
               $("#fp-nav").removeClass("white");
+              $("#down_scroll_btn").removeClass("black").addClass("up");
             }
 
             var wow = new WOW({
@@ -479,11 +501,27 @@
             wow.init();
           },
         });
+
+
+        $("#down_scroll_btn").click(function () {
+          fullpage_api.moveTo(1);
+        })
       }
 
       // 动态
       $(".index-active-news-wrapper").tabSwitch();
     });
+
+
+    function setPage() {
+      const num = parseInt(activeIndex) + 1;
+      $(".left-page-pagination .pagination-wrapper").html('<span class="swiper-pagination-current">'+ num +'</span> / <span class="swiper-pagination-total">5</span>');
+      if (num === 1) {
+        $(".left-page-pagination .pagination-wrapper").addClass("white").removeClass("black");
+      } else {
+        $(".left-page-pagination .pagination-wrapper").removeClass("white").addClass("black");
+      }
+    }
 
     // banner
     (function () {
@@ -495,15 +533,6 @@
           delay: 5000
         },
         disableOnInteraction: false,
-        pagination: {
-          el: '#index_banner_pagination',
-          type: 'fraction',
-          renderFraction: function (currentClass, totalClass) {
-            return '<span class="' + currentClass + '"></span>' +
-              ' / ' +
-              '<span class="' + totalClass + '"></span>';
-          },
-        },
         on: {
           init: function () {
             swiperAnimateCache(this); //隐藏动画元素 
@@ -527,14 +556,17 @@
     (function () {
       var productBanner = new Swiper("#product_banner", {
         slidesPerView: 'auto',
+        slidesPerGroup: 3,
         spaceBetween: 30,
         breakpoints: {
           768: {
             slidesPerView: 1.2,
+            slidesPerGroup: 1,
             spaceBetween: 20
           },
           1200: {
             slidesPerView: 2,
+            slidesPerGroup: 2,
             spaceBetween: 30
           }
         }
