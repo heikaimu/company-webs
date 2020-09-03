@@ -1,0 +1,88 @@
+@charset "utf-8";
+// flex布局
+@mixin flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@mixin flex-center-x {
+  display: flex;
+  justify-content: center;
+}
+
+@mixin flex-between-x {
+  display: flex;
+  justify-content: space-between;
+}
+
+@mixin flex-center-y {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flex-center-x-center-y {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-between-x-center-y {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin flex-around-x-center-y {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+// 阴影
+@mixin box-shadow {
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1)
+}
+
+// 清除浮动
+@mixin clear-float {
+  &:after {
+    display: block;
+    content: "";
+    clear: both;
+  }
+}
+
+@mixin bg-cover {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+// transition
+@mixin transition {
+  transition: all 0.2s linear;
+  -webkit-transition: all 0.2s linear;
+}
+
+// text-nowrap
+@mixin no-line {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin omit {
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+
+@mixin omits($num) {
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: $num;
+  line-clamp: $num;
+  -webkit-box-orient: vertical;
+}
