@@ -1,13 +1,18 @@
 @media (min-width: 1200px) {
   .web-header {
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    z-index: 999;
-    color: #ffffff;
-    &.black {
-      color: #333333;
+    background-color: #fff;
+    color: #333333;
+    &.fixed {
+      position: fixed;
+      left: 0;
+      right: 0;
+      top: 0;
+      z-index: 999;
+      background-color: transparent;
+      color: #ffffff;
+      &.black {
+        color: #333333;
+      }
     }
     .header-container {
       height: 100px;
@@ -139,6 +144,7 @@
         .iconfont {
           padding: 10px 20px;
           cursor: pointer;
+          color: currentColor;
           &:hover {
             color: $theme-color;
           }

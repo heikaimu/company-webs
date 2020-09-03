@@ -4,7 +4,7 @@
  * @Autor: Yaowen Liu
  * @Date: 2020-05-01 09:06:12
  * @LastEditors: Yaowen Liu
- * @LastEditTime: 2020-09-01 12:44:51
+ * @LastEditTime: 2020-09-03 10:45:10
  -->
 <!DOCTYPE html>
 <html lang="en">
@@ -52,28 +52,29 @@
             <input type="text" class="search-input-text" placeholder="输入关键词搜索">
           </div>
           <div class="submit-wrapper">
-            <span class="icon-search"></span>
+            <span class="iconfont icon-search"></span>
           </div>
         </div>
         <div class="search-bar-close">
-          <span class="icon-close"></span>
+          <span class="iconfont icon-close"></span>
         </div>
       </div>
 
       <div class="search-bar-show">
-        <span class="icon-search"></span>
+        <span class="iconfont icon-search"></span>
       </div>
     </div>
   </header>
 
   <!-- 主体内容 -->
-  <div class="inner-page-banner" style="background-image: url('./images/banner3.png')">
+  <div class="inner-page-banner">
+    <div class="image wow shrink" data-wow-duration="5s" style="background-image: url('./images/banner3.png')"></div>
     <div class="content-wrapper">
       <div class="content">
-        <h2 class="cn">走进华登思</h2>
-        <p class="en">Translation</p>
+        <h2 class="cn wow fadeInUp">走进华登思</h2>
+        <p class="en wow fadeInUp">Translation</p>
         <div class="scroll-box">
-          <div class="scroll-button">
+          <div class="scroll-button wow fadeInUp">
             <p class="text">下滑继续</p>
             <div class="icon"></div>
           </div>
@@ -100,15 +101,15 @@
   </div>
 
   <!-- 第二屏介绍 -->
-  <div class="introduce white-bg">
+  <div class="introduce white-bg" id="introduce">
     <div class="full-container">
       <div class="half-wrapper left center-y">
         <div class="content">
           <div class="inner-page-title">
-            <h2 class="cn">企业概况</h2>
-            <h3 class="en"><span class="yellow">COMPANY </span> PROFILE </h3>
+            <h2 class="cn wow fadeInUp">企业概况</h2>
+            <h3 class="en wow fadeInUp"><span class="yellow">COMPANY </span> PROFILE </h3>
           </div>
-          <div class="image">
+          <div class="image wow zoomIn">
             <img class="" src="./images/avatar.jpeg" alt="">
           </div>
         </div>
@@ -116,7 +117,7 @@
       <div class="half-wrapper right center-y">
         <div class="content">
           <div class="page-article black">
-            <article class="desc">
+            <article class="desc wow fadeInUp">
               《塞尔达传说：旷野之息》（ゼルダの伝说： ブレスオブザワイルド）是由任天堂企划制作本部与子公司Monolith
               Soft协力研发制作的开放世界动作冒险游戏。2017年3月3日由任天堂发行，为《塞尔达传说》系列游戏正统续作第15部作品，其他续作有《塞尔达传说：众神的三角力量》、《塞尔达传说2：林克的冒险》、《塞尔达传说：风之杖》、《塞尔达传说：时之笛》等。2019年6月12日，在任天堂E3展前发布会上官方公开了该作续作的首个宣传片，并正在开发中
               [1] 。
@@ -362,6 +363,27 @@
   <script src="./js/main.js"></script>
 
   <script>
+    $(function() {
+      runNumber();
+    })
+
+    $(window).scroll(function () {
+      runNumber();
+    });
+    // 滚动数字
+    var isDone = false;
+    // 滚动数字
+    function runNumber() {
+      if (Math.abs($(window).scrollTop()) > $('#introduce').offset().top - 300) {
+        if (!isDone) {
+          $(".run-num").each(function () {
+            $(this).runNumber();
+          })
+          isDone = true;
+        }
+      }
+    }
+
     (function () {
       var honorSwiper = new Swiper('.swiper-honor', {
         slidesPerView: 4,

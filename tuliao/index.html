@@ -4,7 +4,7 @@
  * @Autor: Yaowen Liu
  * @Date: 2020-05-01 09:06:12
  * @LastEditors: Yaowen Liu
- * @LastEditTime: 2020-09-01 17:10:50
+ * @LastEditTime: 2020-09-03 10:51:10
  -->
 <!DOCTYPE html>
 <html lang="en">
@@ -23,7 +23,7 @@
 
 <body>
   <!-- 头部 -->
-  <header class="web-header" id="web_header">
+  <header class="web-header fixed" id="web_header">
     <div class="header-container">
       <!-- logo -->
       <a href="/" class="web-logo" title="成龙"><img src="./images/logo.png" alt=""></a>
@@ -150,7 +150,7 @@
         <div class="full-container">
           <div class="half-wrapper left center-y">
             <div class="content">
-              <div class="image">
+              <div class="image wow zoomIn">
                 <img class="" src="./images/avatar.jpeg" alt="">
               </div>
             </div>
@@ -158,8 +158,8 @@
           <div class="half-wrapper right center-y">
             <div class="content">
               <div class="page-article black">
-                <h2 class="title">塞尔达传说：旷野之息111</h2>
-                <article class="desc">
+                <h2 class="title wow fadeInUp">塞尔达传说：旷野之息111</h2>
+                <article class="desc wow fadeInUp">
                   《塞尔达传说：旷野之息》（ゼルダの伝说： ブレスオブザワイルド）是由任天堂企划制作本部与子公司Monolith
                   Soft协力研发制作的开放世界动作冒险游戏。2017年3月3日由任天堂发行，为《塞尔达传说》系列游戏正统续作第15部作品，其他续作有《塞尔达传说：众神的三角力量》、《塞尔达传说2：林克的冒险》、《塞尔达传说：风之杖》、《塞尔达传说：时之笛》等。2019年6月12日，在任天堂E3展前发布会上官方公开了该作续作的首个宣传片，并正在开发中
                   [1] 。
@@ -467,6 +467,7 @@
           sectionsColor: ['#F0F0F0', '#F0F0F0', '#ffffff', '#F0F0F0', '#e8ad23'],
           navigation: true,
           slidesNavigation: true,
+          scrollBar: true,
           afterLoad: function (anchorLink, index) {
             activeIndex = index.index;
             setPage();
@@ -494,11 +495,6 @@
               $("#fp-nav").removeClass("white");
               $("#down_scroll_btn").removeClass("black").addClass("up");
             }
-
-            var wow = new WOW({
-              animateClass: 'animated',
-            });
-            wow.init();
           },
         });
 

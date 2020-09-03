@@ -1,9 +1,12 @@
 // 内页banner
 .inner-page-banner {
-  @include bg-cover;
-  height: 100vh;
   position: relative;
-
+  overflow: hidden;
+  height: calc(100vh - 100px);
+  .image {
+    @include bg-cover;
+    height: 100%;
+  }
   .content-wrapper {
     position: absolute;
     left: 0;
@@ -193,6 +196,7 @@
 
 // 荣誉
 .our-honor {
+  padding: 50px 0;
   width: 98%;
   box-sizing: border-box;
   max-width: 1200px;

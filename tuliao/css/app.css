@@ -518,14 +518,19 @@ a.animated-button.thar-four:before {
 }
 @media (min-width: 1200px) {
   .web-header {
+    background-color: #fff;
+    color: #333333;
+  }
+  .web-header.fixed {
     position: fixed;
     left: 0;
     right: 0;
     top: 0;
     z-index: 999;
+    background-color: transparent;
     color: #ffffff;
   }
-  .web-header.black {
+  .web-header.fixed.black {
     color: #333333;
   }
   .web-header .header-container {
@@ -667,6 +672,7 @@ a.animated-button.thar-four:before {
   .web-header .header-container .search-bar-show .iconfont {
     padding: 10px 20px;
     cursor: pointer;
+    color: currentColor;
   }
   .web-header .header-container .search-bar-show .iconfont:hover {
     color: #ECBB48;
@@ -2178,11 +2184,15 @@ a.animated-button.thar-four:before {
   }
 }
 .inner-page-banner {
+  position: relative;
+  overflow: hidden;
+  height: calc(100vh - 100px);
+}
+.inner-page-banner .image {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  height: 100vh;
-  position: relative;
+  height: 100%;
 }
 .inner-page-banner .content-wrapper {
   position: absolute;
@@ -2362,6 +2372,7 @@ a.animated-button.thar-four:before {
 }
 
 .our-honor {
+  padding: 50px 0;
   width: 98%;
   box-sizing: border-box;
   max-width: 1200px;
