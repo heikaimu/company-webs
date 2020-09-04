@@ -4,7 +4,7 @@
  * @Autor: Yaowen Liu
  * @Date: 2020-05-01 09:06:12
  * @LastEditors: Yaowen Liu
- * @LastEditTime: 2020-09-03 18:36:32
+ * @LastEditTime: 2020-09-04 10:40:18
  -->
 <!DOCTYPE html>
 <html lang="en">
@@ -122,7 +122,6 @@
       </div>
     </div>
 
-
   </div>
 
   <!-- 底部 -->
@@ -143,29 +142,7 @@
   <script src="./js/my-jq-fun.js"></script>
   <script src="./js/main.js"></script>
   <script>
-    new Swiper("#banner", {
-      loop: true,
-      speed: 500,
-      effect: 'fade',
-      autoplay: {
-        delay: 5000
-      },
-      disableOnInteraction: false,
-      pagination: {
-        el: $("#banner .swiper-pagination"),
-        clickable: true
-      },
-      on: {
-        init: function () {
-          swiperAnimateCache(this); //隐藏动画元素 
-          swiperAnimate(this); //初始化完成开始动画
-        },
-        slideChangeTransitionEnd: function () {
-          swiperAnimate(this); //每个slide切换结束时也运行当前slide动画
-          //this.slides.eq(this.activeIndex).find('.ani').removeClass('ani'); 动画只展现一次，去除ani类名
-        }
-      }
-    });
+
   </script>
 </body>
 

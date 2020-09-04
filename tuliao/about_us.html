@@ -4,7 +4,7 @@
  * @Autor: Yaowen Liu
  * @Date: 2020-05-01 09:06:12
  * @LastEditors: Yaowen Liu
- * @LastEditTime: 2020-09-03 10:45:10
+ * @LastEditTime: 2020-09-04 11:37:17
  -->
 <!DOCTYPE html>
 <html lang="en">
@@ -22,61 +22,62 @@
 </head>
 
 <body>
-  <!-- 头部 -->
-  <header class="web-header" id="web_header">
-    <div class="header-container">
-      <!-- logo -->
-      <a href="/" class="web-logo" title="成龙"><img src="./images/logo.png" alt=""></a>
-      <!-- phone -->
-      <span class="header-phone">+400-888-4545</span>
-      <!-- 导航 -->
-      <div class="mobile-blank"></div>
-      <nav class="web-nav">
-        <ul class="nav-list">
-          <li class="nav-item" class="active"><a href="./index.html">首页</a></li>
-          <li class="nav-item"><a href="./aboutus.html">走进华登思</a></li>
-          <li class="nav-item"><a href="">企业文化</a></li>
-          <li class="nav-item"><a href="">产品服务</a></li>
-          <li class="nav-item"><a href="./business-one.html">招聘</a></li>
-        </ul>
-      </nav>
-      <div class="web-nav-switch">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <!-- 搜索框 -->
-      <div class="search-bar">
-        <div class="search-form">
-          <div class="input-wrapper">
-            <input type="text" class="search-input-text" placeholder="输入关键词搜索">
+  <div class='header-and-banner'>
+    <!-- 头部 -->
+    <header class="web-header" id="web_header">
+      <div class="header-container">
+        <!-- logo -->
+        <a href="/" class="web-logo" title="成龙"><img src="./images/logo.png" alt=""></a>
+        <!-- phone -->
+        <span class="header-phone">+400-888-4545</span>
+        <!-- 导航 -->
+        <div class="mobile-blank"></div>
+        <nav class="web-nav">
+          <ul class="nav-list">
+            <li class="nav-item" class="active"><a href="./index.html">首页</a></li>
+            <li class="nav-item"><a href="./aboutus.html">走进华登思</a></li>
+            <li class="nav-item"><a href="">企业文化</a></li>
+            <li class="nav-item"><a href="">产品服务</a></li>
+            <li class="nav-item"><a href="./business-one.html">招聘</a></li>
+          </ul>
+        </nav>
+        <div class="web-nav-switch">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <!-- 搜索框 -->
+        <div class="search-bar">
+          <div class="search-form">
+            <div class="input-wrapper">
+              <input type="text" class="search-input-text" placeholder="输入关键词搜索">
+            </div>
+            <div class="submit-wrapper">
+              <span class="iconfont icon-search"></span>
+            </div>
           </div>
-          <div class="submit-wrapper">
-            <span class="iconfont icon-search"></span>
+          <div class="search-bar-close">
+            <span class="iconfont icon-close"></span>
           </div>
         </div>
-        <div class="search-bar-close">
-          <span class="iconfont icon-close"></span>
+
+        <div class="search-bar-show">
+          <span class="iconfont icon-search"></span>
         </div>
       </div>
-
-      <div class="search-bar-show">
-        <span class="iconfont icon-search"></span>
-      </div>
-    </div>
-  </header>
-
-  <!-- 主体内容 -->
-  <div class="inner-page-banner">
-    <div class="image wow shrink" data-wow-duration="5s" style="background-image: url('./images/banner3.png')"></div>
-    <div class="content-wrapper">
-      <div class="content">
-        <h2 class="cn wow fadeInUp">走进华登思</h2>
-        <p class="en wow fadeInUp">Translation</p>
-        <div class="scroll-box">
-          <div class="scroll-button wow fadeInUp">
-            <p class="text">下滑继续</p>
-            <div class="icon"></div>
+    </header>
+    <!-- 主体内容 -->
+    <div class="inner-page-banner">
+      <div class="image wow shrink" data-wow-duration="5s" style="background-image: url('./images/banner3.png')"></div>
+      <div class="content-wrapper">
+        <div class="content">
+          <h2 class="cn wow fadeInUp">走进华登思</h2>
+          <p class="en wow fadeInUp">Translation</p>
+          <div class="scroll-box">
+            <div class="scroll-button wow fadeInUp">
+              <p class="text">下滑继续</p>
+              <div class="icon"></div>
+            </div>
           </div>
         </div>
       </div>
@@ -363,7 +364,7 @@
   <script src="./js/main.js"></script>
 
   <script>
-    $(function() {
+    $(function () {
       runNumber();
     })
 

@@ -52,6 +52,14 @@
   }
 }
 
+@mixin iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 @mixin bg-cover {
   background-repeat: no-repeat;
   background-position: center center;

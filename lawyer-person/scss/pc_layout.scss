@@ -119,6 +119,50 @@
 // 主要内容
 .main-content {
   min-height: calc(100vh - 210px);
+  background-color: $white;
+  &.gray {
+    background-color: #ebeced;
+  }
+}
+
+// 分页
+.pagination-wrapper {
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+// 面包屑导航
+.bread-nav {
+  .bread-nav-container {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    .first {
+      display: inline-block;
+      color: $font-color-sub;
+      &::before {
+        @include iconfont;
+        content: "\e790";
+      }
+    }
+    .medium {
+      display: inline-block;
+      color: $font-color-sub;
+      &::after {
+        display: inline-block;
+        margin: 0 5px;
+        @include iconfont;
+        content: "\e7eb";
+      }
+      &:hover {
+        color: $theme-sub-color;
+      }
+    }
+    .last {
+      color: $theme-sub-color;
+    }
+  }
 }
 
 // banner
@@ -176,7 +220,7 @@
     left: 50%;
     top: 12px;
     z-index: -1;
-    transform: translate3d(-50%,0,0);
+    transform: translate3d(-50%, 0, 0);
   }
   .cn {
     font-size: 22px;
@@ -187,7 +231,57 @@
   .en {
     font-size: 22px;
     color: currentColor;
-    opacity: .8;
+    opacity: 0.8;
+  }
+}
+
+// 内页导航
+.inline-nav {
+  position: relative;
+  top: -50px;
+  z-index: 9999;
+  .inline-nav-container {
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: $white;
+    @include box-shadow;
+    .inline-nav-wrapper {
+      display: flex;
+      align-items: center;
+      .left-wrapper {
+        flex: 0 0 190px;
+        width: 190px;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $theme-sub-color;
+        .page-name {
+          color: $white;
+          .cn {
+            font-size: 26px;
+          }
+          .en {
+            font-size: 18px;
+          }
+        }
+      }
+      .right-wrapper {
+        .nav-item {
+          display: block;
+          width: 112px;
+          border-radius: 20px;
+          line-height: 40px;
+          text-align: center;
+          font-size: 18px;
+          color: $font-color-main;
+          &.active {
+            background-color: $theme-sub-color;
+            color: $white;
+          }
+        }
+      }
+    }
   }
 }
 

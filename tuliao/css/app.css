@@ -517,18 +517,21 @@ a.animated-button.thar-four:before {
   }
 }
 @media (min-width: 1200px) {
-  .web-header {
-    background-color: #fff;
-    color: #333333;
+  .header-and-banner {
+    position: relative;
   }
-  .web-header.fixed {
-    position: fixed;
+
+  .web-header {
+    background-color: transparent;
+    color: #ffffff;
+    position: absolute;
     left: 0;
     right: 0;
     top: 0;
     z-index: 999;
-    background-color: transparent;
-    color: #ffffff;
+  }
+  .web-header.fixed {
+    position: fixed;
   }
   .web-header.fixed.black {
     color: #333333;
@@ -686,7 +689,6 @@ a.animated-button.thar-four:before {
     top: 0;
     z-index: 999999;
     color: #ffffff;
-    box-shadow: 0 0 3px #ccc;
   }
   .web-header.active {
     background-color: #fff;
