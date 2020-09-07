@@ -268,6 +268,27 @@
 // =======================产品服务======================
 
 // 产品介绍
+.tab-content-list {
+  height: 560px;
+  overflow: hidden;
+  position: relative;
+  li {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    opacity: 0;
+    z-index: -1;
+    transition: 1s;
+    transform: translate3d(0,60px,0);
+    &.active {
+      opacity: 1;
+      z-index: 1;
+      transform: translate3d(0,0,0);
+    }
+  }
+}
 .product-introduce {
   position: relative;
   .product-nav-list {
@@ -1033,6 +1054,27 @@
   // =======================产品服务======================
 
   // 产品介绍
+  .tab-content-list {
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+    li {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      opacity: 0;
+      z-index: -1;
+      transition: 1s;
+      transform: translate3d(0,60px,0);
+      &.active {
+        opacity: 1;
+        z-index: 1;
+        transform: translate3d(0,0,0);
+      }
+    }
+  }
   .product-introduce {
     position: relative;
     .product-nav-list {
