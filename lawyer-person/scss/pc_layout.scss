@@ -119,7 +119,6 @@
 // 主要内容
 .main-content {
   min-height: calc(100vh - 210px);
-  background-color: $white;
   &.gray {
     background-color: #ebeced;
   }
@@ -143,7 +142,7 @@
       color: $font-color-sub;
       &::before {
         @include iconfont;
-        content: "\e790";
+        content: "\e96d";
       }
     }
     .medium {
@@ -153,7 +152,8 @@
         display: inline-block;
         margin: 0 5px;
         @include iconfont;
-        content: "\e7eb";
+        content: "\e96c";
+        transform: rotate(180deg);
       }
       &:hover {
         color: $theme-sub-color;
@@ -168,6 +168,9 @@
 // banner
 .banner {
   height: 570px;
+  &.line {
+    border-bottom: 4px solid $theme-color;
+  }
   .image {
     @include bg-cover;
     height: 570px;
@@ -196,6 +199,7 @@
     position: absolute;
     left: 50%;
     top: 570px;
+    z-index: 99;
     transform: translate3d(-50%, 0, 0);
   }
 }
@@ -219,7 +223,7 @@
     position: absolute;
     left: 50%;
     top: 12px;
-    z-index: -1;
+    z-index: 0;
     transform: translate3d(-50%, 0, 0);
   }
   .cn {
@@ -227,11 +231,59 @@
     font-weight: 600;
     color: currentColor;
     padding-bottom: 4px;
+    position: relative;
+    z-index: 1;
   }
   .en {
     font-size: 22px;
     color: currentColor;
     opacity: 0.8;
+    position: relative;
+    z-index: 1;
+  }
+}
+
+// 每一块得标题背景
+.bg-text {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate3d(-50%,0,0);
+  z-index: -1;
+  font-size: 220px;
+  opacity: 0.05;
+  line-height: 160px;
+  font-weight: 600;
+  &.light {
+    color: #ffffff;
+  }
+}
+
+// 下一页
+.next-page {
+  display: block;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  color:  $theme-sub-color;
+  border: 1px solid currentColor;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  bottom: 40px;
+  transform: translate3d(-50%,0,0);
+  &::after {
+    @include iconfont;
+    content: "\e923";
+    transform: rotate(90deg);
+    color: currentColor;
+    position: relative;
+    left: -1px;
+  }
+  &.light {
+    color: $white;
   }
 }
 

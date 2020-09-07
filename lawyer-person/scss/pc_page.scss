@@ -1,33 +1,553 @@
 // 服务领域
 .home-services {
+  padding: 47px 0 122px 0;
+  position: relative;
+  z-index: 2;
+  background-color: #ebeced;
   .home-services-container {
-
+    .services-list {
+      padding-top: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: -20px;
+      margin-right: -20px;
+      .services-item {
+        width: 25%;
+        box-sizing: border-box;
+        padding: 20px;
+        .services-card {
+          border-radius: 5px;
+          overflow: hidden;
+          background-color: $white;
+          color: $theme-sub-color;
+          cursor: pointer;
+          .cover {
+            height: 135px;
+            overflow: hidden;
+            position: relative;
+            .image {
+              width: 100%;
+              height: 100%;
+              @include bg-cover;
+              transition: 0.3s;
+            }
+          }
+          .info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding-top: 20px;
+            padding-bottom: 13px;
+            .title {
+              display: flex;
+              align-items: center;
+              padding-bottom: 10px;
+              .icon {
+                width: 40px;
+                height: 40px;
+                position: relative;
+                .iconfont {
+                  font-size: 34px;
+                  color: currentColor;
+                  position: absolute;
+                  left: 50%;
+                  top: 50%;
+                  transform: translate3d(-50%, -50%, 0);
+                  transition: 0.3s;
+                  &.big {
+                    font-size: 40px;
+                  }
+                  &.large {
+                    font-size: 44px;
+                  }
+                }
+              }
+              .text {
+                padding-left: 10px;
+                .cn {
+                  font-size: 16px;
+                  color: $font-color-main;
+                  padding-bottom: 3px;
+                }
+                .en {
+                  font-size: 12px;
+                  color: $font-color-sub;
+                }
+              }
+            }
+            .button {
+              display: block;
+              width: 215px;
+              height: 32px;
+              border-radius: 16px;
+              background-color: $theme-sub-color;
+              border-radius: 16px;
+              font-size: 16px;
+              color: $white;
+              text-align: center;
+              line-height: 32px;
+              transition: 0.3s;
+            }
+          }
+          &:hover {
+            color: $theme-color;
+            .info {
+              .button {
+                background-color: $theme-color;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
 
 // 个人介绍
 .person-introduce {
+  padding: 47px 0 120px 0;
+  position: relative;
+  z-index: 2;
   .person-introduce-container {
-
+    .person-introduce-wrapper {
+      padding-top: 55px;
+      overflow: hidden;
+      .left-wrapper {
+        width: 50%;
+        float: left;
+        box-sizing: border-box;
+        padding-right: 50px;
+        .basic {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding-bottom: 36px;
+          .name {
+            font-size: 30px;
+            color: $font-color-main;
+          }
+          .exp {
+            font-size: 16px;
+            color: $font-color-sub;
+            strong {
+              font-size: 24px;
+              color: $theme-color;
+            }
+          }
+          .check {
+            display: flex;
+            width: 135px;
+            height: 40px;
+            background-color: $theme-color;
+            border-radius: 20px;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            color: $white;
+          }
+        }
+        .exp-list {
+          padding-bottom: 34px;
+          .item {
+            & + .item {
+              margin-top: 16px;
+            }
+            &:nth-child(even) {
+              .card {
+                .index {
+                  background-color: $theme-color;
+                }
+              }
+            }
+            .card {
+              height: 44px;
+              border-radius: 10px;
+              display: flex;
+              overflow: hidden;
+              .index {
+                flex: 0 0 44px;
+                width: 44px;
+                height: 44px;
+                background-color: $theme-sub-color;
+                font-size: 30px;
+                font-family: Didot;
+                font-weight: 400;
+                color: #f4f4f4;
+                text-align: center;
+                line-height: 44px;
+              }
+              .desc {
+                flex: 1;
+                @include omit;
+                line-height: 44px;
+                padding: 0 15px;
+                background-color: #f4f4f4;
+              }
+            }
+          }
+        }
+        .features-list {
+          display: flex;
+          justify-content: space-between;
+          .item {
+            flex: 0 0 96px;
+            width: 96px;
+            height: 96px;
+            border-radius: 50%;
+            font-size: 24px;
+            color: $white;
+            text-align: center;
+            line-height: 96px;
+            background-color: $theme-color;
+            position: relative;
+            &:nth-child(even) {
+              background-color: $theme-sub-color;
+            }
+            & + .item {
+              &::before {
+                content: "+";
+                display: block;
+                position: absolute;
+                left: -40px;
+                top: 0;
+                color: $theme-color;
+                font-size: 40px;
+                font-weight: 200;
+              }
+            }
+          }
+        }
+      }
+      .right-wrapper {
+        width: 50%;
+        float: left;
+        display: flex;
+        flex-wrap: wrap;
+        border-radius: 40px 0 40px 0;
+        overflow: hidden;
+        .big-image {
+          flex: 2;
+          height: 490px;
+          .image {
+            width: 100%;
+            height: 100%;
+            @include bg-cover;
+          }
+        }
+        .image-list {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          .image {
+            flex: 1;
+          }
+        }
+      }
+    }
   }
 }
 
 // 金典案例
 .classic-case {
+  padding: 47px 0 110px 0;
+  position: relative;
+  z-index: 2;
+  background: url(../images/case_bg.png) no-repeat center center / cover;
   .classic-case-container {
-
+    .classic-case-list {
+      padding-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: -19px;
+      margin-right: -19px;
+      .item {
+        width: 50%;
+        box-sizing: border-box;
+        padding: 19px;
+        .card {
+          height: 147px;
+          border-radius: 5px;
+          overflow: hidden;
+          background-color: $white;
+          .top-wrapper {
+            height: 50px;
+            background-color: #e5e5e5;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .type {
+              font-size: 20px;
+              color: $font-color-main;
+              padding-left: 20px;
+            }
+            .progress {
+              width: 244px;
+              height: 14px;
+              border-radius: 7px;
+              overflow: hidden;
+              background-color: $white;
+              .done {
+                display: block;
+                height: 14px;
+                background: url(../images/progress.png);
+              }
+            }
+            .record {
+              flex: 0 0 184px;
+              width: 184px;
+              height: 50px;
+              background-color: $theme-color;
+              color: $white;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              strong {
+                font-size: 18px;
+                display: inline-block;
+                margin: 0 4px;
+              }
+            }
+          }
+          .content-wrapper {
+            padding: 10px 20px;
+            .desc {
+              font-size: 16px;
+              color: $font-color-main;
+              line-height: 2;
+              @include omit;
+            }
+            .summary {
+              font-size: 14px;
+              color: $font-color-sub;
+              line-height: 1.4;
+              @include omits(2);
+            }
+          }
+        }
+      }
+    }
   }
 }
 
 // 荣誉&评论
 .honor-and-comments {
+  padding: 47px 0 68px 0;
+  position: relative;
+  z-index: 2;
   .honor-and-comments-container {
+    .honor-and-comments-wrapper {
+      overflow: hidden;
+      padding-top: 50px;
+      .left-wrapper {
+        float: left;
+        width: 50%;
+        .honor-swiper {
+          height: 420px;
+          border-radius: 0px 40px 0px 40px;
+          overflow: hidden;
+          .swiper-slide {
+            @include bg-cover;
+          }
 
+          .gallery-top {
+            height: 70%;
+            width: 100%;
+          }
+
+          .gallery-thumbs {
+            height: 30%;
+            box-sizing: border-box;
+            padding-top: 10px;
+            .swiper-slide {
+              width: 33.33%;
+              height: 100%;
+              opacity: 0.4;
+              &.swiper-slide-thumb-active {
+                opacity: 1;
+              }
+            }
+          }
+        }
+      }
+      .right-wrapper {
+        width: 50%;
+        float: left;
+        .comments-list {
+          height: 420px;
+          padding-left: 40px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          .item {
+            &:nth-child(even) {
+              .card {
+                border-left: 10px solid $theme-color;
+              }
+            }
+            .card {
+              padding: 12px 0 12px 25px;
+              border-left: 10px solid $theme-sub-color;
+              border-radius: 10px;
+              background-color: #ebeced;
+              display: flex;
+              align-items: center;
+              .cover {
+                flex: 0 0 62px;
+                width: 62px;
+                height: 62px;
+                border-radius: 50%;
+                overflow: hidden;
+                .image {
+                  width: 100%;
+                  height: 100%;
+                  @include bg-cover;
+                }
+              }
+              .info {
+                flex: 1;
+                padding: 0 30px;
+                position: relative;
+                &::before {
+                  content: url(../images/node_right.png);
+                  position: absolute;
+                  left: 3px;
+                  top: -3px;
+                }
+                &::after {
+                  content: url(../images/node_left.png);
+                  position: absolute;
+                  right: 10px;
+                  bottom: -8px;
+                }
+                .text {
+                  font-size: 14px;
+                  color: $font-color-common;
+                  vertical-align: bottom;
+                  line-height: 1.8;
+                  strong {
+                    font-size: 16px;
+                    color: $theme-sub-color;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// 相关案例
+.related-case {
+  padding: 43px 0 136px 0;
+  background-color: #ebeced;
+  position: relative;
+  .related-case-container {
+    .related-case-list {
+      padding-top: 50px;
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: -10px;
+      margin-right: -10px;
+      .item {
+        width: 25%;
+        box-sizing: border-box;
+        padding: 0 10px;
+        .card {
+          position: relative;
+          background-color: $white;
+          transition: 0.3s;
+          .cover {
+            height: 159px;
+            overflow: hidden;
+            position: relative;
+            .image {
+              width: 100%;
+              height: 100%;
+              @include bg-cover;
+              transition: 0.3s;
+            }
+            .type {
+              display: flex;
+              align-items: center;
+              padding: 0 10px;
+              height: 30px;
+              background-color: $theme-sub-color;
+              font-size: 14px;
+              color: $white;
+              position: absolute;
+              right: 0;
+              bottom: 0;
+              transition: 0.3s;
+              &::before {
+                @include iconfont;
+                content: "\e96d";
+                margin-right: 2px;
+              }
+            }
+          }
+          .info {
+            box-sizing: border-box;
+            height: 174px;
+            margin-top: 15px;
+            padding: 20px;
+            background-color: $white;
+            position: relative;
+            .title {
+              @include omits(2);
+              font-size: 18px;
+              color: $font-color-main;
+              line-height: 1.6;
+              padding-bottom: 10px;
+              transition: 0.3s;
+            }
+            .summary {
+              @include omits(3);
+              font-size: 14px;
+              color: $font-color-sub;
+              line-height: 1.6;
+              transition: 0.3s;
+            }
+          }
+          .link {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            z-index: 2;
+          }
+          &:hover {
+            box-shadow: 0px 0px 14px 2px rgba(77, 77, 77, 0.75);
+            margin-top: -20px;
+            .cover {
+              .image {
+                transform: scale(1.1);
+              }
+              .type {
+                background-color: $theme-color;
+              }
+            }
+            .info {
+              .title {
+                color: $theme-color;
+              }
+              .summary {
+                color: $theme-sub-color;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
 
 // 案例页面
 .case-page {
+  position: relative;
   .case-page-container {
     .case-list {
       display: flex;
@@ -51,7 +571,7 @@
               width: 100%;
               height: 100%;
               @include bg-cover;
-              transition: .3s;
+              transition: 0.3s;
             }
             .type {
               padding: 0 10px;
@@ -63,7 +583,7 @@
               position: absolute;
               right: 0;
               bottom: 0;
-              transition: .3s;
+              transition: 0.3s;
             }
           }
           .info {
@@ -81,14 +601,14 @@
               color: $font-color-main;
               line-height: 1.6;
               padding-bottom: 10px;
-              transition: .3s;
+              transition: 0.3s;
             }
             .summary {
               @include omits(3);
               font-size: 14px;
               color: $font-color-sub;
               line-height: 1.6;
-              transition: .3s;
+              transition: 0.3s;
             }
           }
           .link {
@@ -104,6 +624,9 @@
               .image {
                 transform: scale(1.1);
               }
+              .type {
+                background-color: $theme-color;
+              }
             }
             .info {
               .title {
@@ -116,7 +639,7 @@
           }
         }
       }
-    } 
+    }
   }
 }
 
@@ -165,28 +688,209 @@
       .button {
         display: block;
         width: 164px;
-        background-color: #EAEBED;
         line-height: 36px;
+        border-radius: 2px;
+        background-color: #eaebed;
         text-align: center;
         font-size: 14px;
         color: $font-color-sub;
-        transition: .3s;
+        transition: 0.3s;
         @include iconfont;
         &.prev {
           &::before {
-            content: "\e665";
+            content: "\e98e";
             margin-right: 5px;
           }
         }
         &.next {
           &::after {
-            content: "\e666";
+            content: "\e98d";
             margin-left: 5px;
           }
         }
         &:hover {
           background-color: $theme-sub-color;
           color: $white;
+        }
+      }
+    }
+  }
+}
+
+// 业务和问题
+.business-question {
+  padding: 42px 0 74px 0;
+  position: relative;
+  background-color: #ebeced;
+  .business-question-container {
+    .business-question-list {
+      padding-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: -19px;
+      margin-right: -19px;
+      .item {
+        width: 50%;
+        box-sizing: border-box;
+        padding: 19px;
+        .card {
+          position: relative;
+          display: flex;
+          overflow: hidden;
+          background-color: $white;
+          transition: 0.3s;
+          .cover {
+            flex: 0 0 250px;
+            width: 250px;
+            height: 250px;
+            overflow: hidden;
+            position: relative;
+            .image {
+              width: 100%;
+              height: 100%;
+              @include bg-cover;
+              transition: 0.3s;
+            }
+          }
+          .info {
+            flex: 1;
+            padding: 18px 22px;
+            .title {
+              vertical-align: bottom;
+              .cn {
+                display: inline-block;
+                font-size: 22px;
+                color: $font-color-main;
+                padding-right: 10px;
+              }
+              .en {
+                display: inline-block;
+                font-size: 16px;
+                color: $font-color-sub;
+              }
+            }
+            .questions-list {
+              height: 150px;
+              .text {
+                font-size: 16px;
+                color: $font-color-common;
+                padding-top: 14px;
+                @include omit;
+                display: flex;
+                align-items: center;
+                overflow: hidden;
+                &::before {
+                  content: "";
+                  display: block;
+                  width: 6px;
+                  height: 6px;
+                  border-radius: 50%;
+                  background-color: $theme-sub-color;
+                  transition: .3s;
+                  margin-right: 10px;
+                }
+              }
+            }
+            .operations {
+              display: flex;
+              justify-content: space-between;
+              .button {
+                display: block;
+                width: 135px;
+                height: 40px;
+                background: $theme-sub-color;
+                border: 1px solid $theme-sub-color;
+                border-radius: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 18px;
+                color: $white;
+                transition: .3s;
+                &:nth-child(2) {
+                  background-color: transparent;
+                  color: $theme-sub-color;
+                }
+              }
+            }
+          }
+          &:hover {
+            box-shadow: 0px 0px 14px 2px rgba(77, 77, 77, 0.75);
+            .cover {
+              .image {
+                transform: scale(1.1);
+              }
+            }
+            .info {
+              .questions-list {
+                .text {
+                  &::before {
+                    background-color: $theme-color;
+                  }
+                }
+              }
+              .operations {
+                .button {
+                  background: $theme-color;
+                  border: 1px solid $theme-color;
+                  &:nth-child(2) {
+                    background-color: transparent;
+                    color: $theme-color;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.lawyer-features {
+  padding: 40px 0 50px 0;
+  height: 733px;
+  box-sizing: border-box;
+  background: url(../images/features_bg.png) no-repeat top center;
+  .lawyer-features-container {
+    .features-list {
+      position: relative;
+      .item {
+        position: absolute;
+        .text {
+          font-size: 15px;
+          color: $font-color-common;
+          line-height: 1.6;
+        }
+        &:nth-child(1) {
+          width: 198px;
+          left: 50px;
+          top: 460px;
+        }
+        &:nth-child(2) {
+          width: 192px;
+          left: 200px;
+          top: 300px;
+        }
+        &:nth-child(3) {
+          width: 142px;
+          left: 430px;
+          top: 190px;
+        }
+        &:nth-child(4) {
+          width: 142px;
+          left: 640px;
+          top: 190px;
+        }
+        &:nth-child(5) {
+          width: 192px;
+          left: 820px;
+          top: 300px;
+        }
+        &:nth-child(6) {
+          width: 198px;
+          left: 940px;
+          top: 460px;
         }
       }
     }
