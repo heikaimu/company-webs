@@ -4,7 +4,7 @@
  * @Autor: Yaowen Liu
  * @Date: 2020-05-01 09:06:12
  * @LastEditors: Yaowen Liu
- * @LastEditTime: 2020-09-03 10:51:10
+ * @LastEditTime: 2020-09-08 11:03:24
  -->
 <!DOCTYPE html>
 <html lang="en">
@@ -382,17 +382,12 @@
           <div class="top">
             <div class="left">
               <!-- 友情链接 -->
-              <div class="web-footer__links">
-                <select class="select" name="link" id="footer_link">
-                  <option value='' disabled selected style='display:none;'>友情链接</option>
-                  <option value="baidu">百度</option>
-                  <option value="tengxun">腾讯</option>
-                  <option value="ali">阿里</option>
-                  <option value="3">Google</option>
-                  <option value="3">Facebook</option>
-                </select>
-                <span class="iconfont icon-down"></span>
-              </div>
+              <select name="jQuery1" class="beautify_input">
+                <option value="1" selected>jQuery插件库UI</option>
+                <option value="2">jQuery插件库输入</option>
+                <option value="3">jQuery插件库媒体</option>
+                <option value="4">jQuery插件库导航</option>
+              </select>
             </div>
             <div class="right">
               <ul class="footer-nav">
@@ -457,6 +452,7 @@
   <script src="./plugins/swiper/swiper.animate.rewrite.min.js"></script>
   <script src="./plugins/fullpage/fullpage.js"></script>
   <script src="./js/my-swiper.js"></script>
+  <script type="text/javascript" src="js/jquery.cssforms.js"></script>
   <script src="./js/main.js"></script>
   <script>
     var activeIndex = 0;
@@ -505,7 +501,10 @@
       }
 
       // 动态
-      $(".index-active-news-wrapper").tabSwitch();
+      $(".index-active-news-wrapper").tabSwitch()
+      
+      // 底部下拉框
+      $('.beautify_input').cssSelect();
     });
 
 

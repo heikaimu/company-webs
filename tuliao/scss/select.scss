@@ -1,0 +1,220 @@
+::-webkit-selection {
+  background: #000;
+  color: #fff;
+  text-shadow: none;
+}
+::-moz-selection {
+  background: #000;
+  color: #fff;
+  text-shadow: none;
+}
+::selection {
+  background: #000;
+  color: #fff;
+  text-shadow: none;
+}
+.cssSelect {
+  white-space: nowrap;
+  float: left;
+}
+.cssSelect * {
+  display: block;
+}
+.cssSelect a {
+  color: #666;
+  outline-width: 0;
+  text-decoration: none;
+}
+.cssSelect .selectBox {
+  cursor: pointer;
+  float: left;
+}
+.cssSelect .selectLt {
+  cursor: pointer;
+  float: left;
+  text-align: left;
+}
+.cssSelect .selectBox {
+}
+.cssSelect .selectLt {
+  border: none;
+  width: 340px;
+  height: 46px;
+  line-height: 46px;
+  background-color: rgba($color: #ffffff, $alpha: 0.3);
+  text-indent: 10px;
+  color: #ffffff;
+}
+.cssSelect .selectRt {
+  width: 46px;
+  height: 46px;
+  background-color: #ffffff;
+  color: #666;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: left;
+  cursor: pointer;
+  &::before {
+    @include iconfont;
+    content: "\e7ee";
+  }
+}
+.cssSelect .sNormal {
+  background-position: 0 0;
+}
+.cssSelect .sHover {
+  background-position: 0 -50px;
+}
+.cssSelect .sHover .selectRt {
+  &::before {
+    @include iconfont;
+    content: "\e7ee";
+  }
+}
+.cssSelect .sPressDown {
+}
+.cssSelect .sPressDown .selectRt {
+  &::before {
+    @include iconfont;
+    content: "\e7ee";
+  }
+}
+.cssSelect .optionsBox {
+  width: 386px;
+  box-sizing: border-box;
+  position: absolute;
+  border: 1px solid #dbdbdb;
+  padding: 2px;
+  margin: 0;
+  background: #fff;
+  z-index: 100;
+}
+.cssSelect .optionsInnerBox {
+}
+.cssSelect .optionBox {
+  box-sizing: border-box;
+  cursor: pointer;
+  width: 380px;
+  padding: 10px;
+  margin: 0;
+}
+.cssSelect .optionBox span {
+  cursor: pointer;
+  display: block;
+  font-size: 12px;
+}
+.cssSelect .oNormal {
+}
+.cssSelect .oHover {
+  background: #ECBB48;
+  color: #fff;
+}
+.cssSelect .selected {
+  background: #ECBB48;
+  color: #fff;
+}
+
+@media (max-width:1200px) {
+  .cssSelect {
+    white-space: nowrap;
+    float: left;
+  }
+  .cssSelect * {
+    display: block;
+  }
+  .cssSelect a {
+    color: #666;
+    outline-width: 0;
+    text-decoration: none;
+  }
+  .cssSelect .selectBox {
+    cursor: pointer;
+    float: left;
+  }
+  .cssSelect .selectLt {
+    cursor: pointer;
+    float: left;
+    text-align: left;
+  }
+  .cssSelect .selectBox {
+  }
+  .cssSelect .selectLt {
+    border: none;
+    width: 240px;
+    height: 40px;
+    line-height: 40px;
+    background-color: rgba($color: #ffffff, $alpha: 0.3);
+    text-indent: 10px;
+    color: #ffffff;
+  }
+  .cssSelect .selectRt {
+    width: 40px;
+    height: 40px;
+    background-color: #ffffff;
+    color: #666;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: left;
+    cursor: pointer;
+    &::before {
+      @include iconfont;
+      content: "\e7ee";
+    }
+  }
+  .cssSelect .sNormal {
+    background-position: 0 0;
+  }
+  .cssSelect .sHover {
+    background-position: 0 -50px;
+  }
+  .cssSelect .sHover .selectRt {
+    &::before {
+      @include iconfont;
+      content: "\e7ee";
+    }
+  }
+  .cssSelect .sPressDown {
+  }
+  .cssSelect .sPressDown .selectRt {
+    &::before {
+      @include iconfont;
+      content: "\e7ee";
+    }
+  }
+  .cssSelect .optionsBox {
+    width: 280px;
+    box-sizing: border-box;
+    position: absolute;
+    border: 1px solid #dbdbdb;
+    padding: 2px;
+    margin: 0;
+    background: #fff;
+    z-index: 100;
+  }
+  .cssSelect .optionsInnerBox {
+  }
+  .cssSelect .optionBox {
+    box-sizing: border-box;
+    cursor: pointer;
+    width: 274px;
+    padding: 6px;
+    margin: 0;
+  }
+  .cssSelect .optionBox span {
+    cursor: pointer;
+    display: block;
+    font-size: 12px;
+  }
+  .cssSelect .oNormal {
+  }
+  .cssSelect .oHover {
+    background: #ECBB48;
+    color: #fff;
+  }
+  .cssSelect .selected {
+    background: #ECBB48;
+    color: #fff;
+  }
+}
