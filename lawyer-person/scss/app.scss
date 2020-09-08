@@ -4,7 +4,5 @@
 @import "../fonts/iconfont.css";
 @import "./my-animations.scss";
 
-@media (min-width:1200px) {
-  @import "./pc_layout.scss";
-  @import "./pc_page.scss";
-}
+@import "./pc_layout.scss";
+@import "./pc_page.scss";

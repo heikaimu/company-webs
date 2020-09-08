@@ -1,0 +1,581 @@
+<!--
+ * @Description: 
+ * @Version: 2.0
+ * @Autor: Yaowen Liu
+ * @Date: 2020-05-01 09:06:12
+ * @LastEditors: Yaowen Liu
+ * @LastEditTime: 2020-09-08 17:08:00
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>网站首页</title>
+  <link rel="stylesheet" href="./css/mobile-app.css">
+  <link rel="stylesheet" href="./plugins/swiper/swiper.min.css">
+  <link rel="stylesheet" href="https://cdn.dowebok.com/98/css/animate.min.css">
+</head>
+
+<body>
+
+  <!-- 头部 -->
+  <header class="web-header">
+    <div class="main-content">
+      <div class="menu-switch">
+        <span class="iconfont icon-zuo"></span>
+      </div>
+      <div class="lawyer">
+        <h2 class="name">某某某律师</h2>
+      </div>
+      <div class="phone">
+        <span class="iconfont icon-lihun"></span>
+        <p class="phone-number">130-12345678</p>
+      </div>
+    </div>
+    <nav class="web-nav">
+      <ul class="nav-list">
+        <li class="nav-item active"><a href="./index.html">律所首页<span>HOME</span></a></li>
+        <li class="nav-item"><a href="./case.html">经典案例<span>CASE</span></a></li>
+        <li class="nav-item"><a href="./services.html">业务领域<span>SERVICES</span></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- 主要内容 -->
+  <div class="main-content">
+
+    <!-- 轮播图 -->
+    <div class="banner line">
+      <div class="swiper-container swiper-animation" id="banner">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="swiper-item">
+              <div class="image ani" swiper-animate-effect="shrink" swiper-animate-duration="5s" swiper-no-hidden
+                style="background-image: url(./images/banner1.png)"></div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="swiper-item">
+              <div class="image ani" swiper-animate-effect="shrink" swiper-animate-duration="5s" swiper-no-hidden
+                style="background-image: url(./images/banner2.png)"></div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="swiper-item">
+              <div class="image ani" swiper-animate-effect="shrink" swiper-animate-duration="5s" swiper-no-hidden
+                style="background-image: url(./images/banner3.png)"></div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+      <div class="lawyer-intro">
+        <div class="info-item">
+          <img src="" alt="">
+          <div class="info">
+            <p class="number">6882+</p>
+            <p class="desc">办理案件</p>
+          </div>
+        </div>
+        <div class="info-item">
+          <img src="" alt="">
+          <div class="info">
+            <p class="number">6882+</p>
+            <p class="desc">办理案件</p>
+          </div>
+        </div>
+        <div class="phone-item">
+          <div class="phone">
+            <span class="iconfont icon-lihun"></span>
+            <p class="desc">立即拨打电话</p>
+          </div>
+          <p class="number">13012345678</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 服务领域 -->
+    <div class="home-services">
+      <h2 class="bg-text">SERVICE</h2>
+      <div class="container home-services-container">
+        <div class="common-title">
+          <p class="cn">服务领域</p>
+          <p class="en">Services</p>
+        </div>
+        <ul class="services-list">
+          <li class="services-item">
+            <div class="services-card">
+              <div class="icon"><span class="iconfont icon-lihun"></span></div>
+              <p class="title">婚姻家庭</p>
+            </div>
+          </li>
+          <li class="services-item">
+            <div class="services-card">
+              <div class="icon"><span class="iconfont icon-fanzuirenyuanku"></span></div>
+              <p class="title">刑事辩护</p>
+            </div>
+          </li>
+          <li class="services-item">
+            <div class="services-card">
+              <div class="icon"><span class="iconfont icon-budongchanjiaofeichazhao"></span></div>
+              <p class="title">房产纠纷</p>
+            </div>
+          </li>
+          <li class="services-item">
+            <div class="services-card">
+              <div class="icon"><span class="iconfont icon-daolujiaotongshigubaojingtai"></span></div>
+              <p class="title">交通事故</p>
+            </div>
+          </li>
+          <li class="services-item">
+            <div class="services-card">
+              <div class="icon"><span class="iconfont icon-hetong"></span></div>
+              <p class="title">合同纠纷</p>
+            </div>
+          </li>
+          <li class="services-item">
+            <div class="services-card">
+              <div class="icon"><span class="iconfont icon-1"></span></div>
+              <p class="title">债权债务</p>
+            </div>
+          </li>
+          <li class="services-item">
+            <div class="services-card">
+              <div class="icon"><span class="iconfont icon-gongzuo"></span></div>
+              <p class="title">劳动工伤</p>
+            </div>
+          </li>
+          <li class="services-item">
+            <div class="services-card">
+              <div class="icon"><span class="iconfont icon-icon_lawyer"></span></div>
+              <p class="title">法律顾问</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <span class="next-page"></span>
+    </div>
+
+    <!-- 个人介绍 -->
+    <div class="person-introduce">
+      <div class="container person-introduce-container">
+        <div class="common-title">
+          <p class="cn">个人介绍</p>
+          <p class="en">Personal introduction</p>
+        </div>
+        <div class="person-introduce-wrapper">
+          <div class="top-info-wrapper">
+            <div class="basic">
+              <p class="name"><strong>何 川</strong> 已咨询2632例</p>
+              <p class="exp">四川品默律所金牌主办律师</p>
+              <p class="role">财产纠纷专案导师</p>
+            </div>
+            <ul class="exp-list">
+              <li class="item">
+                <p class="desc">多家企业提供法律服务及专项法律服务</p>
+              </li>
+              <li class="item">
+                <p class="desc">为多家跨国企业挽回上亿损失</p>
+              </li>
+              <li class="item">
+                <p class="desc">央视《今日说法》2089期特邀房产律师</p>
+              </li>
+              <li class="item">
+                <p class="desc">专业的法律功底和务实的工作态度得到多家企业的肯定和赞誉</p>
+              </li>
+              <li class="item">
+                <p class="desc">多家企业提供法律服务及专项法律服务 拷贝 4</p>
+              </li>
+            </ul>
+          </div>
+          <div class="bottom-image-wrapper">
+            <div class="big-image">
+              <div class="image" style="background-image:url(./images/person_big.jpg)"></div>
+            </div>
+            <div class="image-list">
+              <div class="image" style="background-image:url(./images/person_small1.jpg)"></div>
+              <div class="image" style="background-image:url(./images/person_small2.jpg)"></div>
+              <div class="image" style="background-image:url(./images/person_small3.jpg)"></div>
+            </div>
+          </div>
+          <a href="" class="button">免费在线咨询律师</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 经典案例 -->
+    <div class="classic-case">
+      <div class="bg-text light">CASES</div>
+      <div class="container classic-case-container">
+        <div class="common-title white">
+          <p class="cn">经典案例</p>
+          <p class="en">Case</p>
+        </div>
+        <div class="swiper-container swiper-animation" id="case">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <ul class="classic-case-list">
+                <li class="item">
+                  <div class="card">
+                    <div class="cover">
+                      <div class="image" style="background-image:url(./images/person_big.jpg)"></div>
+                    </div>
+                    <div class="content-wrapper">
+                      <p class="title">合伙经营纠纷，品默律师助当事人维权合伙经营纠纷，品默律师助当事人维权</p>
+                      <div class="progress"><span class="done" percent="35"></span></div>
+                      <div class="bottom">
+                        <p class="type">合同纠纷</p>
+                        <p class="record">已办 <strong>30</strong> 件</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="card">
+                    <div class="cover">
+                      <div class="image" style="background-image:url(./images/person_big.jpg)"></div>
+                    </div>
+                    <div class="content-wrapper">
+                      <p class="title">合伙经营纠纷，品默律师助当事人维权合伙经营纠纷，品默律师助当事人维权</p>
+                      <div class="progress"><span class="done" percent="35"></span></div>
+                      <div class="bottom">
+                        <p class="type">合同纠纷</p>
+                        <p class="record">已办 <strong>30</strong> 件</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="card">
+                    <div class="cover">
+                      <div class="image" style="background-image:url(./images/person_big.jpg)"></div>
+                    </div>
+                    <div class="content-wrapper">
+                      <p class="title">合伙经营纠纷，品默律师助当事人维权合伙经营纠纷，品默律师助当事人维权</p>
+                      <div class="progress"><span class="done" percent="35"></span></div>
+                      <div class="bottom">
+                        <p class="type">合同纠纷</p>
+                        <p class="record">已办 <strong>30</strong> 件</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="card">
+                    <div class="cover">
+                      <div class="image" style="background-image:url(./images/person_big.jpg)"></div>
+                    </div>
+                    <div class="content-wrapper">
+                      <p class="title">合伙经营纠纷，品默律师助当事人维权合伙经营纠纷，品默律师助当事人维权</p>
+                      <div class="progress"><span class="done" percent="35"></span></div>
+                      <div class="bottom">
+                        <p class="type">合同纠纷</p>
+                        <p class="record">已办 <strong>30</strong> 件</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="swiper-slide">
+              <ul class="classic-case-list">
+                <li class="item">
+                  <div class="card">
+                    <div class="cover">
+                      <div class="image" style="background-image:url(./images/person_big.jpg)"></div>
+                    </div>
+                    <div class="content-wrapper">
+                      <p class="title">合伙经营纠纷，品默律师助当事人维权合伙经营纠纷，品默律师助当事人维权</p>
+                      <div class="progress"><span class="done" percent="35"></span></div>
+                      <div class="bottom">
+                        <p class="type">合同纠纷</p>
+                        <p class="record">已办 <strong>30</strong> 件</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="card">
+                    <div class="cover">
+                      <div class="image" style="background-image:url(./images/person_big.jpg)"></div>
+                    </div>
+                    <div class="content-wrapper">
+                      <p class="title">合伙经营纠纷，品默律师助当事人维权合伙经营纠纷，品默律师助当事人维权</p>
+                      <div class="progress"><span class="done" percent="35"></span></div>
+                      <div class="bottom">
+                        <p class="type">合同纠纷</p>
+                        <p class="record">已办 <strong>30</strong> 件</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="card">
+                    <div class="cover">
+                      <div class="image" style="background-image:url(./images/person_big.jpg)"></div>
+                    </div>
+                    <div class="content-wrapper">
+                      <p class="title">合伙经营纠纷，品默律师助当事人维权合伙经营纠纷，品默律师助当事人维权</p>
+                      <div class="progress"><span class="done" percent="35"></span></div>
+                      <div class="bottom">
+                        <p class="type">合同纠纷</p>
+                        <p class="record">已办 <strong>30</strong> 件</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="card">
+                    <div class="cover">
+                      <div class="image" style="background-image:url(./images/person_big.jpg)"></div>
+                    </div>
+                    <div class="content-wrapper">
+                      <p class="title">合伙经营纠纷，品默律师助当事人维权合伙经营纠纷，品默律师助当事人维权</p>
+                      <div class="progress"><span class="done" percent="35"></span></div>
+                      <div class="bottom">
+                        <p class="type">合同纠纷</p>
+                        <p class="record">已办 <strong>30</strong> 件</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 选择律师的优势 -->
+    <div class="lawyer-features">
+      <div class="container lawyer-features-container">
+        <div class="common-title white">
+          <p class="cn">选择律师的优势</p>
+          <p class="en">The advantages of choosing a lawyer</p>
+        </div>
+        <ul class="features-list">
+          <li class="item">
+            <div class="card">
+              <div class="info">
+                <div class="title">
+                  <span class="iconfont icon-lihun"></span>
+                  <p class="text">快速响应</p>
+                </div>
+                <p class="summary">快至30秒极速响应，7*24小时在线服务；代理诉讼。 拷贝 3</p>
+              </div>
+              <div class="cover">
+                <div class="image" style="background-image: url(./images/index2_06-08.jpg)"></div>
+              </div>
+            </div>
+          </li>
+          <li class="item">
+            <div class="card">
+              <div class="info">
+                <div class="title">
+                  <span class="iconfont icon-lihun"></span>
+                  <p class="text">快速响应</p>
+                </div>
+                <p class="summary">快至30秒极速响应，7*24小时在线服务；代理诉讼。 拷贝 3</p>
+              </div>
+              <div class="cover">
+                <div class="image" style="background-image: url(./images/index2_06-08.jpg)"></div>
+              </div>
+            </div>
+          </li>
+          <li class="item">
+            <div class="card">
+              <div class="info">
+                <div class="title">
+                  <span class="iconfont icon-lihun"></span>
+                  <p class="text">快速响应</p>
+                </div>
+                <p class="summary">快至30秒极速响应，7*24小时在线服务；代理诉讼。 拷贝 3</p>
+              </div>
+              <div class="cover">
+                <div class="image" style="background-image: url(./images/index2_06-08.jpg)"></div>
+              </div>
+            </div>
+          </li>
+          <li class="item">
+            <div class="card">
+              <div class="info">
+                <div class="title">
+                  <span class="iconfont icon-lihun"></span>
+                  <p class="text">快速响应</p>
+                </div>
+                <p class="summary">快至30秒极速响应，7*24小时在线服务；代理诉讼。 拷贝 3</p>
+              </div>
+              <div class="cover">
+                <div class="image" style="background-image: url(./images/index2_06-08.jpg)"></div>
+              </div>
+            </div>
+          </li>
+          <li class="item">
+            <div class="card">
+              <div class="info">
+                <div class="title">
+                  <span class="iconfont icon-lihun"></span>
+                  <p class="text">快速响应</p>
+                </div>
+                <p class="summary">快至30秒极速响应，7*24小时在线服务；代理诉讼。 拷贝 3</p>
+              </div>
+              <div class="cover">
+                <div class="image" style="background-image: url(./images/index2_06-08.jpg)"></div>
+              </div>
+            </div>
+          </li>
+          <li class="item">
+            <div class="card">
+              <div class="info">
+                <div class="title">
+                  <span class="iconfont icon-lihun"></span>
+                  <p class="text">快速响应</p>
+                </div>
+                <p class="summary">快至30秒极速响应，7*24小时在线服务；代理诉讼。 拷贝 3</p>
+              </div>
+              <div class="cover">
+                <div class="image" style="background-image: url(./images/index2_06-08.jpg)"></div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 荣誉&评论 -->
+    <div class="honor-and-comments">
+      <div class="container honor-and-comments-container">
+        <div class="common-title">
+          <p class="cn">荣誉&评论</p>
+          <p class="en">Honors & Reviews</p>
+        </div>
+        <div class="honor-and-comments-wrapper">
+          <ul class="comments-list">
+            <li class="item">
+              <div class="card">
+                <div class="cover">
+                  <div class="image" style="background-image: url(./images/index2_06-08.jpg)"></div>
+                </div>
+                <div class="info">
+                  <p class="text">
+                    <strong>刘先生评论：</strong>
+                    感谢某某律师为我挽回公司6500万的财务损失。律师楷模，维权先锋；全心全意，为名讨薪。
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li class="item">
+              <div class="card">
+                <div class="cover">
+                  <div class="image" style="background-image: url(./images/index2_06-08.jpg)"></div>
+                </div>
+                <div class="info">
+                  <p class="text">
+                    <strong>刘先生评论：</strong>
+                    感谢某某律师为我挽回公司6500万的财务损失。律师楷模，维权先锋；全心全意，为名讨薪。
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li class="item">
+              <div class="card">
+                <div class="cover">
+                  <div class="image" style="background-image: url(./images/index2_06-08.jpg)"></div>
+                </div>
+                <div class="info">
+                  <p class="text">
+                    <strong>刘先生评论：</strong>
+                    感谢某某律师为我挽回公司6500万的财务损失。律师楷模，维权先锋；全心全意，为名讨薪。
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li class="item">
+              <div class="card">
+                <div class="cover">
+                  <div class="image" style="background-image: url(./images/index2_06-08.jpg)"></div>
+                </div>
+                <div class="info">
+                  <p class="text">
+                    <strong>刘先生评论：</strong>
+                    感谢某某律师为我挽回公司6500万的财务损失。律师楷模，维权先锋；全心全意，为名讨薪。
+                  </p>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <div class="honor-swiper">
+            <div class="swiper-container gallery-top">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide" style="background-image:url(./images/banner1.png)"></div>
+                <div class="swiper-slide" style="background-image:url(./images/banner2.png)"></div>
+                <div class="swiper-slide" style="background-image:url(./images/banner3.png)"></div>
+              </div>
+              <div class="swiper-button-next swiper-button-white"></div>
+              <div class="swiper-button-prev swiper-button-white"></div>
+            </div>
+            <div class="swiper-container gallery-thumbs">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide" style="background-image:url(./images/banner1.png)"></div>
+                <div class="swiper-slide" style="background-image:url(./images/banner2.png)"></div>
+                <div class="swiper-slide" style="background-image:url(./images/banner3.png)"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- 底部 -->
+  <footer class="web-footer">
+    <div class="container footer-container">
+      <p class="text">© COPYRIGHT 品默律师事务所版权所有 PINMORE.CN ALL RIGHTS RESERVED. 备案号：蜀ICP备20011418号-1</p>
+    </div>
+  </footer>
+
+  <script src="./js/jquery.js"></script>
+  <script src="./plugins/swiper/swiper.min.js"></script>
+  <script src="./plugins/swiper/swiper.animate.rewrite.min.js"></script>
+  <script src="./js/my-jq-fun.js"></script>
+  <script src="./js/main.js"></script>
+  <script>
+
+    $(function () {
+      $(".progress").each(function () {
+        var doneItem = $(this).find(".done");
+        var percent = doneItem.attr("percent");
+        console.log(percent)
+        doneItem.css('width', percent + '%')
+      })
+
+      // 荣誉轮播图
+      var galleryThumbs = new Swiper('.gallery-thumbs', {
+        spaceBetween: 10,
+        slidesPerView: 3,
+        freeMode: true,
+        watchSlidesVisibility: true,
+        watchSlidesProgress: true,
+      });
+      var galleryTop = new Swiper('.gallery-top', {
+        spaceBetween: 10,
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        thumbs: {
+          swiper: galleryThumbs
+        }
+      });
+    })
+
+
+  </script>
+</body>
+
+</html>
