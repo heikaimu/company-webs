@@ -151,8 +151,11 @@
         letter-spacing: 4px;
       }
       p {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding-top: 20px;
         font-size: 16px;
-        line-height: 34px;
+        line-height: 1.6;
       }
     }
   }
@@ -162,7 +165,7 @@
     left: 80px;
     right: 80px;
     bottom: 40px;
-    z-index: 9;
+    z-index: 99999;
     .left {
       flex: 1;
       @include flex-wrap;
@@ -266,7 +269,7 @@
         @include flex-wrap;
         padding-top: 60px;
         .item {
-          margin-right: 50px;
+          margin-right: 90px;
           .num {
             font-size: 39px;
             font-weight: 600;
@@ -393,9 +396,9 @@
   max-width: 1200px;
   margin: 0 auto;
   .swiper-slide {
-    width: 25%;
+    width: calc(25% - 20px);
     &:nth-child(3n + 1) {
-      width: 50%;
+      width: calc(50% - 20px);
     }
   }
   .card {
@@ -412,6 +415,7 @@
         color: currentColor;
         padding-bottom: 20px;
         @include omit;
+        transition: .3s;
       }
       .desc {
         font-size: 14px;
@@ -419,6 +423,19 @@
         line-height: 1.6;
         opacity: 0.6;
         @include omit2;
+        transition: .3s;
+      }
+    }
+    &:hover {
+      .cover {
+        .image {
+          transform: scale(1.1);
+        }
+      }
+      .info {
+        .title {
+          color: $theme-color;
+        }
       }
     }
   }
@@ -428,10 +445,11 @@
     .iconfont {
       font-size: 30px;
       color: $font-color-common;
-      opacity: 0.6;
       margin-right: 20px;
+      transition: .3s;
+      cursor: pointer;
       &:hover {
-        opacity: 1;
+        color: $theme-color;
       }
     }
   }

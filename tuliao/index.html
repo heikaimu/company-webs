@@ -4,7 +4,7 @@
  * @Autor: Yaowen Liu
  * @Date: 2020-05-01 09:06:12
  * @LastEditors: Yaowen Liu
- * @LastEditTime: 2020-09-08 11:03:24
+ * @LastEditTime: 2020-09-09 13:49:02
  -->
 <!DOCTYPE html>
 <html lang="en">
@@ -95,7 +95,7 @@
                     启涂中华 永登巅峰 敏思创新</h2>
                   <p class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s"
                     swiper-animate-delay="0.6s">
-                    Qituzhonghua, Yongdeng peak, minsi innovation
+                    环球时报消息,近日,澳大利亚情报部门人员悍然突击搜查中国驻澳媒体记者住所,长时间盘问记者,强行扣押记者电脑、手机等,并要求记者不环球时报消息,近日,澳大利亚情报部门人员悍然突击搜查中国驻澳媒体记者住所,长时间盘问记者,强行扣押记者电脑、手机等,并要求记者不
                   </p>
                 </div>
               </div>
@@ -302,7 +302,9 @@
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <div class="card">
-                <div class="image cover" style="background-image:url(./images/banner1.png)"></div>
+                <div class="cover">
+                  <a href="" class="image" style="background-image:url(./images/banner1.png)"></a>
+                </div>
                 <div class="info">
                   <a href="" class="title">华登思快闪创意空间—“城市野餐”圆满落幕</a>
                   <p class="desc">
@@ -313,7 +315,9 @@
             </div>
             <div class="swiper-slide">
               <div class="card">
-                <div class="image cover" style="background-image:url(./images/banner1.png)"></div>
+                <div class="cover">
+                  <a href="" class="image" style="background-image:url(./images/banner1.png)"></a>
+                </div>
                 <div class="info">
                   <a href="" class="title">华登思快闪创意空间—“城市野餐”圆满落幕</a>
                   <p class="desc">
@@ -324,7 +328,9 @@
             </div>
             <div class="swiper-slide">
               <div class="card">
-                <div class="image cover" style="background-image:url(./images/banner1.png)"></div>
+                <div class="cover">
+                  <a href="" class="image" style="background-image:url(./images/banner1.png)"></a>
+                </div>
                 <div class="info">
                   <a href="" class="title">华登思快闪创意空间—“城市野餐”圆满落幕</a>
                   <p class="desc">
@@ -335,7 +341,9 @@
             </div>
             <div class="swiper-slide">
               <div class="card">
-                <div class="image cover" style="background-image:url(./images/banner1.png)"></div>
+                <div class="cover">
+                  <a href="" class="image" style="background-image:url(./images/banner1.png)"></a>
+                </div>
                 <div class="info">
                   <a href="" class="title">华登思快闪创意空间—“城市野餐”圆满落幕</a>
                   <p class="desc">
@@ -346,7 +354,9 @@
             </div>
             <div class="swiper-slide">
               <div class="card">
-                <div class="image cover" style="background-image:url(./images/banner1.png)"></div>
+                <div class="cover">
+                  <a href="" class="image" style="background-image:url(./images/banner1.png)"></a>
+                </div>
                 <div class="info">
                   <a href="" class="title">华登思快闪创意空间—“城市野餐”圆满落幕</a>
                   <p class="desc">
@@ -357,7 +367,9 @@
             </div>
             <div class="swiper-slide">
               <div class="card">
-                <div class="image cover" style="background-image:url(./images/banner1.png)"></div>
+                <div class="cover">
+                  <a href="" class="image" style="background-image:url(./images/banner1.png)"></a>
+                </div>
                 <div class="info">
                   <a href="" class="title">华登思快闪创意空间—“城市野餐”圆满落幕</a>
                   <p class="desc">
@@ -502,7 +514,7 @@
 
       // 动态
       $(".index-active-news-wrapper").tabSwitch()
-      
+
       // 底部下拉框
       $('.beautify_input').cssSelect();
     });
@@ -510,7 +522,7 @@
 
     function setPage() {
       const num = parseInt(activeIndex) + 1;
-      $(".left-page-pagination .pagination-wrapper").html('<span class="swiper-pagination-current">'+ num +'</span> / <span class="swiper-pagination-total">5</span>');
+      $(".left-page-pagination .pagination-wrapper").html('<span class="swiper-pagination-current">' + num + '</span> / <span class="swiper-pagination-total">5</span>');
       if (num === 1) {
         $(".left-page-pagination .pagination-wrapper").addClass("white").removeClass("black");
       } else {

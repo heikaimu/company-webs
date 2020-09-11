@@ -488,7 +488,7 @@ a.animated-button.thar-four:before {
     align-items: center;
   }
   .full-container .half-wrapper .content {
-    width: 80%;
+    width: 100%;
   }
 }
 @media (max-width: 1199px) {
@@ -1909,8 +1909,11 @@ a.animated-button.thar-four:before {
   letter-spacing: 4px;
 }
 .index-banner .swiper-item .content p {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 20px;
   font-size: 16px;
-  line-height: 34px;
+  line-height: 1.6;
 }
 .index-banner .bottom-operations {
   display: flex;
@@ -1919,7 +1922,7 @@ a.animated-button.thar-four:before {
   left: 80px;
   right: 80px;
   bottom: 40px;
-  z-index: 9;
+  z-index: 99999;
 }
 .index-banner .bottom-operations .left {
   flex: 1;
@@ -2019,7 +2022,7 @@ a.animated-button.thar-four:before {
   padding-top: 60px;
 }
 .introduce .right .content .statistical .item {
-  margin-right: 50px;
+  margin-right: 90px;
 }
 .introduce .right .content .statistical .item .num {
   font-size: 39px;
@@ -2137,10 +2140,10 @@ a.animated-button.thar-four:before {
   margin: 0 auto;
 }
 .our-products .swiper-slide {
-  width: 25%;
+  width: calc(25% - 20px);
 }
 .our-products .swiper-slide:nth-child(3n + 1) {
-  width: 50%;
+  width: calc(50% - 20px);
 }
 .our-products .card .cover {
   height: 220px;
@@ -2158,6 +2161,7 @@ a.animated-button.thar-four:before {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  transition: .3s;
 }
 .our-products .card .info .desc {
   font-size: 14px;
@@ -2171,6 +2175,13 @@ a.animated-button.thar-four:before {
   -webkit-line-clamp: 2;
   line-clamp: 2;
   -webkit-box-orient: vertical;
+  transition: .3s;
+}
+.our-products .card:hover .cover .image {
+  transform: scale(1.1);
+}
+.our-products .card:hover .info .title {
+  color: #ECBB48;
 }
 .our-products .operations {
   padding-top: 50px;
@@ -2179,11 +2190,12 @@ a.animated-button.thar-four:before {
 .our-products .operations .iconfont {
   font-size: 30px;
   color: #010101;
-  opacity: 0.6;
   margin-right: 20px;
+  transition: .3s;
+  cursor: pointer;
 }
 .our-products .operations .iconfont:hover {
-  opacity: 1;
+  color: #ECBB48;
 }
 
 @media (max-width: 1200px) {
@@ -3198,6 +3210,127 @@ a.animated-button.thar-four:before {
   top: 14px;
 }
 
+.case-query {
+  padding-top: 20px;
+}
+.case-query .item {
+  display: flex;
+  padding-bottom: 10px;
+}
+.case-query .item .title {
+  flex: 0 0 60px;
+  line-height: 30px;
+  font-size: 14px;
+  color: #010101;
+}
+.case-query .item .tags {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+}
+.case-query .item .tags .tag {
+  line-height: 30px;
+  padding: 0 15px;
+  border-radius: 2px;
+  color: #010101;
+  margin-right: 20px;
+  font-size: 14px;
+}
+.case-query .item .tags .tag:hover, .case-query .item .tags .tag.active {
+  background-color: #ECBB48;
+  color: #ffffff;
+}
+
+.case-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+.case-list .item {
+  width: 25%;
+  box-sizing: border-box;
+  padding: 10px;
+}
+.case-list .item .card {
+  position: relative;
+}
+.case-list .item .card .link {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.case-list .item .card .cover {
+  height: 160px;
+}
+.case-list .item .card .info {
+  padding: 10px 0;
+}
+.case-list .item .card .info .time {
+  font-size: 14px;
+  padding-bottom: 8px;
+  color: #666666;
+}
+.case-list .item .card .info .title {
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  font-size: 16px;
+  line-height: 20px;
+  height: 40px;
+  color: #333333;
+  padding-bottom: 10px;
+  transition: .3s;
+}
+.case-list .item .card .info .desc {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  color: #666666;
+  padding: 10px 0;
+  border-top: 1px solid #e7e7e7;
+  position: relative;
+}
+.case-list .item .card .info .desc::after {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 0%;
+  position: absolute;
+  left: 0;
+  top: -1px;
+  z-index: 2;
+  background-color: #ECBB48;
+}
+.case-list .item .card .info .desc .iconfont {
+  transition: .3s;
+  transform: translate3d(-50px, 0, 0);
+  opacity: 0;
+}
+.case-list .item .card:hover .cover .image {
+  transform: scale(1.1);
+}
+.case-list .item .card:hover .info .title {
+  color: #ECBB48;
+}
+.case-list .item .card:hover .desc {
+  color: #ECBB48;
+}
+.case-list .item .card:hover .desc::after {
+  width: 100%;
+}
+.case-list .item .card:hover .desc .iconfont {
+  transform: translate3d(0, 0, 0);
+  opacity: 1;
+}
+
 @media (max-width: 1200px) {
   .inner-page-banner {
     background-repeat: no-repeat;
@@ -3977,5 +4110,84 @@ a.animated-button.thar-four:before {
     position: absolute;
     left: 0;
     top: 14px;
+  }
+
+  .case-query {
+    padding-top: 20px;
+  }
+  .case-query .item {
+    display: flex;
+    padding-bottom: 10px;
+  }
+  .case-query .item .title {
+    flex: 0 0 60px;
+    line-height: 30px;
+    font-size: 14px;
+    color: #010101;
+  }
+  .case-query .item .tags {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .case-query .item .tags .tag {
+    line-height: 30px;
+    padding: 0 15px;
+    border-radius: 2px;
+    color: #010101;
+    margin-right: 20px;
+    font-size: 14px;
+  }
+  .case-query .item .tags .tag:hover, .case-query .item .tags .tag.active {
+    background-color: #ECBB48;
+    color: #ffffff;
+  }
+
+  .case-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+  .case-list .item {
+    width: 50%;
+    box-sizing: border-box;
+    padding: 10px;
+  }
+  .case-list .item .card {
+    position: relative;
+  }
+  .case-list .item .card .link {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
+  .case-list .item .card .cover {
+    height: 100px;
+  }
+  .case-list .item .card .info {
+    padding: 10px 0;
+  }
+  .case-list .item .card .info .title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 16px;
+    color: #333333;
+    padding-bottom: 10px;
+  }
+  .case-list .item .card .info .desc {
+    text-overflow: -o-ellipsis-lastline;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    font-size: 14px;
+    color: #666;
+    line-height: 1.4;
   }
 }

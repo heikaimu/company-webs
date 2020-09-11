@@ -5,118 +5,135 @@
 
 // 头部
 .web-header {
-  background: linear-gradient(to right, $white 50%, $theme-color 50%);
-  @include box-shadow;
-  .header-container {
-    display: flex;
-    justify-content: space-between;
-    height: 100px;
-    background-color: $white;
-    .left-wrapper {
+  height: 44px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 99;
+  .header-content {
+    height: 44px;
+    background-color: $theme-sub-color;
+    position: relative;
+    .menu-switch {
+      position: absolute;
+      left: 10px;
+      top: 0;
+      bottom: 0;
+      padding: 0 10px;
       display: flex;
       align-items: center;
-      .logo {
-        height: 100%;
-        display: flex;
-        align-items: center;
-        img {
-          width: auto;
-          height: 60px;
-          display: inline-block;
-        }
+      .icon {
+        display: block;
+        height: 20px;
+        width: 30px;
+        background-image: linear-gradient(
+          #ffffff 0,
+          #ffffff 10%,
+          transparent 10%,
+          transparent 45%,
+          #ffffff 45%,
+          #ffffff 55%,
+          transparent 55%,
+          transparent 90%,
+          #ffffff 90%,
+          #ffffff 100%
+        );
       }
-      .lawyer {
-        padding-left: 20px;
-        .name {
-          font-size: 32px;
-          font-weight: 600;
-          color: $font-color-main;
-          padding-bottom: 5px;
-        }
-        .en {
-          font-size: 13px;
-          color: $font-color-sub;
+    }
+    .lawyer {
+      position: absolute;
+      left: 70px;
+      top: 0;
+      bottom: 0;
+      .name {
+        line-height: 44px;
+        color: $white;
+      }
+    }
+    .phone {
+      position: absolute;
+      top: 8px;
+      right: 10px;
+      height: 28px;
+      background-color: rgba($color: #4e7fdb, $alpha: 0.7);
+      display: flex;
+      align-items: center;
+      padding: 0 10px;
+      border-radius: 4px;
+      color: $white;
+      .iconfont {
+        font-size: 14px;
+      }
+      .number {
+        font-size: 12px;
+      }
+    }
+  }
+  .web-nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    .content {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 50%;
+      bottom: 0;
+      z-index: 99;
+      background-color: $theme-sub-color;
+      transform: translate3d(-200px, 0, 0);
+      opacity: 0;
+      transition: 0.3s;
+      &.active {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+      }
+      .iconfont {
+        position: absolute;
+        left: 0;
+        top: 0;
+        padding: 20px;
+        color: $white;
+        font-weight: 900;
+      }
+      .nav-list {
+        margin-top: 80px;
+        .item {
+          text-align: center;
+          padding-bottom: 30px;
+          a {
+            display: block;
+            padding: 10px;
+            text-align: center;
+            color: $white;
+            font-size: 16px;
+            padding-bottom: 5px;
+            letter-spacing: 2px;
+            span {
+              display: block;
+              font-size: 12px;
+            }
+          }
         }
       }
     }
-    .right-wrapper {
-      height: 100%;
-      display: flex;
-      .web-nav {
-        height: 100%;
-        position: relative;
-        .nav-list {
-          height: 100%;
-          @include flex-between-x-center-y;
-          margin: 0;
-          .nav-item {
-            height: 100%;
-            display: flex;
-            align-content: center;
-            color: $font-color-main;
-            a {
-              display: flex;
-              flex-direction: column;
-              justify-content: center;
-              align-items: center;
-              height: 100%;
-              padding: 0 30px;
-              font-size: 16px;
-              color: currentColor;
-              text-decoration: none;
-              transition: 0.3s;
-              span {
-                display: block;
-                padding-top: 5px;
-                font-size: 12px;
-              }
-            }
-            &.active {
-              color: $white;
-              a {
-                background-color: $theme-sub-color;
-              }
-            }
-          }
-        }
-        .line {
-          height: 2px;
-          background-color: $theme-color;
-          position: absolute;
-          bottom: 0;
-          z-index: 9;
-        }
-      }
-
-      .phone {
-        padding: 0 38px;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        background-color: $theme-color;
-        color: $white;
-        .iconfont {
-          font-size: 40px;
-        }
-        .info {
-          padding-left: 20px;
-          .title {
-            font-size: 13px;
-            padding-bottom: 10px;
-          }
-          .phone-number {
-            font-size: 26px;
-            font-family: Didot;
-          }
-        }
-      }
+    .blank {
+      position: fixed;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: 98;
+      background-color: rgba($color: #000000, $alpha: 0.7);
+      display: none;
     }
   }
 }
 
 // 主要内容
 .main-content {
-  min-height: calc(100vh - 210px);
+  padding-top: 44px;
   &.gray {
     background-color: #ebeced;
   }
@@ -124,7 +141,7 @@
 
 // 分页
 .pagination-wrapper {
-  padding: 40px;
+  padding: 10px;
   display: flex;
   justify-content: center;
 }
@@ -165,20 +182,19 @@
 
 // banner
 .banner {
-  height: 570px;
   &.line {
-    border-bottom: 4px solid $theme-color;
+    border-bottom: 3px solid $theme-color;
   }
   .image {
     @include bg-cover;
-    height: 570px;
+    height: 150px;
     -webkit-transform: scale3d(1.1, 1.1, 1.1);
     -ms-transform: scale3d(1.1, 1.1, 1.1);
     transform: scale3d(1.1, 1.1, 1.1);
   }
   .swiper-pagination-bullet {
-    width: 15px;
-    height: 15px;
+    width: 8px;
+    height: 8px;
     border-radius: 50%;
     background-color: #ffffff;
     opacity: 1;
@@ -191,14 +207,69 @@
   &::after {
     content: "";
     display: block;
-    width: 1330px;
-    height: 33px;
-    background: url(../images/banner_shadow.png) no-repeat top center;
+    width: 80%;
+    height: 16px;
+    background: url(../images/banner_shadow.png) no-repeat top center / contain;
     position: absolute;
     left: 50%;
-    top: 570px;
+    bottom: -18px;
     z-index: 99;
     transform: translate3d(-50%, 0, 0);
+  }
+  .lawyer-intro {
+    height: 45px;
+    padding: 0 22px;
+    background-color: $white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .info-item {
+      display: flex;
+      align-items: center;
+      img {
+        width: auto;
+        height: 30px;
+      }
+      .info {
+        padding-left: 6px;
+        .number {
+          font-size: 15px;
+          color: $theme-color;
+          font-weight: 600;
+        }
+        .desc {
+          font-size: 12px;
+          color: $font-color-sub;
+        }
+      }
+    }
+    .phone-item {
+     width: 103px;
+     height: 38px;
+     border-radius: 5px;
+     background-color: $theme-color;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+      .phone {
+        padding-top: 2px;
+        display: flex;
+        align-items: center;
+        font-size: 12px;
+        color: $white;
+        .iconfont {
+          font-size: 14px;
+        }
+        .desc {
+
+        }
+      }
+      .number {
+        font-size: 14px;
+        color: $white;
+        padding-top: 2px;
+      }
+    }
   }
 }
 
@@ -214,26 +285,25 @@
   &::after {
     content: "";
     display: block;
-    width: 72px;
-    height: 18px;
-    border-radius: 9px;
+    width: 36px;
+    height: 9px;
+    border-radius: 5px;
     background-color: $theme-color;
     position: absolute;
     left: 50%;
-    top: 12px;
+    top: 10px;
     z-index: 0;
     transform: translate3d(-50%, 0, 0);
   }
   .cn {
-    font-size: 22px;
-    font-weight: 600;
+    font-size: 15px;
     color: currentColor;
     padding-bottom: 4px;
     position: relative;
     z-index: 1;
   }
   .en {
-    font-size: 22px;
+    font-size: 12px;
     color: currentColor;
     opacity: 0.8;
     position: relative;
@@ -246,7 +316,7 @@
   position: absolute;
   bottom: 0;
   left: 50%;
-  transform: translate3d(-50%,0,0);
+  transform: translate3d(-50%, 0, 0);
   z-index: -1;
   font-size: 220px;
   opacity: 0.05;
@@ -263,7 +333,7 @@
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  color:  $theme-sub-color;
+  color: $theme-sub-color;
   border: 1px solid currentColor;
   display: flex;
   justify-content: center;
@@ -271,7 +341,7 @@
   position: absolute;
   left: 50%;
   bottom: 40px;
-  transform: translate3d(-50%,0,0);
+  transform: translate3d(-50%, 0, 0);
   &::after {
     @include iconfont;
     content: "\e923";
@@ -339,17 +409,17 @@
 .web-footer {
   background-color: #12131a;
   .footer-container {
-    height: 130px;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     .text {
       text-align: center;
-      font-size: 14px;
+      font-size: 12px;
       color: $white;
       opacity: 0.8;
-      line-height: 1.8;
+      line-height: 1.6;
     }
   }
 }
