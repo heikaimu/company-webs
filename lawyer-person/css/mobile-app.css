@@ -434,6 +434,18 @@ body {
 .banner.line {
   border-bottom: 3px solid #F79907;
 }
+.banner.line::after {
+  content: "";
+  display: block;
+  width: 80%;
+  height: 16px;
+  background: url(../images/banner_shadow.png) no-repeat top center/contain;
+  position: absolute;
+  left: 50%;
+  bottom: -18px;
+  z-index: 99;
+  transform: translate3d(-50%, 0, 0);
+}
 .banner .image {
   background-repeat: no-repeat;
   background-position: center center;
@@ -453,18 +465,6 @@ body {
 }
 .banner .swiper-pagination-bullet-active {
   background-color: #F79907;
-}
-.banner::after {
-  content: "";
-  display: block;
-  width: 80%;
-  height: 16px;
-  background: url(../images/banner_shadow.png) no-repeat top center/contain;
-  position: absolute;
-  left: 50%;
-  bottom: -18px;
-  z-index: 99;
-  transform: translate3d(-50%, 0, 0);
 }
 .banner .lawyer-intro {
   height: 45px;
@@ -606,50 +606,23 @@ body {
   color: #fff;
 }
 
-.inline-nav {
-  position: relative;
-  top: -50px;
-  z-index: 9999;
-}
 .inline-nav .inline-nav-container {
-  border-radius: 10px;
   overflow: hidden;
-  background-color: #fff;
+  background-color: #E9E9E9;
   box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
 }
-.inline-nav .inline-nav-container .inline-nav-wrapper {
-  display: flex;
-  align-items: center;
-}
-.inline-nav .inline-nav-container .inline-nav-wrapper .left-wrapper {
-  flex: 0 0 190px;
-  width: 190px;
-  height: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #2952A0;
-}
-.inline-nav .inline-nav-container .inline-nav-wrapper .left-wrapper .page-name {
-  color: #fff;
-}
-.inline-nav .inline-nav-container .inline-nav-wrapper .left-wrapper .page-name .cn {
-  font-size: 26px;
-}
-.inline-nav .inline-nav-container .inline-nav-wrapper .left-wrapper .page-name .en {
-  font-size: 18px;
-}
-.inline-nav .inline-nav-container .inline-nav-wrapper .right-wrapper .nav-item {
+.inline-nav .inline-nav-container .nav-item {
   display: block;
-  width: 112px;
-  border-radius: 20px;
-  line-height: 40px;
+  width: 70px;
+  border-radius: 10px;
+  line-height: 20px;
   text-align: center;
-  font-size: 18px;
+  font-size: 12px;
   color: #111111;
+  margin: 10px 0;
 }
-.inline-nav .inline-nav-container .inline-nav-wrapper .right-wrapper .nav-item.active {
-  background-color: #2952A0;
+.inline-nav .inline-nav-container .nav-item.active {
+  background-color: #F79907;
   color: #fff;
 }
 
@@ -719,7 +692,7 @@ body {
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background-color: #14BA43;
+  background-color: #14ba43;
   margin-right: 3px;
 }
 .buttom-consulting .customer-service .info .status.offline::before {
@@ -1352,4 +1325,233 @@ body {
   font-size: 12px;
   line-height: 1.6;
   color: #666666;
+}
+
+.business-question {
+  padding: 22px 0 10px 0;
+  background-color: #f1f1f1;
+}
+.business-question .business-question-container .business-question-list {
+  padding-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -7px;
+  margin-right: -7px;
+}
+.business-question .business-question-container .business-question-list .item {
+  width: 50%;
+  box-sizing: border-box;
+  padding: 7px;
+  margin-bottom: 10px;
+}
+.business-question .business-question-container .business-question-list .item .card .cover {
+  height: 98px;
+}
+.business-question .business-question-container .business-question-list .item .card .cover .image {
+  height: 98px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.business-question .business-question-container .business-question-list .item .card .info {
+  position: relative;
+}
+.business-question .business-question-container .business-question-list .item .card .info .title {
+  height: 24px;
+  line-height: 24px;
+  padding: 0 10px;
+  position: absolute;
+  top: -24px;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  font-size: 14px;
+  color: #fff;
+  font-weight: 200;
+}
+.business-question .business-question-container .business-question-list .item .card .info .questions-list {
+  padding-top: 10px;
+}
+.business-question .business-question-container .business-question-list .item .card .info .questions-list .text {
+  font-size: 12px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 1.6;
+  color: #111111;
+  position: relative;
+}
+.business-question .business-question-container .business-question-list .item .card .info .questions-list .text::before {
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-left: 6px solid #F79907;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  margin-right: 5px;
+}
+
+.case-page {
+  background-color: #fff;
+}
+.case-page .case-page-container .case-page-title {
+  font-size: 15px;
+  font-weight: 400;
+  padding-top: 20px;
+}
+.case-page .case-page-container .case-page-title span {
+  color: #2952A0;
+}
+
+.case-list .item .card {
+  display: flex;
+  overflow: hidden;
+  padding: 15px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+.case-list .item .card .cover {
+  flex: 0 0 144px;
+  width: 144px;
+  height: 94px;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+}
+.case-list .item .card .cover .image {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.case-list .item .card .cover .type {
+  width: 60px;
+  height: 20px;
+  border-radius: 5px;
+  background-color: #2952A0;
+  font-size: 12px;
+  color: #fff;
+  line-height: 20px;
+  text-align: center;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.case-list .item .card .info {
+  flex: 1;
+  padding-left: 20px;
+}
+.case-list .item .card .info .title {
+  height: 40px;
+  font-size: 15px;
+  line-height: 20px;
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.case-list .item .card .info .time {
+  font-size: 12px;
+  color: #999999;
+  padding: 5px 0;
+}
+.case-list .item .card .info .summary {
+  height: 30px;
+  font-size: 12px;
+  color: #666666;
+  line-height: 15px;
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.case-list .item .card .link {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.article-details {
+  background-color: #fff;
+  margin-bottom: 4px;
+}
+.article-details .article-details-container {
+  padding: 16px;
+}
+.article-details .article-details-container .title {
+  font-size: 16px;
+  text-align: center;
+  line-height: 1.6;
+  color: #111111;
+}
+.article-details .article-details-container .tags {
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid #e7e7e7;
+}
+.article-details .article-details-container .tags .tag-item {
+  font-size: 12px;
+  color: #999999;
+}
+.article-details .article-details-container .tags .tag-item + .tag-item {
+  margin-left: 20px;
+}
+.article-details .article-details-container .article {
+  padding-top: 20px;
+  font-size: 12px;
+  color: #666666;
+  line-height: 1.8;
+}
+.article-details .article-details-container .article img {
+  display: block;
+  max-width: 100%;
+  margin: 20px auto;
+}
+.article-details .article-details-container .prev-next-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+}
+.article-details .article-details-container .prev-next-wrapper .button {
+  display: block;
+  width: 100px;
+  line-height: 26px;
+  border-radius: 2px;
+  background-color: #eaebed;
+  text-align: center;
+  font-size: 12px;
+  color: #999999;
+  transition: 0.3s;
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.article-details .article-details-container .prev-next-wrapper .button.prev::before {
+  content: "\e98e";
+  margin-right: 5px;
+}
+.article-details .article-details-container .prev-next-wrapper .button.next::after {
+  content: "\e98d";
+  margin-left: 5px;
+}
+.article-details .article-details-container .prev-next-wrapper .button:hover {
+  background-color: #2952A0;
+  color: #fff;
 }

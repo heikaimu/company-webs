@@ -649,3 +649,223 @@
     }
   }
 }
+
+// 业务&问题
+.business-question {
+  padding: 22px 0 10px 0;
+  background-color: #f1f1f1;
+  .business-question-container {
+    .business-question-list {
+      padding-top: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: -7px;
+      margin-right: -7px;
+      .item {
+        width: 50%;
+        box-sizing: border-box;
+        padding: 7px;
+        margin-bottom: 10px;
+        .card {
+          .cover {
+            height: 98px;
+            .image {
+              height: 98px;
+              @include bg-cover;
+            }
+          }
+          .info {
+            position: relative;
+            .title {
+              height: 24px;
+              line-height: 24px;
+              padding: 0 10px;
+              position: absolute;
+              top: -24px;
+              left: 0;
+              right: 0;
+              background-color: rgba($color: #000000, $alpha: .6);
+              font-size: 14px;
+              color: $white;
+              font-weight: 200;
+            }
+            .questions-list {
+              padding-top: 10px;
+              .text {
+                font-size: 12px;
+                @include omit;
+                line-height: 1.6;
+                color: $font-color-main;
+                position: relative;
+                &::before {
+                  content: "";
+                  display: inline-block;
+                  width: 0;
+                  height: 0;
+                  border-left: 6px solid $theme-color;
+                  border-top: 4px solid transparent;
+                  border-bottom: 4px solid transparent;
+                  margin-right: 5px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// 案例列表
+.case-page {
+  background-color: $white;
+  .case-page-container {
+   .case-page-title {
+     font-size: 15px;
+     font-weight: 400;
+     padding-top: 20px;
+     span {
+       color: $theme-sub-color;
+     }
+   }
+  }
+}
+
+.case-list {
+  .item {
+    .card {
+      display: flex;
+      overflow: hidden;
+      padding: 15px 0;
+      border-bottom: 1px solid rgba($color: #000000, $alpha: .1);
+      position: relative;
+      .cover {
+        flex: 0 0 144px;
+        width: 144px;
+        height: 94px;
+        border-radius: 5px;
+        overflow: hidden;
+        position: relative;
+        .image {
+          width: 100%;
+          height: 100%;
+          @include bg-cover;
+        }
+        .type {
+          width: 60px;
+          height: 20px;
+          border-radius: 5px;
+          background-color: $theme-sub-color;
+          font-size: 12px;
+          color: $white;
+          line-height: 20px;
+          text-align: center;
+          position: absolute;
+          left: 0;
+          bottom: 0;
+        }
+      }
+      .info {
+        flex: 1;
+        padding-left: 20px;
+        .title {
+          height: 40px;
+          font-size: 15px;
+          line-height: 20px;
+          @include omits(2);
+        }
+        .time {
+          font-size: 12px;
+          color: $font-color-sub;
+          padding: 5px 0;
+        }
+        .summary {
+          height: 30px;
+          font-size: 12px;
+          color: $font-color-common;
+          line-height: 15px;
+          @include omits(2);
+        }
+      }
+      .link {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+      }
+    }
+  }
+}
+
+// 文章详情
+.article-details {
+  background-color: $white;
+  margin-bottom: 4px;
+  .article-details-container {
+    padding: 16px;
+    .title {
+      font-size: 16px;
+      text-align: center;
+      line-height: 1.6;
+      color: $font-color-main;
+    }
+    .tags {
+      padding: 10px 0;
+      display: flex;
+      justify-content: center;
+      border-bottom: 1px solid #e7e7e7;
+      .tag-item {
+        font-size: 12px;
+        color: $font-color-sub;
+        & + .tag-item {
+          margin-left: 20px;
+        }
+      }
+    }
+    .article {
+      padding-top: 20px;
+      font-size: 12px;
+      color: $font-color-common;
+      line-height: 1.8;
+      img {
+        display: block;
+        max-width: 100%;
+        margin: 20px auto;
+      }
+    }
+    .prev-next-wrapper {
+      display: flex;
+      justify-content: space-between;
+      padding-top: 20px;
+      .button {
+        display: block;
+        width: 100px;
+        line-height: 26px;
+        border-radius: 2px;
+        background-color: #eaebed;
+        text-align: center;
+        font-size: 12px;
+        color: $font-color-sub;
+        transition: 0.3s;
+        @include iconfont;
+        &.prev {
+          &::before {
+            content: "\e98e";
+            margin-right: 5px;
+          }
+        }
+        &.next {
+          &::after {
+            content: "\e98d";
+            margin-left: 5px;
+          }
+        }
+        &:hover {
+          background-color: $theme-sub-color;
+          color: $white;
+        }
+      }
+    }
+  }
+}

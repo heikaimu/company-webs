@@ -4,7 +4,7 @@
  * @Autor: Yaowen Liu
  * @Date: 2020-05-01 09:06:12
  * @LastEditors: Yaowen Liu
- * @LastEditTime: 2020-09-04 15:13:04
+ * @LastEditTime: 2020-09-15 13:15:24
  -->
 <!DOCTYPE html>
 <html lang="en">
@@ -20,34 +20,31 @@
 </head>
 
 <body>
-
   <!-- 头部 -->
-  <header class="web-header">
-    <div class="container header-container">
-      <div class="left-wrapper">
-        <a href="" class="logo"><img src="./images/logo.png" alt=""></a>
-        <div class="lawyer">
-          <h2 class="name">某某某律师</h2>
-          <p class="en">so-and-so lawyer</p>
-        </div>
+  <header class="web-header" id="header">
+    <div class="header-content">
+      <div class="menu-switch open-menu">
+        <span class="icon"></span>
       </div>
-      <div class="right-wrapper">
-        <nav class="web-nav">
-          <ul class="nav-list">
-            <li class="nav-item"><a href="./index.html">律所首页<span>HOME</span></a></li>
-            <li class="nav-item active"><a href="./case.html">经典案例<span>CASE</span></a></li>
-            <li class="nav-item"><a href="./services.html">业务领域<span>SERVICES</span></a></li>
-          </ul>
-        </nav>
-        <div class="phone">
-          <span class="iconfont icon-dianhua"></span>
-          <div class="info">
-            <p class="title">vip法律服务电话</p>
-            <p class="phone-number">130-12345678</p>
-          </div>
-        </div>
+      <div class="lawyer">
+        <h2 class="name">MWhitedw daw</h2>
+      </div>
+      <div class="phone">
+        <span class="iconfont icon-dianhua"></span>
+        <p class="number">130-12345678</p>
       </div>
     </div>
+    <nav class="web-nav">
+      <div class="blank"></div>
+      <div class="content">
+        <span class="iconfont icon-zuo close-menu"></span>
+        <ul class="nav-list">
+          <li class="item active"><a href="./index.html">律所首页<span>HOME</span></a></li>
+          <li class="item"><a href="./case.html">经典案例<span>CASE</span></a></li>
+          <li class="item"><a href="./services.html">业务领域<span>SERVICES</span></a></li>
+        </ul>
+      </div>
+    </nav>
   </header>
 
   <!-- 主要内容 -->
@@ -80,72 +77,13 @@
       </div>
     </div>
 
-    <!-- 内部导航 -->
-    <div class="inline-nav">
-      <div class="container inline-nav-container">
-        <div class="inline-nav-wrapper">
-          <div class="left-wrapper">
-            <div class="page-name">
-              <p class="cn">经典案例</p>
-              <p class="en">Classic Case</p>
-            </div>
-          </div>
-          <div class="right-wrapper">
-            <div class="swiper-container" id="inline_nav">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <a href="" class="nav-item">导航1</a>
-                </div>
-                <div class="swiper-slide">
-                  <a href="" class="nav-item active">导航2</a>
-                </div>
-                <div class="swiper-slide">
-                  <a href="" class="nav-item">导航3</a>
-                </div>
-                <div class="swiper-slide">
-                  <a href="" class="nav-item">导航4</a>
-                </div>
-                <div class="swiper-slide">
-                  <a href="" class="nav-item">导航5</a>
-                </div>
-                <div class="swiper-slide">
-                  <a href="" class="nav-item">导航6</a>
-                </div>
-                <div class="swiper-slide">
-                  <a href="" class="nav-item">导航7</a>
-                </div>
-                <div class="swiper-slide">
-                  <a href="" class="nav-item">导航8</a>
-                </div>
-                <div class="swiper-slide">
-                  <a href="" class="nav-item">导航9</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 面包屑导航 -->
-    <div class="bread-nav">
-      <div class="container bread-nav-container">
-        <p class="first">你所在的位置：</p>
-        <a href="" class="medium">首页</a>
-        <a href="" class="medium">经典案例</a>
-        <p class="last">民事纠纷</p>
-      </div>
-    </div>
-
     <!-- 详情 -->
     <div class="article-details">
       <div class="container article-details-container">
         <h2 class="title">刑事辩护：过失致人死亡，应当如何判决？</h2>
         <div class="tags">
           <p class="tag-item">时间：2019/01/15</p>
-          <p class="tag-item">来源：品默律师事务所</p>
           <p class="tag-item">浏览：4815次</p>
-          <p class="tag-item">所在地：成都</p>
         </div>
         <article class="article">
 
@@ -171,16 +109,142 @@
       </div>
     </div>
 
+    <!-- 案例 -->
+    <div class="case-page">
+      <div class="container case-page-container">
+        <h2 class="case-page-title"><span>相关</span>案例</h2>
+        <ul class="case-list">
+          <li class="item">
+            <div class="card">
+              <div class="cover">
+                <div class="image" style="background-image: url(./images/banner1.png)"></div>
+                <p class="type">合同纠纷</p>
+              </div>
+              <div class="info">
+                <p class="title">运输合同纠纷，农民工讨薪补一定由承包方承担</p>
+                <p class="time">2013-42-12</p>
+                <p class="summary">王某某等十一人认为十堰市郧阳区沧浪洲汉江大桥系中交某工程有限公司承建中交某工程有限公司将拉土方垫河道工程发包给杨某某...</p>
+              </div>
+              <a href="" class="link"></a>
+            </div>
+          </li>
+          <li class="item">
+            <div class="card">
+              <div class="cover">
+                <div class="image" style="background-image: url(./images/banner1.png)"></div>
+                <p class="type">合同纠纷</p>
+              </div>
+              <div class="info">
+                <p class="title">运输合同纠纷，农民工讨薪补一定由承包方承担</p>
+                <p class="time">2013-42-12</p>
+                <p class="summary">王某某等十一人认为十堰市郧阳区沧浪洲汉江大桥系中交某工程有限公司承建中交某工程有限公司将拉土方垫河道工程发包给杨某某...</p>
+              </div>
+              <a href="" class="link"></a>
+            </div>
+          </li>
+          <li class="item">
+            <div class="card">
+              <div class="cover">
+                <div class="image" style="background-image: url(./images/banner1.png)"></div>
+                <p class="type">合同纠纷</p>
+              </div>
+              <div class="info">
+                <p class="title">运输合同纠纷，农民工讨薪补一定由承包方承担</p>
+                <p class="time">2013-42-12</p>
+                <p class="summary">王某某等十一人认为十堰市郧阳区沧浪洲汉江大桥系中交某工程有限公司承建中交某工程有限公司将拉土方垫河道工程发包给杨某某...</p>
+              </div>
+              <a href="" class="link"></a>
+            </div>
+          </li>
+          <li class="item">
+            <div class="card">
+              <div class="cover">
+                <div class="image" style="background-image: url(./images/banner1.png)"></div>
+                <p class="type">合同纠纷</p>
+              </div>
+              <div class="info">
+                <p class="title">运输合同纠纷，农民工讨薪补一定由承包方承担</p>
+                <p class="time">2013-42-12</p>
+                <p class="summary">王某某等十一人认为十堰市郧阳区沧浪洲汉江大桥系中交某工程有限公司承建中交某工程有限公司将拉土方垫河道工程发包给杨某某...</p>
+              </div>
+              <a href="" class="link"></a>
+            </div>
+          </li>
+          <li class="item">
+            <div class="card">
+              <div class="cover">
+                <div class="image" style="background-image: url(./images/banner1.png)"></div>
+                <p class="type">合同纠纷</p>
+              </div>
+              <div class="info">
+                <p class="title">运输合同纠纷，农民工讨薪补一定由承包方承担</p>
+                <p class="time">2013-42-12</p>
+                <p class="summary">王某某等十一人认为十堰市郧阳区沧浪洲汉江大桥系中交某工程有限公司承建中交某工程有限公司将拉土方垫河道工程发包给杨某某...</p>
+              </div>
+              <a href="" class="link"></a>
+            </div>
+          </li>
+          <li class="item">
+            <div class="card">
+              <div class="cover">
+                <div class="image" style="background-image: url(./images/banner1.png)"></div>
+                <p class="type">合同纠纷</p>
+              </div>
+              <div class="info">
+                <p class="title">运输合同纠纷，农民工讨薪补一定由承包方承担</p>
+                <p class="time">2013-42-12</p>
+                <p class="summary">王某某等十一人认为十堰市郧阳区沧浪洲汉江大桥系中交某工程有限公司承建中交某工程有限公司将拉土方垫河道工程发包给杨某某...</p>
+              </div>
+              <a href="" class="link"></a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 分页容器 -->
+    <div class="pagination-wrapper">
+      <div class="content">
+        这里放分页组件
+      </div>
+    </div>
+
   </div>
 
   <!-- 底部 -->
   <footer class="web-footer">
     <div class="container footer-container">
-      <p class="text">© COPYRIGHT 品默律师事务所版权所有 PINMORE.CN ALL RIGHTS RESERVED. </p>
-      <p class="text">备案号：蜀ICP备20011418号-1</p>
-      <p class="text">转载内容版权归作者及来源网站所有，本站原创内容转载请注明来源，商业媒体及纸媒请先联系：toushu@PINMOREcom </p>
+      <p class="text">© COPYRIGHT 品默律师事务所版权所有 PINMORE.CN ALL RIGHTS RESERVED. 备案号：蜀ICP备20011418号-1</p>
     </div>
   </footer>
+
+  <!-- 底部咨询 -->
+  <div class="buttom-consulting">
+    <div class="customer-service">
+      <div class="cover">
+        <div class="image" style="background-image:url(./images/banner1.png)"></div>
+      </div>
+      <div class="info">
+        <p class="name">刘经理</p>
+        <p class="status online">在线</p>
+      </div>
+    </div>
+    <div class="operations">
+      <a href="" class="item">
+        <span class="iconfont icon-zixun"></span>
+        <div class="info">
+          <p class="text1">咨询</p>
+        </div>
+      </a>
+      <a href="" class="item blue">
+        <span class="iconfont icon-dianhua"></span>
+        <div class="info">
+          <p class="text2">立即拨打电话</p>
+          <p class="text2">13012345678</p>
+        </div>
+      </a>
+    </div>
+  </div>
 
   <script src="./js/jquery.js"></script>
   <script src="./js/wow.min.js"></script>
@@ -189,7 +253,7 @@
   <script src="./plugins/fullpage/fullpage.js"></script>
   <script src="./js/my-swiper.js"></script>
   <script src="./js/my-jq-fun.js"></script>
-  <script src="./js/main.js"></script>
+  <script src="./js/mobile-main.js"></script>
   <script>
 
   </script>

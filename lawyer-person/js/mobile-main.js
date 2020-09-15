@@ -4,7 +4,7 @@
  * @Autor: Yaowen Liu
  * @Date: 2020-09-09 18:10:03
  * @LastEditors: Yaowen Liu
- * @LastEditTime: 2020-09-10 16:40:29
+ * @LastEditTime: 2020-09-15 12:53:21
  */
 $(function () {
 
@@ -53,6 +53,11 @@ $(function () {
         //this.slides.eq(this.activeIndex).find('.ani').removeClass('ani'); 动画只展现一次，去除ani类名
       }
     }
+  });
+
+  // 内部导航
+  new Swiper("#inline_nav", {
+    slidesPerView: 6,
   });
 
 })

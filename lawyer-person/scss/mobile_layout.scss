@@ -1,4 +1,4 @@
-body{
+body {
   padding-bottom: 64px;
 }
 // 内容宽度
@@ -187,6 +187,18 @@ body{
 .banner {
   &.line {
     border-bottom: 3px solid $theme-color;
+    &::after {
+      content: "";
+      display: block;
+      width: 80%;
+      height: 16px;
+      background: url(../images/banner_shadow.png) no-repeat top center / contain;
+      position: absolute;
+      left: 50%;
+      bottom: -18px;
+      z-index: 99;
+      transform: translate3d(-50%, 0, 0);
+    }
   }
   .image {
     @include bg-cover;
@@ -207,18 +219,6 @@ body{
     background-color: $theme-color;
   }
   position: relative;
-  &::after {
-    content: "";
-    display: block;
-    width: 80%;
-    height: 16px;
-    background: url(../images/banner_shadow.png) no-repeat top center / contain;
-    position: absolute;
-    left: 50%;
-    bottom: -18px;
-    z-index: 99;
-    transform: translate3d(-50%, 0, 0);
-  }
   .lawyer-intro {
     height: 45px;
     padding: 0 22px;
@@ -247,13 +247,13 @@ body{
       }
     }
     .phone-item {
-     width: 103px;
-     height: 38px;
-     border-radius: 5px;
-     background-color: $theme-color;
-     display: flex;
-     justify-content: center;
-     align-items: center;
+      width: 103px;
+      height: 38px;
+      border-radius: 5px;
+      background-color: $theme-color;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       .phone {
         padding-top: 2px;
         display: flex;
@@ -264,7 +264,6 @@ body{
           font-size: 14px;
         }
         .desc {
-
         }
       }
       .number {
@@ -360,49 +359,22 @@ body{
 
 // 内页导航
 .inline-nav {
-  position: relative;
-  top: -50px;
-  z-index: 9999;
   .inline-nav-container {
-    border-radius: 10px;
     overflow: hidden;
-    background-color: $white;
+    background-color: #E9E9E9;
     @include box-shadow;
-    .inline-nav-wrapper {
-      display: flex;
-      align-items: center;
-      .left-wrapper {
-        flex: 0 0 190px;
-        width: 190px;
-        height: 100px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: $theme-sub-color;
-        .page-name {
-          color: $white;
-          .cn {
-            font-size: 26px;
-          }
-          .en {
-            font-size: 18px;
-          }
-        }
-      }
-      .right-wrapper {
-        .nav-item {
-          display: block;
-          width: 112px;
-          border-radius: 20px;
-          line-height: 40px;
-          text-align: center;
-          font-size: 18px;
-          color: $font-color-main;
-          &.active {
-            background-color: $theme-sub-color;
-            color: $white;
-          }
-        }
+    .nav-item {
+      display: block;
+      width: 70px;
+      border-radius: 10px;
+      line-height: 20px;
+      text-align: center;
+      font-size: 12px;
+      color: $font-color-main;
+      margin: 10px 0;
+      &.active {
+        background-color: $theme-color;
+        color: $white;
       }
     }
   }
@@ -471,7 +443,7 @@ body{
             width: 6px;
             height: 6px;
             border-radius: 50%;
-            background-color: #14BA43;
+            background-color: #14ba43;
             margin-right: 3px;
           }
         }

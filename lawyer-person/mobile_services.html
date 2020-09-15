@@ -4,7 +4,7 @@
  * @Autor: Yaowen Liu
  * @Date: 2020-05-01 09:06:12
  * @LastEditors: Yaowen Liu
- * @LastEditTime: 2020-09-08 16:15:34
+ * @LastEditTime: 2020-09-15 12:40:33
  -->
 <!DOCTYPE html>
 <html lang="en">
@@ -77,25 +77,27 @@
       </div>
       <div class="lawyer-intro">
         <div class="info-item">
-          <img src="" alt="">
+          <img src="./images/mobile_icon1.png" alt="">
           <div class="info">
             <p class="number">6882+</p>
             <p class="desc">办理案件</p>
           </div>
         </div>
         <div class="info-item">
-          <img src="" alt="">
+          <img src="./images/mobile_icon2.png" alt="">
           <div class="info">
             <p class="number">6882+</p>
             <p class="desc">办理案件</p>
           </div>
         </div>
         <div class="phone-item">
-          <div class="phone">
-            <span class="iconfont icon-lihun"></span>
-            <p class="desc">立即拨打电话</p>
-          </div>
-          <p class="number">13012345678</p>
+          <a href="">
+            <div class="phone">
+              <span class="iconfont icon-dianhua"></span>
+              <p class="desc">立即拨打电话</p>
+            </div>
+            <p class="number">13012345678</p>
+          </a>
         </div>
       </div>
     </div>
@@ -114,10 +116,7 @@
                 <div class="image" style="background-image: url(./images/index2_03.jpg)"></div>
               </div>
               <div class="info">
-                <div class="title">
-                  <p class="cn">起草合同</p>
-                  <p class="en">Drafting the contract</p>
-                </div>
+                <h2 class="title">起草合同</h2>
                 <div class="questions-list">
                   <p class="text">为什么要起草合同？</p>
                   <p class="text">律师起草合同怎么收费？</p>
@@ -133,10 +132,7 @@
                 <div class="image" style="background-image: url(./images/index2_03.jpg)"></div>
               </div>
               <div class="info">
-                <div class="title">
-                  <p class="cn">合伙散伙</p>
-                  <p class="en">Break up in partnership</p>
-                </div>
+                <p class="title">合伙散伙</p>
                 <div class="questions-list">
                   <p class="text">为什么要起草合同？</p>
                   <p class="text">律师起草合同怎么收费？</p>
@@ -152,10 +148,7 @@
                 <div class="image" style="background-image: url(./images/index2_03.jpg)"></div>
               </div>
               <div class="info">
-                <div class="title">
-                  <p class="cn">合同谈判</p>
-                  <p class="en">Contract negotiation</p>
-                </div>
+                <p class="title">合同谈判</p>
                 <div class="questions-list">
                   <p class="text">为什么要起草合同？</p>
                   <p class="text">律师起草合同怎么收费？</p>
@@ -171,10 +164,7 @@
                 <div class="image" style="background-image: url(./images/index2_03.jpg)"></div>
               </div>
               <div class="info">
-                <div class="title">
-                  <p class="cn">经济纠纷</p>
-                  <p class="en">Economic disputes</p>
-                </div>
+                <p class="title">经济纠纷</p>
                 <div class="questions-list">
                   <p class="text">为什么要起草合同？</p>
                   <p class="text">律师起草合同怎么收费？</p>
@@ -733,8 +723,8 @@
         },
       })
 
-      $(".advice-list .card").each(function() {
-        $(this).click(function() {
+      $(".advice-list .card").each(function () {
+        $(this).click(function () {
           if ($(this).hasClass("active")) {
             $(this).removeClass("active");
           } else {

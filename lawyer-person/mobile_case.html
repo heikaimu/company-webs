@@ -4,7 +4,7 @@
  * @Autor: Yaowen Liu
  * @Date: 2020-05-01 09:06:12
  * @LastEditors: Yaowen Liu
- * @LastEditTime: 2020-09-08 17:16:13
+ * @LastEditTime: 2020-09-15 12:57:05
  -->
 <!DOCTYPE html>
 <html lang="en">
@@ -20,40 +20,66 @@
 </head>
 
 <body>
+  <!-- 头部 -->
+  <header class="web-header" id="header">
+    <div class="header-content">
+      <div class="menu-switch open-menu">
+        <span class="icon"></span>
+      </div>
+      <div class="lawyer">
+        <h2 class="name">MWhitedw daw</h2>
+      </div>
+      <div class="phone">
+        <span class="iconfont icon-dianhua"></span>
+        <p class="number">130-12345678</p>
+      </div>
+    </div>
+    <nav class="web-nav">
+      <div class="blank"></div>
+      <div class="content">
+        <span class="iconfont icon-zuo close-menu"></span>
+        <ul class="nav-list">
+          <li class="item active"><a href="./index.html">律所首页<span>HOME</span></a></li>
+          <li class="item"><a href="./case.html">经典案例<span>CASE</span></a></li>
+          <li class="item"><a href="./services.html">业务领域<span>SERVICES</span></a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
 
   <!-- 主要内容 -->
   <div class="main-content gray">
 
     <!-- 轮播图 -->
     <div class="banner">
-      <div class="swiper-container swiper-animation" id="banner">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <div class="swiper-item">
-              <div class="image ani" swiper-animate-effect="shrink" swiper-animate-duration="5s" swiper-no-hidden
-                style="background-image: url(./images/banner1.png)"></div>
+        <div class="swiper-container swiper-animation" id="banner">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="swiper-item">
+                <div class="image ani" swiper-animate-effect="shrink" swiper-animate-duration="5s" swiper-no-hidden
+                  style="background-image: url(./images/banner1.png)"></div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-item">
+                <div class="image ani" swiper-animate-effect="shrink" swiper-animate-duration="5s" swiper-no-hidden
+                  style="background-image: url(./images/banner2.png)"></div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-item">
+                <div class="image ani" swiper-animate-effect="shrink" swiper-animate-duration="5s" swiper-no-hidden
+                  style="background-image: url(./images/banner3.png)"></div>
+              </div>
             </div>
           </div>
-          <div class="swiper-slide">
-            <div class="swiper-item">
-              <div class="image ani" swiper-animate-effect="shrink" swiper-animate-duration="5s" swiper-no-hidden
-                style="background-image: url(./images/banner2.png)"></div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="swiper-item">
-              <div class="image ani" swiper-animate-effect="shrink" swiper-animate-duration="5s" swiper-no-hidden
-                style="background-image: url(./images/banner3.png)"></div>
-            </div>
-          </div>
+          <div class="swiper-pagination"></div>
         </div>
-        <div class="swiper-pagination"></div>
       </div>
-    </div>
 
     <!-- 内部导航 -->
     <div class="inline-nav">
-      <div class="container inline-nav-container">
+      <div class="inline-nav-container">
         <div class="inline-nav-wrapper">
           <div class="swiper-container" id="inline_nav">
             <div class="swiper-wrapper">
@@ -94,79 +120,85 @@
     <div class="case-page">
       <div class="container case-page-container">
         <ul class="case-list">
-          <li class="case-item">
-            <div class="case-card">
+          <li class="item">
+            <div class="card">
               <div class="cover">
                 <div class="image" style="background-image: url(./images/banner1.png)"></div>
                 <p class="type">合同纠纷</p>
               </div>
               <div class="info">
                 <p class="title">运输合同纠纷，农民工讨薪补一定由承包方承担</p>
+                <p class="time">2013-42-12</p>
                 <p class="summary">王某某等十一人认为十堰市郧阳区沧浪洲汉江大桥系中交某工程有限公司承建中交某工程有限公司将拉土方垫河道工程发包给杨某某...</p>
               </div>
               <a href="" class="link"></a>
             </div>
           </li>
-          <li class="case-item">
-            <div class="case-card">
+          <li class="item">
+            <div class="card">
               <div class="cover">
                 <div class="image" style="background-image: url(./images/banner1.png)"></div>
                 <p class="type">合同纠纷</p>
               </div>
               <div class="info">
                 <p class="title">运输合同纠纷，农民工讨薪补一定由承包方承担</p>
+                <p class="time">2013-42-12</p>
                 <p class="summary">王某某等十一人认为十堰市郧阳区沧浪洲汉江大桥系中交某工程有限公司承建中交某工程有限公司将拉土方垫河道工程发包给杨某某...</p>
               </div>
               <a href="" class="link"></a>
             </div>
           </li>
-          <li class="case-item">
-            <div class="case-card">
+          <li class="item">
+            <div class="card">
               <div class="cover">
                 <div class="image" style="background-image: url(./images/banner1.png)"></div>
                 <p class="type">合同纠纷</p>
               </div>
               <div class="info">
                 <p class="title">运输合同纠纷，农民工讨薪补一定由承包方承担</p>
+                <p class="time">2013-42-12</p>
                 <p class="summary">王某某等十一人认为十堰市郧阳区沧浪洲汉江大桥系中交某工程有限公司承建中交某工程有限公司将拉土方垫河道工程发包给杨某某...</p>
               </div>
               <a href="" class="link"></a>
             </div>
           </li>
-          <li class="case-item">
-            <div class="case-card">
+          <li class="item">
+            <div class="card">
               <div class="cover">
                 <div class="image" style="background-image: url(./images/banner1.png)"></div>
                 <p class="type">合同纠纷</p>
               </div>
               <div class="info">
                 <p class="title">运输合同纠纷，农民工讨薪补一定由承包方承担</p>
+                <p class="time">2013-42-12</p>
                 <p class="summary">王某某等十一人认为十堰市郧阳区沧浪洲汉江大桥系中交某工程有限公司承建中交某工程有限公司将拉土方垫河道工程发包给杨某某...</p>
               </div>
               <a href="" class="link"></a>
             </div>
           </li>
-          <li class="case-item">
-            <div class="case-card">
+          <li class="item">
+            <div class="card">
               <div class="cover">
                 <div class="image" style="background-image: url(./images/banner1.png)"></div>
                 <p class="type">合同纠纷</p>
               </div>
               <div class="info">
                 <p class="title">运输合同纠纷，农民工讨薪补一定由承包方承担</p>
+                <p class="time">2013-42-12</p>
                 <p class="summary">王某某等十一人认为十堰市郧阳区沧浪洲汉江大桥系中交某工程有限公司承建中交某工程有限公司将拉土方垫河道工程发包给杨某某...</p>
               </div>
               <a href="" class="link"></a>
             </div>
           </li>
-          <li class="case-item">
-            <div class="case-card">
+          <li class="item">
+            <div class="card">
               <div class="cover">
                 <div class="image" style="background-image: url(./images/banner1.png)"></div>
                 <p class="type">合同纠纷</p>
               </div>
               <div class="info">
                 <p class="title">运输合同纠纷，农民工讨薪补一定由承包方承担</p>
+                <p class="time">2013-42-12</p>
                 <p class="summary">王某某等十一人认为十堰市郧阳区沧浪洲汉江大桥系中交某工程有限公司承建中交某工程有限公司将拉土方垫河道工程发包给杨某某...</p>
               </div>
               <a href="" class="link"></a>
@@ -185,6 +217,41 @@
 
   </div>
 
+  <!-- 底部 -->
+  <footer class="web-footer">
+    <div class="container footer-container">
+      <p class="text">© COPYRIGHT 品默律师事务所版权所有 PINMORE.CN ALL RIGHTS RESERVED. 备案号：蜀ICP备20011418号-1</p>
+    </div>
+  </footer>
+
+  <!-- 底部咨询 -->
+  <div class="buttom-consulting">
+    <div class="customer-service">
+      <div class="cover">
+        <div class="image" style="background-image:url(./images/banner1.png)"></div>
+      </div>
+      <div class="info">
+        <p class="name">刘经理</p>
+        <p class="status online">在线</p>
+      </div>
+    </div>
+    <div class="operations">
+      <a href="" class="item">
+        <span class="iconfont icon-zixun"></span>
+        <div class="info">
+          <p class="text1">咨询</p>
+        </div>
+      </a>
+      <a href="" class="item blue">
+        <span class="iconfont icon-dianhua"></span>
+        <div class="info">
+          <p class="text2">立即拨打电话</p>
+          <p class="text2">13012345678</p>
+        </div>
+      </a>
+    </div>
+  </div>
+
   <script src="./js/jquery.js"></script>
   <script src="./js/wow.min.js"></script>
   <script src="./plugins/swiper/swiper.min.js"></script>
@@ -192,7 +259,7 @@
   <script src="./plugins/fullpage/fullpage.js"></script>
   <script src="./js/my-swiper.js"></script>
   <script src="./js/my-jq-fun.js"></script>
-  <script src="./js/main.js"></script>
+  <script src="./js/mobile-main.js"></script>
   <script>
 
   </script>
