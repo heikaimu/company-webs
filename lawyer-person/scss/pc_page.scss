@@ -444,6 +444,14 @@
   padding: 43px 0 136px 0;
   background-color: #ebeced;
   position: relative;
+  &.npd {
+    padding: 20px 0;
+    .related-case-container {
+      .related-case-list {
+        padding-top: 20px;
+      }
+    }
+  }
   .related-case-container {
     .related-case-list {
       padding-top: 50px;
@@ -542,6 +550,12 @@
         }
       }
     }
+  }
+}
+.details-case-title {
+  font-size: 20px;
+  span {
+    color: $theme-sub-color;
   }
 }
 

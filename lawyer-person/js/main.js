@@ -4,7 +4,7 @@
  * @Autor: Yaowen Liu
  * @Date: 2020-05-02 17:17:19
  * @LastEditors: Yaowen Liu
- * @LastEditTime: 2020-09-04 13:17:47
+ * @LastEditTime: 2020-09-25 12:21:45
  */
 $(function () {
 
@@ -42,6 +42,19 @@ $(function () {
     slidesPerView: 9,
   });
 
+  // 下一页
+  $(".next-page").each(function () {
+    $(this).click(function () {
+      const nextEl = $(this).parent('div').next('div')[0];
+      if (nextEl) {
+        $(this).parent('div').next('div')[0].scrollIntoView({
+          block: 'start',
+          behavior: 'smooth'
+        })
+      }
+    })
+  })
+
 })
 
 
@@ -52,7 +65,7 @@ function gotoPage(domId, offsetDistance) {
   if (domId) {
     scrollDistance = $("#" + domId).offset().top + offsetDistance + 'px';
   };
-  
+
   $("html,body").animate({
     scrollTop: scrollDistance
   }, 500);

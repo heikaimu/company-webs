@@ -274,6 +274,12 @@
   left: 50%;
   bottom: 40px;
   transform: translate3d(-50%,0,0);
+  cursor: pointer;
+  transition: .3s;
+  &:hover {
+    background-color: $theme-sub-color;
+    color: $white;
+  }
   &::after {
     @include iconfont;
     content: "\e923";
@@ -319,9 +325,10 @@
         }
       }
       .right-wrapper {
+        padding: 0 13px;
         .nav-item {
           display: block;
-          width: 112px;
+          width: 106px;
           border-radius: 20px;
           line-height: 40px;
           text-align: center;

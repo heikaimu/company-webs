@@ -528,6 +528,12 @@ img:not([src]) {
   left: 50%;
   bottom: 40px;
   transform: translate3d(-50%, 0, 0);
+  cursor: pointer;
+  transition: .3s;
+}
+.next-page:hover {
+  background-color: #2952A0;
+  color: #fff;
 }
 .next-page::after {
   font-family: 'icomoon' !important;
@@ -582,9 +588,12 @@ img:not([src]) {
 .inline-nav .inline-nav-container .inline-nav-wrapper .left-wrapper .page-name .en {
   font-size: 18px;
 }
+.inline-nav .inline-nav-container .inline-nav-wrapper .right-wrapper {
+  padding: 0 13px;
+}
 .inline-nav .inline-nav-container .inline-nav-wrapper .right-wrapper .nav-item {
   display: block;
-  width: 112px;
+  width: 106px;
   border-radius: 20px;
   line-height: 40px;
   text-align: center;
@@ -1050,6 +1059,12 @@ img:not([src]) {
   background-color: #ebeced;
   position: relative;
 }
+.related-case.npd {
+  padding: 20px 0;
+}
+.related-case.npd .related-case-container .related-case-list {
+  padding-top: 20px;
+}
 .related-case .related-case-container .related-case-list {
   padding-top: 50px;
   display: flex;
@@ -1163,6 +1178,13 @@ img:not([src]) {
   color: #F79907;
 }
 .related-case .related-case-container .related-case-list .item .card:hover .info .summary {
+  color: #2952A0;
+}
+
+.details-case-title {
+  font-size: 20px;
+}
+.details-case-title span {
   color: #2952A0;
 }
 
