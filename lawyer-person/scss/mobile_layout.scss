@@ -105,7 +105,7 @@ body {
         .item {
           text-align: center;
           padding-bottom: 30px;
-          a {
+          .one {
             display: block;
             padding: 10px;
             text-align: center;
@@ -116,6 +116,21 @@ body {
             span {
               display: block;
               font-size: 12px;
+            }
+          }
+          .pull-down-nav {
+            .two {
+              display: block;
+              padding: 10px;
+              text-align: center;
+              color: $white;
+              font-size: 12px;
+              padding-bottom: 3px;
+              letter-spacing: 1px;
+              span {
+                display: block;
+                font-size: 12px;
+              }
             }
           }
         }
@@ -221,12 +236,13 @@ body {
   position: relative;
   .lawyer-intro {
     height: 45px;
-    padding: 0 22px;
+    padding: 0 16px;
     background-color: $white;
     display: flex;
     justify-content: space-between;
     align-items: center;
     .info-item {
+      flex: 1;
       display: flex;
       align-items: center;
       img {

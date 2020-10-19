@@ -4,13 +4,20 @@
  * @Autor: Yaowen Liu
  * @Date: 2020-05-02 17:17:19
  * @LastEditors: Yaowen Liu
- * @LastEditTime: 2020-09-25 12:21:45
+ * @LastEditTime: 2020-09-28 16:27:40
  */
 $(function () {
 
   // 导航
   var nav = $(this).find(".web-nav");
   nav.lavaLamp({ fx: "swing", speed: 500 });
+  $(".pull-down").each(function() {
+    $(this).hover(function() {
+      $(this).find('.pull-down-nav').fadeIn();
+    }, function() {
+      $(this).find('.pull-down-nav').fadeOut();
+    })
+  })
 
   // 轮播图
   new Swiper("#banner", {
@@ -39,7 +46,7 @@ $(function () {
 
   // 内部导航
   new Swiper("#inline_nav", {
-    slidesPerView: 9,
+    slidesPerView: 8,
   });
 
   // 下一页

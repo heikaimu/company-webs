@@ -307,8 +307,9 @@ img:not([src]) {
   display: flex;
   align-content: center;
   color: #111111;
+  position: relative;
 }
-.web-header .header-container .right-wrapper .web-nav .nav-list .nav-item a {
+.web-header .header-container .right-wrapper .web-nav .nav-list .nav-item .one {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -320,7 +321,7 @@ img:not([src]) {
   text-decoration: none;
   transition: 0.3s;
 }
-.web-header .header-container .right-wrapper .web-nav .nav-list .nav-item a span {
+.web-header .header-container .right-wrapper .web-nav .nav-list .nav-item .one span {
   display: block;
   padding-top: 5px;
   font-size: 12px;
@@ -330,6 +331,30 @@ img:not([src]) {
 }
 .web-header .header-container .right-wrapper .web-nav .nav-list .nav-item.active a {
   background-color: #2952A0;
+}
+.web-header .header-container .right-wrapper .web-nav .nav-list .nav-item .pull-down-nav {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100px;
+  z-index: 9999;
+  display: none;
+}
+.web-header .header-container .right-wrapper .web-nav .nav-list .nav-item .pull-down-nav .two {
+  display: block;
+  padding: 10px;
+  height: 30px;
+  background-color: #fff;
+  line-height: 1.4;
+  text-align: center;
+  font-size: 14px;
+  color: #999999;
+  border-bottom: 1px solid #f2f2f2;
+  cursor: pointer;
+}
+.web-header .header-container .right-wrapper .web-nav .nav-list .nav-item .pull-down-nav .two:hover {
+  background-color: #F79907;
+  color: #fff;
 }
 .web-header .header-container .right-wrapper .web-nav .line {
   height: 2px;
@@ -569,6 +594,7 @@ img:not([src]) {
 .inline-nav .inline-nav-container .inline-nav-wrapper {
   display: flex;
   align-items: center;
+  overflow: hidden;
 }
 .inline-nav .inline-nav-container .inline-nav-wrapper .left-wrapper {
   flex: 0 0 190px;
@@ -589,11 +615,11 @@ img:not([src]) {
   font-size: 18px;
 }
 .inline-nav .inline-nav-container .inline-nav-wrapper .right-wrapper {
+  flex: 1;
   padding: 0 13px;
 }
 .inline-nav .inline-nav-container .inline-nav-wrapper .right-wrapper .nav-item {
   display: block;
-  width: 106px;
   border-radius: 20px;
   line-height: 40px;
   text-align: center;
@@ -861,6 +887,9 @@ img:not([src]) {
 }
 .person-introduce .person-introduce-container .person-introduce-wrapper .right-wrapper .image-list .image {
   flex: 1;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
 }
 
 .classic-case {
@@ -1124,7 +1153,7 @@ img:not([src]) {
 .related-case .related-case-container .related-case-list .item .card .info {
   box-sizing: border-box;
   height: 174px;
-  margin-top: 15px;
+  margin-top: 0px;
   padding: 20px;
   background-color: #fff;
   position: relative;
