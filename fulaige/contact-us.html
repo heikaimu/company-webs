@@ -1,0 +1,289 @@
+<!--
+ * @Description: 
+ * @Version: 2.0
+ * @Autor: Yaowen Liu
+ * @Date: 2020-08-27 10:57:36
+ * @LastEditors: Yaowen Liu
+ * @LastEditTime: 2020-10-20 18:07:51
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>about us</title>
+  <link rel="stylesheet" href="./css/app.css">
+  <script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
+</head>
+
+<body>
+
+  <!-- 头部 -->
+  <header class="web-header">
+      <div class="language">
+        <div class="select" id="language_change_button">
+          <div class="image"><img src="./images/cn.png" alt=""></div>
+          <h2 class="title">中文 <span class="iconfont icon-unfold"></span></h2>
+          <ul class="language-list">
+            <li><a href="">英文</a></li>
+            <li><a href="">日语</a></li>
+            <li><a href="">韩语</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="web-header__wrapper">
+        <!-- logo -->
+        <a class="web-header__logo"><img src="./images/logo.png" alt=""></a>
+        <!-- 导航 -->
+        <nav class="web-header__nav">
+          <ul class="web-header__nav__list">
+            <li class="web-header__nav__item" class="active"><a href="./index.html">网站首页</a></li>
+            <li class="web-header__nav__item"><a href="./about-us.html">关于我们</a></li>
+            <li class="web-header__nav__item"><a href="./products.html">产品中心</a></li>
+            <li class="web-header__nav__item"><a href="./news.html">新闻资讯</a></li>
+            <li class="web-header__nav__item"><a href="./sell-website.html">售后网点</a></li>
+            <li class="web-header__nav__item"><a href="./applications.html">行业应用</a></li>
+            <li class="web-header__nav__item"><a href="./download.html">下载中心</a></li>
+            <li class="web-header__nav__item"><a href="./contact-us.html">联系我们</a></li>
+          </ul>
+        </nav>
+        <!-- 移动端导航隐藏显示按钮 -->
+        <div class="web-header__nav__switch--mobile">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </header>
+
+  <!-- banner -->
+  <div class="banner-wrapper">
+    <div class="image" style="background-image: url(./images/banner.png)"></div>
+  </div>
+
+  <!-- 联系我们 -->
+  <div class="contact-us-part container">
+    <div class="common-title">
+      <h2 class="main">联系我们</h2>
+      <p class="sub">无论您面临何种工况   我们承诺为您提供最完善的阀门应用解决方案</p>
+    </div>
+    <div class="form">
+      <ul class="form-list">
+        <li class="half"><input type="text" placeholder="姓名"></li>
+        <li class="half"><input type="text" placeholder="邮箱"></li>
+        <li class="half"><input type="text" placeholder="电话"></li>
+        <li class="half"><input type="text" placeholder="地址"></li>
+        <li class="full"><textarea name="" id="" cols="30" rows="10" placeholder="你想对我们说..."></textarea></li>
+        <li class="full"><button class="submit">提 交</button></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 联系信息 -->
+  <div class="contact-third-info-part container">
+    <ul class="info-list">
+      <li class="item">
+        <div class="contact-card">
+          <div class="icon-wrapper">
+            <div class="icon"><span class="iconfont icon-location"></span></div>
+          </div>
+          <div class="info-wrapper">
+            <p class="title">公司地址</p>
+            <p class="text">成都市经济开发区（龙泉驿）南二路309号</p>
+          </div>
+          <div class="menus">
+            <a href="" class="button">欢迎咨询</a>
+          </div>
+        </div>
+      </li>
+      <li class="item">
+        <div class="contact-card">
+          <div class="icon-wrapper">
+            <div class="icon"><span class="iconfont icon-phone"></span></div>
+          </div>
+          <div class="info-wrapper">
+            <p class="title">公司地址</p>
+            <p class="text">成都市经济开发区（龙泉驿）南二路309号</p>
+          </div>
+          <div class="menus">
+            <a href="" class="button">欢迎咨询</a>
+          </div>
+        </div>
+      </li>
+      <li class="item">
+        <div class="contact-card">
+          <div class="icon-wrapper">
+            <div class="icon"><span class="iconfont icon-mail"></span></div>
+          </div>
+          <div class="info-wrapper">
+            <p class="title">公司地址</p>
+            <p class="text">成都市经济开发区（龙泉驿）南二路309号</p>
+          </div>
+          <div class="menus">
+            <a href="" class="button">欢迎咨询</a>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <!-- 地图 -->
+  <div class="map-part">
+    <div class="map" id="dituContent"></div>
+  </div>
+
+  <!-- 底部 -->
+  <footer class="footer">
+      <div class="top-wrapper">
+        <div class="container">
+          <a class="logo"><img src="./images/logo.png" alt=""></a>
+          <ul class="footer-list">
+            <li class="item">
+              <p class="title">联系我们</p>
+              <div class="contact-info">
+                <dl>
+                  <dt>联系电话</dt>
+                  <dd>028-454545</dd>
+                </dl>
+                <dl>
+                  <dt>传真号码</dt>
+                  <dd>028-454545</dd>
+                </dl>
+                <dl>
+                  <dt>联系地址</dt>
+                  <dd>成都天府广场</dd>
+                </dl>
+              </div>
+            </li>
+            <li class="item">
+              <p class="title">快速导航</p>
+              <nav class="fast-nav">
+                <a href="./index.html">网站首页</a>
+                <a href="./aboutus.html">关于我们</a>
+                <a href="">产品中心</a>
+                <a href="">新闻资讯</a>
+                <a href="">售后网点</a>
+                <a href="">行业应用</a>
+                <a href="">下载中心</a>
+                <a href="">联系我们</a>
+              </nav>
+            </li>
+            <li class="item">
+              <p class="title">关注我们</p>
+              <div class="qr-code">
+                <div class="image"><img src="./images/qr.png" alt=""></div>
+                <div class="info">
+                  <p class="text">关注微信</p>
+                  <p class="text">成为粉丝</p>
+                  <p class="text">随时随地了解最新动态</p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="bottom-wrapper">
+        <p class="text">flyger保留对产品设计和技术参数进行修改而不另行通知的权利 蜀ICP备17035741号-1</p>
+      </div>
+    </footer>
+
+  <script src="./js/jquery.js"></script>
+  <script src="./js/my-jq-fun.js"></script>
+  <script src="./js/wow.min.js"></script>
+  <script src="./js/common.js"></script>
+  <script>
+//创建和初始化地图函数：
+function initMap() {
+      createMap();//创建地图
+      setMapEvent();//设置地图事件
+      addMapControl();//向地图添加控件
+      addMarker();//向地图中添加marker
+    }
+
+    //创建地图函数：
+    function createMap() {
+      var map = new BMap.Map("dituContent");//在百度地图容器中创建一个地图
+      var point = new BMap.Point(104.231371, 30.573824);//定义一个中心点坐标
+      map.centerAndZoom(point, 17);//设定地图的中心点和坐标并将地图显示在地图容器中
+      window.map = map;//将map变量存储在全局
+    }
+
+    //地图事件设置函数：
+    function setMapEvent() {
+      map.enableDragging();//启用地图拖拽事件，默认启用(可不写)
+      map.enableScrollWheelZoom();//启用地图滚轮放大缩小
+      map.enableDoubleClickZoom();//启用鼠标双击放大，默认启用(可不写)
+      map.enableKeyboard();//启用键盘上下左右键移动地图
+    }
+
+    //地图控件添加函数：
+    function addMapControl() {
+      //向地图中添加缩放控件
+      var ctrl_nav = new BMap.NavigationControl({ anchor: BMAP_ANCHOR_TOP_LEFT, type: BMAP_NAVIGATION_CONTROL_LARGE });
+      map.addControl(ctrl_nav);
+    }
+
+    //标注点数组
+    var markerArr = [{ title: "华登思水性涂料有限公司", content: "", point: "104.231371|30.573824", isOpen: 1, icon: { w: 32, h: 32, l: 0, t: 0, x: 6, lb: 5 } }
+    ];
+    //创建marker
+    function addMarker() {
+      for (var i = 0; i < markerArr.length; i++) {
+        var json = markerArr[i];
+        var p0 = json.point.split("|")[0];
+        var p1 = json.point.split("|")[1];
+        var point = new BMap.Point(p0, p1);
+        var iconImg = createIcon(json.icon);
+        var marker = new BMap.Marker(point, { icon: iconImg });
+        var iw = createInfoWindow(i);
+        var label = new BMap.Label(json.title, { "offset": new BMap.Size(json.icon.lb - json.icon.x + 10, -20) });
+        marker.setLabel(label);
+        map.addOverlay(marker);
+        label.setStyle({
+          borderColor: "#808080",
+          color: "#333",
+          cursor: "pointer"
+        });
+
+        (function () {
+          var index = i;
+          var _iw = createInfoWindow(i);
+          var _marker = marker;
+          _marker.addEventListener("click", function () {
+            this.openInfoWindow(_iw);
+          });
+          _iw.addEventListener("open", function () {
+            _marker.getLabel().hide();
+          })
+          _iw.addEventListener("close", function () {
+            _marker.getLabel().show();
+          })
+          label.addEventListener("click", function () {
+            _marker.openInfoWindow(_iw);
+          })
+          if (!!json.isOpen) {
+            label.hide();
+            _marker.openInfoWindow(_iw);
+          }
+        })()
+      }
+    }
+    //创建InfoWindow
+    function createInfoWindow(i) {
+      var json = markerArr[i];
+      var iw = new BMap.InfoWindow("<b class='iw_poi_title' title='" + json.title + "'>" + json.title + "</b><div class='iw_poi_content'>" + json.content + "</div>");
+      return iw;
+    }
+    //创建一个Icon
+    function createIcon(json) {
+      var icon = new BMap.Icon("./images/zb.png", new BMap.Size(json.w, json.h), { imageOffset: new BMap.Size(-json.l, -json.t), infoWindowOffset: new BMap.Size(json.lb + 5, 1), offset: new BMap.Size(json.x, json.h) })
+      return icon;
+    }
+
+    initMap();//创建和初始化地图
+  </script>
+</body>
+
+</html>

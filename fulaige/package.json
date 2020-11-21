@@ -1,0 +1,12 @@
+{
+  "name": "campany",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "sass --watch scss/app.scss:css/app.css --sourcemap=none --no-cache --style expanded",
+    "mobile-build": "sass --watch scss/mobile-app.scss:css/mobile-app.css --sourcemap=none --no-cache --style expanded"
+  },
+  "author": "Yaowen Liu",
+  "license": "ISC"
+}
